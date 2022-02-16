@@ -2,4 +2,4 @@
 
 import { start } from './templates/welcomePage.js';
 
-myFunction();
+start();

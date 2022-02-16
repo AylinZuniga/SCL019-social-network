@@ -8,6 +8,11 @@ export const start = () => {
     <p>Conoce amigos y gente nueva para salir</p>
     <button name="button" id= "ingresar" value ="ingresar">Comencemos!</button>`
 
-    startPage.innerHTML = welcomePage;
+    
+    const printPage= document.getElementById('container');
+    printPage.innerHTML = welcomePage;
+
+
+
+    return printPage;
 }
-return start
