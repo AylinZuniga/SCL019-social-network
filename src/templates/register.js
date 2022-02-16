@@ -1,12 +1,21 @@
 export const register = () => {
   const registerPage = document.createElement('main');
-  registerPage.className = 'start-section';
-  registerPage.id = 'start-section';
+  registerPage.className = 'register-section';
+  registerPage.id = 'register-section';
   const registerView = `
-      <section class= "welcome-section">
-      <h1>Let's Meet!</h1>
-      <p>Conoce amigos y gente nueva para salir</p>
-      <button name="button" id= "ingresar" value ="ingresar">Comencemos!</button>`;
+  <header>
+  <h1>Together</h1>
+  <nav>
+  <ul id="menu">
+    <li><a href="">Inicio</a></li>
+    <li><a href="">Perfil</a></li>
+    <li><a href="">Contacto</a></li>
+  </ul>
+  </nav>
+  <header>
+ 
+    
+     `;
 
   const printPage = document.getElementById('container');
   printPage.innerHTML = registerView;
