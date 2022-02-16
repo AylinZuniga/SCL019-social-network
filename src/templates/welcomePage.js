@@ -1,5 +1,5 @@
 export const start = () => {
-  const startPage = document.createElement('main'); 
+  const startPage = document.createElement('main');
   startPage.className = 'start-section';
   startPage.id = 'start-section';
   const welcomePage = `
