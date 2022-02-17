@@ -1,0 +1,17 @@
+.img-hanging{
+    width: 10%;
+    height: 10%;
+}
+
+.form-inputs{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.registerInput{
+    display: flex;
+    flex-direction: column;
+    width: 345px;
+    height: 50px;
+}
