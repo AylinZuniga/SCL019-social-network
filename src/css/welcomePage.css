@@ -1,0 +1,27 @@
+body{
+    text-align: center;
+}
+
+.start-section {
+    display: grid;
+    border: 4px solid pink;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto auto;
+    justify-content: flex-start;
+}
+
+.header-start{
+    border: 4px solid pink; 
+}
+
+.img-dancing {
+    width:100%;
+    height: 100%;
+    border: 4px solid pink;
+}
+
+.welcome-section {
+    border: 4px solid pink;
+}
+
+
