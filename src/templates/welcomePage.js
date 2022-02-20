@@ -4,7 +4,7 @@ export const start = () => {
   startPage.id = 'start-section';
   const welcomePage = `
 <header>
-<h1></h1>
+<h1>Together</h1>
 </header>
 <section class= "welcome-section">
 <p>Conoce amigos y gente nueva para salir</p>

@@ -1,17 +1,116 @@
-.img-hanging{
-    width: 10%;
-    height: 10%;
-}
+/* @media screen and (max-width:1125){ */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-size: contain;
+        
+      }
+    h1{
+        font-size:150%;
+        color:white;
 
-.form-inputs{
-    display: flex;
-    flex-direction: column;
-
-}
-
-.registerInput{
-    display: flex;
-    flex-direction: column;
-    width: 345px;
-    height: 50px;
-}
+    }
+    .grid-bottom{
+        margin:5%;
+        flex-direction: row;
+    }
+    p{
+        font-size:350%;
+        color:black;
+    }
+    a{
+        font-size:350%;
+        color: rgba(80, 194, 201, 1);  
+    }
+    .grid-top{
+        display:flex;
+        margin-top: 20%;
+        font-size:350%;
+        
+       
+    }
+    #menu{
+        display:none;
+    }
+    .register-section{
+        display:flex;
+        align-items:center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        margin-bottom: 10%;
+        margin-top:10px;
+    
+    
+    }
+    .img-hanging{
+        width: 50vw;
+        height: 20vh;
+        justify-content: center;
+        text-align:center;
+        align-items: center;
+        margin-bottom:10px;
+        margin-top:10%;
+        
+    
+       
+    }
+    .white-section{
+        position:relative;
+        background-color:rgba(255, 255, 255, 1);
+        margin-top:10%;
+        margin-left:0%;
+        width:101vw;
+        height:100vh;
+        justify-content:baseline;
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        border-radius: 90px;
+        padding-bottom: 30px;
+        margin-bottom: 50%;
+        border:none;
+        padding-top:10%;
+      
+    
+    }
+    
+    .registerInput{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 87vw;
+        height: 7vh;
+        border: none;
+        border-radius: 70px;
+        background-color:rgba(210, 219, 252, 1);
+        justify-content: center;
+        text-align: center;
+        /* margin: 10px; */
+        margin-left: 7%;
+        margin-top: 5%;
+        font-size:350%;
+        text-align: left;
+        
+    
+    }
+  
+    .form-inputs{
+        display:flex;
+        
+    
+    }
+    
+    .buttonRegister{
+        width: 89vw;
+        height: 8vh;
+        border: none;
+        border-radius: 89px;
+        background-color:rgba(100, 130, 244, 1);
+        margin-top:5%;
+        font-size:450%;
+        color: rgba(255, 255, 255, 1);
+     
+    }
+/* } */
