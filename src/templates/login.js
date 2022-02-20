@@ -4,7 +4,7 @@ export const login = () => {
   loginPage.id = 'login-page';
   const usserLoginPage = `
     
-<header>
+<header class= "header-section">
 <h1>Together</h1>
 <nav>
 <ul id="menu">
@@ -13,7 +13,7 @@ export const login = () => {
   <li><a href="">Contacto</a></li>
 </ul>
 </nav>
-<header>
+</header>
 
 <section class= "img-section">
 <img class="img-skating" src="./imagenes/skating.png" />
@@ -43,8 +43,14 @@ export const login = () => {
     </section>
     `;
 
-  const printPage = document.getElementById('container');
+  const printPage = document.getElementById('root');
   printPage.innerHTML = usserLoginPage;
+
+  printPage
+    .querySelector('#checkUser')
+    .addEventListener('click', () => {
+      window.location.hash = '#/register';
+    });
 
   return printPage;
 };
