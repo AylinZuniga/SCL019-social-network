@@ -42,6 +42,17 @@ body{
     background-color:rgba(100, 130, 244, 1);
     font-size:200%;
     margin-top:20%;
-    color:rgba(255, 255, 255, 1) ;
+    color:rgba(255, 255, 255, 1);
+    transform:scale(1);
+}
+#get-into:hover{
+    width:87vw;
+    height: 7vh;
+    
+}
+#get-into:active{
+    transform: scale(.97);
+    transition:transform .5s;
+   
 }
 
