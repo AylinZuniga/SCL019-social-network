@@ -29,14 +29,14 @@ export const register = () => {
   </section>
   </form>
  
-  <section class="grid-bottom"> 
+  <div class="grid-bottom"> 
+  
   <p class="terms">¿Ya tienes cuenta?</p>
   <a class="link-login" id="linkLogin" href="#/login" id= "checkUser">Inicia sesión</a>
 
- </section>
+ </div>
   </div>
   </section>`;
-
 
   const printPage = document.getElementById('root');
   printPage.innerHTML = registerView;
