@@ -5,7 +5,7 @@ export const register = () => {
   const registerView = `
  
 <div class="title-menu">
-  <h1>Together</h1>
+  <h1 class="title">Together</h1>
   <img src="./imagenes/menuicon.png" class="menu-icon">
   </div>
   <section class="register-section">
