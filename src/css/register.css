@@ -124,3 +124,18 @@
     }
 
 /* } */
+
+@media screen and (min-width:1125){
+
+    body{
+        background-image:url("../imagenes/Register.png");
+        
+       
+        overflow:visible;
+      
+    }
+
+
+
+}
+

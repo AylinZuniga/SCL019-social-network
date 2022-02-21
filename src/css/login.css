@@ -11,7 +11,20 @@ body{
     overflow:hidden;
   
 }
-.img-skating{
+.img-skating{@media screen and (min-width:1125){
+
+    body{
+        background-image:url("../imagenes/Register.png");
+        
+       
+        overflow:visible;
+      
+    }
+
+
+
+}
+
     width:100%;
     height: 100%;
 }
@@ -34,4 +47,17 @@ body{
 .header{
     position: top;
     margin-top: 1%;
+}
+@media screen and (min-width:1125){
+
+    body{
+        background-image:url("../imagenes/Register.png");
+        
+       
+        overflow:visible;
+      
+    }
+
+
+
 }
