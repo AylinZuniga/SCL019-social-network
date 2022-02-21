@@ -3,17 +3,10 @@ export const register = () => {
   registerPage.className = 'register-page';
   registerPage.id = 'registerPage';
   const registerView = `
-  <div class="grid-top">
-  <header>
-  <h1 class="title">Together</h1>
-  <nav>
-  <ul id="menu">
-    <li><a href="">Inicio</a></li>
-    <li><a href="">Perfil</a></li>
-    <li><a href="">Contacto</a></li>
-  </ul>
-  </nav>
-  <header>
+ 
+<div class="title-menu">
+  <h1>Together</h1>
+  <img src="./imagenes/menuicon.png" class="menu-icon">
   </div>
   <section class="register-section">
   <img src="./imagenes/hanging.png"class="img-hanging">
