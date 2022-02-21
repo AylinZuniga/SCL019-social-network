@@ -6,9 +6,13 @@
         background-size: contain;
         
       }
+     body{
+          overflow: hidden;
+        }
     h1{
-        font-size:180%;
+        font-size:100%;
         color:white;
+        margin-left:7%;
         
     }
     .grid-bottom{
@@ -35,7 +39,6 @@
     }
     .menu-icon{
         flex-direction: row;
-        margin-top:3%;
         width:9vw;
     }
   
@@ -73,7 +76,7 @@
         align-content: center;
         align-items: center;
         border-radius: 90px;
-        padding-bottom: 30px;
+        /* padding-bottom: 30px; */
         margin-bottom: 50%;
         border:none;
         padding-top:10%;

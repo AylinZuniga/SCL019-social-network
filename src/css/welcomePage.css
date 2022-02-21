@@ -8,7 +8,7 @@ body{
 }
 
 .header-start{
-    font-size: 500%; 
+    font-size: 450%;
     margin-right: 70%;
     margin-left: 2%;
 }
@@ -25,7 +25,9 @@ body{
     position:relative;
     justify-content:center;
     align-items: center;
-    font-size:250%;
+    font-size:230%;
+    font-family: 'Abril Fatface', cursive;
+
   
 }
 .paragraph{
@@ -40,14 +42,19 @@ body{
     border-radius: 95px;
     border:none;
     background-color:rgba(100, 130, 244, 1);
-    font-size:200%;
+    font-size:190%;
     margin-top:20%;
     color:rgba(255, 255, 255, 1);
     transform:scale(1);
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 137.19%;
 }
 #get-into:hover{
     width:87vw;
     height: 7vh;
+
     
 }
 #get-into:active{
