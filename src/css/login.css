@@ -30,4 +30,5 @@ body{
 .header{
     position: top;
     margin-top: 1%;
+    justify-content:left;
 }
