@@ -10,7 +10,7 @@ export const start = () => {
 <img class="img-dancing" src="./imagenes/dancing.png" />
 </section>
  <section class= "welcome-section">
- <p>Conoce amigos y gente nueva para salir</p>
+ <p class="paragraph">Conoce amigos y gente nueva para salir</p>
  <button name="button" id= "get-into" value ="ingresar">Comencemos!</button> 
  </section>`;
 

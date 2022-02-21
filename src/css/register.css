@@ -7,13 +7,14 @@
         
       }
     h1{
-        font-size:150%;
+        font-size:180%;
         color:white;
 
     }
     .grid-bottom{
         margin:5%;
         flex-direction: row;
+       
     }
     p{
         font-size:350%;
@@ -25,7 +26,7 @@
     }
     .grid-top{
         display:flex;
-        margin-top: 20%;
+        margin-top: 5%;
         font-size:350%;
         
        
@@ -45,7 +46,7 @@
     
     }
     .img-hanging{
-        width: 50vw;
+        width: 55vw;
         height: 20vh;
         justify-content: center;
         text-align:center;
@@ -113,4 +114,5 @@
         color: rgba(255, 255, 255, 1);
      
     }
+
 /* } */
