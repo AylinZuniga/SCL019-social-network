@@ -9,7 +9,7 @@
     h1{
         font-size:180%;
         color:white;
-
+        
     }
     .grid-bottom{
         margin:5%;
@@ -24,16 +24,21 @@
         font-size:350%;
         color: rgba(80, 194, 201, 1);  
     }
-    .grid-top{
+    .title-menu{
         display:flex;
         margin-top: 5%;
         font-size:350%;
+        flex-direction:row;
+        gap:50%;
         
        
     }
-    #menu{
-        display:none;
+    .menu-icon{
+        flex-direction: row;
+        margin-top:3%;
+        width:9vw;
     }
+  
     .register-section{
         display:flex;
         align-items:center;
@@ -46,8 +51,7 @@
     
     }
     .img-hanging{
-        width: 55vw;
-        height: 20vh;
+        width: 60vw;
         justify-content: center;
         text-align:center;
         align-items: center;
@@ -112,7 +116,11 @@
         margin-top:5%;
         font-size:450%;
         color: rgba(255, 255, 255, 1);
-     
+        transform: scale(1);
+    }
+    .buttonRegister:hover{
+        width: 87vw;
+        height: 7vh;
     }
 
 /* } */

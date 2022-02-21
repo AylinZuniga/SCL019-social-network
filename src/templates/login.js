@@ -5,7 +5,7 @@ export const login = () => {
   const usserLoginPage = `
     
 <header class= "header-section">
-<h1>Together</h1>
+<h1 class="title">Together</h1>
 <nav>
 <ul id="menu">
   <li><a href="">Inicio</a></li>
