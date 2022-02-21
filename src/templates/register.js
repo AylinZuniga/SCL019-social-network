@@ -5,7 +5,7 @@ export const register = () => {
   const registerView = `
   <div class="grid-top">
   <header>
-  <h1>Together</h1>
+  <h1 class="title">Together</h1>
   <nav>
   <ul id="menu">
     <li><a href="">Inicio</a></li>

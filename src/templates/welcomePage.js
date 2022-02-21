@@ -4,7 +4,7 @@ export const start = () => {
   startPage.id = 'start-section';
   const welcomePage = `
  <header class= "header-start">
- <h1>Together</h1>
+ <h1 class="title">Together</h1>
  </header>
  <section class= "img-section">
 <img class="img-dancing" src="./imagenes/dancing.png" />
