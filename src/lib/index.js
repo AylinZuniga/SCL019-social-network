@@ -1,13 +1,13 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js';
+import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.6.6/firebase-firestore.js';
+
+
+import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.6.6/firebase-auth.js';
 // TODO: Add SDKs for Firebase products that you want to use
  https://firebase.google.com/docs/web/setup#available-libraries
 
 
- import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.6.6/firebase-firestore.js';
-
-
-import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.6.6/firebase-auth.js';
 
 
 
@@ -26,23 +26,30 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-
-//
 const db= getFirestore ()
-
-
 
 // Initialize Firebase 
 const auth = getAuth();
 
-createUserWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    // Signed in
-    const user = userCredential.user;
-    // ...
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    // ..
-  });
+
+export const registerEvent = () => {
+  const signupForm = document.querySelector('.registerForm');
+  signupForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const email = signupForm.email.value;
+    const password = signupForm.password.value;
+    createUserWithEmailAndPassword(auth, email, password)
+    .then((cred) => {
+      console.log('User created: ', cred.user);
+      signupForm.reset();
+    })
+      .catch((err) => {
+        console.log(err.message);
+        alert(err.message);
+      });
+
+
+
+    
+  };
