@@ -17,7 +17,7 @@ export const register = () => {
     <input type="email" id="registerEmail" class="registerInput" placeholder="  Ingresa tu correo" required >
     <input type="password" id="registerPassword" class="registerInput" placeholder="  Ingresa tu contraseña" />
     <input type="password" id="confirmPassword" class="registerInput" placeholder="  Repite tu contraseña" />
-    <button type="button" name="btn-register" class="buttonRegister" id="registerButton">
+    <button type="submit" name="btn-register" class="buttonRegister" id="registerButton">
         Regístrate</button>
   </section>
   </form>

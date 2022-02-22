@@ -13,12 +13,12 @@ body{
 }
 .img-skating{
     width:100%;
-    height: 100%;
+    height: 80%;
     justify-content: center;
     text-align:center;
     align-items: center;
-    margin-bottom:10px;
-    margin-top:10%;
+    margin-bottom:0;
+    margin: top 0%;
     
 }
 
@@ -40,7 +40,6 @@ body{
 .header{
     position: top;
     margin-top: 1%;
-    justify-content:left;
     font-size:180%;
     color:white;
 }
@@ -48,6 +47,12 @@ body{
 h1{
     font-size:180%;
     color:white;
+    text-align: left;
+    display:flex;
+    margin-top: 5%;
+    font-size:350%;
+    flex-direction:row;
+    gap: 50%;
 
 }
 
@@ -84,14 +89,69 @@ h1{
 }
 
 .form-section {
-    background-color: rgba(255, 255, 255, 1) ;
-    border-radius: 3%;
+    background-color: rgba(255, 255, 255, 1);
     width: 100vw;
-    height: 80vh;
+    height: 90vh;
+    border-radius: 90px;
+    border:none;
+    padding-top:2%;
+    justify-content:baseline;
+ 
 }
 
+.login-input {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 95vw;
+    height: 8vh;
+    border: none;
+    border-radius: 70px;
+    background-color:rgba(210, 219, 252, 1);
+    justify-content: center;
+    /* margin: 10px; */
+    /*margin-left: 7%;*/
+    margin-top: 5%;
+    font-size:350%;
+    text-align:center;
+}
+    
+    .buttonRegister:hover{
+        color:lightsteelblue;
+        width: 87vw;
+        height: 7vh;
+    }
 
-
-
+nav {
+    display: none;
+}
        
+.button-google{
+    border: none;
+    background-color:rgba(255, 255, 255, 1);
+    font-size:120%;
+    text-decoration-color: rgba(210, 219, 252, 1);
+    margin-bottom: 6%;
+    margin-top: 6%;
+}
 
+.img-google{
+    width: 5vw;
+    height: 4vh;
+}
+
+.terms{
+    margin-top: 3%;
+    font-size: 450%;
+}
+
+.link-newAccount{
+font-size: 450%;
+}
+
+.login-google {
+    margin-top: 6%;
+}
+/*.menu-icon{
+text-align: right;
+}*/
