@@ -11,7 +11,7 @@ export const register = () => {
   <section class="register-section">
   <img src="./imagenes/hanging.png"class="img-hanging">
   <div class="white-section">
-  <form id="form-register">
+  <form id="form-register" class= "registerForm">
    <section id="form-inputs" class="register-inputs">
     <input type="name" id="registerName" class="registerInput" placeholder="  Ingresa tu nombre" />
     <input type="email" id="registerEmail" class="registerInput" placeholder="  Ingresa tu correo" required >
