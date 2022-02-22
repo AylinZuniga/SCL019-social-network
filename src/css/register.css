@@ -10,7 +10,7 @@
           overflow: hidden;
         }
     h1{
-        font-size:100%;
+        font-size:50%;
         color:white;
         margin-left:7%;
         
@@ -33,13 +33,14 @@
         margin-top: 5%;
         font-size:350%;
         flex-direction:row;
-        gap:50%;
+        gap:30%;
         
        
     }
     .menu-icon{
         flex-direction: row;
         width:9vw;
+        padding:1%;
     }
   
     .register-section{
