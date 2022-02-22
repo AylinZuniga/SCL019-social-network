@@ -33,3 +33,39 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export const registerEvent = () => {
+  const signupForm = document.querySelector('.registerForm');
+  signupForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const email = signupForm.email.value;
+    const password = signupForm.password.value;
+    createUserWithEmailAndPassword(auth, email, password)
+    .then((cred) => {
+      console.log('User created: ', cred.user);
+      signupForm.reset();
+    })
+      .catch((err) => {
+        console.log(err.message);
+        alert(err.message);
+      });
+
+
+
+    
