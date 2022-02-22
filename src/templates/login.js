@@ -6,6 +6,7 @@ export const login = () => {
     
 <header class= "header-section">
 <h1 class="title">Together</h1>
+<img src="./imagenes/menuicon.png" class="menu-icon">
 <nav>
 <ul id="menu">
   <li><a href="">Inicio</a></li>
@@ -18,18 +19,20 @@ export const login = () => {
 <section class= "img-section">
 <img class="img-skating" src="./imagenes/skating.png" />
 </section>
+
     <section class= "form-section">
   <form id="login">
   <section class="login-user">
-  <input type="email" id="emailUser" class="email-user" placeholder="Ingresa tu correo" required >
-  <input type="password" id="passwordUser" class="password-user" placeholder="Ingresa tu contraseña" />
-  <button type="button" name="btn-login" class="button-login" id="accessButton">
+  <input type="email" id="emailUser" class="login-input" placeholder="Ingresa tu correo" required >
+  <input type="password" id="passwordUser" class="login-input" placeholder="Ingresa tu contraseña" />
+  <button type="submit" name="btn-login" class="button-login" id="accessButton">
   Inicia Sesión</button>
   <section class="login-google">
   <p class="login-google">----- O -----</p>
+  <img class="img-google" src="./imagenes/google.png" />
   <button type="button" name="btn-google" class="button-google" id="googleButton">
   <a href="">Inicia sesión con Google</a>
-    <img class="img-google" src="./imagenes/google.png" />
+    
   </button>
   </section>
   <section class="login-newAccount">
