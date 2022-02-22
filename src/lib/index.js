@@ -1,26 +1,19 @@
 // Import the functions you need from the SDKs you need
-// Initialize Firebase
-
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-
-const auth = getAuth();
-createUserWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    // Signed in
-    const user = userCredential.user;
-    // ...
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    // ..
-  });
-
-
-  
-import { initializeApp } from "firebase/app";
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js';
 // TODO: Add SDKs for Firebase products that you want to use
  https://firebase.google.com/docs/web/setup#available-libraries
+
+
+ import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.6.6/firebase-firestore.js';
+
+
+import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.6.6/firebase-auth.js';
+
+
+
+
+
+
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -33,20 +26,10 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+const db= getFirestore ()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Initialize Firebase 
+const auth = getAuth();
 
 
 export const registerEvent = () => {
@@ -69,3 +52,4 @@ export const registerEvent = () => {
 
 
     
+
