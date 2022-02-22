@@ -1,6 +1,48 @@
-// aqui exportaras las funciones que necesites
+// Import the functions you need from the SDKs you need
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js';
+// TODO: Add SDKs for Firebase products that you want to use
+ https://firebase.google.com/docs/web/setup#available-libraries
 
-// export const myFunction = () => {
-//   // aqui tu codigo
-//   console.log('Hola mundo!');
-// };
+
+ import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.6.6/firebase-firestore.js';
+
+
+import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.6.6/firebase-auth.js';
+
+
+
+
+
+
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyBUvj7Ny-b2QLU57iZ_B0CP8gsezTwV75Q",
+  authDomain: "social-network-949f0.firebaseapp.com",
+  projectId: "social-network-949f0",
+  storageBucket: "social-network-949f0.appspot.com",
+  messagingSenderId: "499338039893",
+  appId: "1:499338039893:web:7f04fc4790a65d8949fadc"
+};
+
+const app = initializeApp(firebaseConfig);
+
+//
+const db= getFirestore ()
+
+
+
+// Initialize Firebase 
+const auth = getAuth();
+
+createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in
+    const user = userCredential.user;
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // ..
+  });
