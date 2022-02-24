@@ -26,24 +26,19 @@ const db = getFirestore();
 // Initialize Firebase
 const auth = getAuth();
 
-export const registerEvent = () => {
-  const signupForm = document.querySelector('.registerForm');
-  signupForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const email = signupForm.email.value;
-    const password = signupForm.password.value;
+export const registerEvent = (email, password, name ) => {
+ 
     createUserWithEmailAndPassword(auth, email, password)
       .then((cred) => {
         console.log('User created: ', cred.user);
-        signupForm.reset();
+      
         window.location.hash = '#/wall';
       })
       .catch((err) => {
         console.log(err.message);
         alert(err.message);
       });
-  });
+ 
 };
 // export const logoutButton = () => {
 //   const logoutForm = document.querySelector('#login');
