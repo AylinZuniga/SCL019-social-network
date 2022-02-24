@@ -129,7 +129,7 @@ h1{
     font-size:350%;
     text-align:center;
 }
-    
+
     .buttonRegister:hover{
         color:lightsteelblue;
         width: 87vw;
@@ -216,4 +216,3 @@ text-align: right;
 nav {
     display: none;
 }
-    
