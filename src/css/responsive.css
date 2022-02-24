@@ -1,0 +1,81 @@
+
+/*General*/
+
+@media (min-width: 700px){
+    .title{
+        font-family: 'Bowlby One SC', cursive;
+        font-size: 5vw;
+        margin-left: 3%;
+        margin-top: 2%;
+        
+    }
+}
+
+/* Página de bienvenida */
+
+@media (min-width: 700px){
+    .title{
+        font-family: 'Bowlby One SC', cursive;
+        font-size: 5vw;
+        margin-left: 3%;
+        margin-top: 2%;
+        
+    }
+    .welcome{
+        display: flex;
+        padding: 5%;
+        gap: 2%;
+
+        }
+
+    .img-section{
+        width: 100%;
+
+    }
+    
+    .img-dancing {
+        margin-top: 10%;
+        width: 70%;
+        padding-left: 5%;
+        
+             
+    }
+    .welcome-section {
+        margin-top: 10%;
+        text-align: center;
+        justify-content:center;
+        align-items: center; 
+        width: 50%;
+        gap:10%; 
+        font-size:100%;
+    
+    } 
+
+    #get-into{
+       
+        width:30vw;
+        height:8vh;
+        font-size:100%;
+        margin-top:20%; 
+    }
+  
+}
+
+/*Página de login*/
+/* @media screen and (min-width:1125){
+
+    
+
+
+} */
+
+
+/*Página de register*/
+
+/* @media screen and (min-width:1125){
+
+   
+
+
+
+} */

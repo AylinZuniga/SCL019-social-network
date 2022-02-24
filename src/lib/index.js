@@ -8,13 +8,6 @@ import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com
  https://firebase.google.com/docs/web/setup#available-libraries
 
 
-
-
-
-
-
-
-
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyBUvj7Ny-b2QLU57iZ_B0CP8gsezTwV75Q",
@@ -51,5 +44,6 @@ export const registerEvent = () => {
 
 
 
-    
+    })
   };
+

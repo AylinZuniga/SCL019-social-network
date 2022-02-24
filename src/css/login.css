@@ -1,31 +1,19 @@
-.title{
+/* .title{
     font-family: 'Bowlby One SC', cursive;
     font-size: 8vw;
-}
+} */
 
 body{
-    /* background-image:url("../imagenes/Register.png"); */
-    background-color: brown;
+    background-image:url("../imagenes/Register.png");
     display: flex;
     height:100vh;
     width:100vw;
-    overflow:hidden;
+    /* overflow:hidden; */
   
 }
-.img-skating{@media screen and (min-width:1125){
-
-    body{
-        background-image:url("../imagenes/Register.png");
-        
-       
-        overflow:visible;
-      
-    }
 
 
-
-}
-
+.img-skating{
     width:100%;
     height: 80%;
     justify-content: center;
@@ -167,53 +155,4 @@ font-size: 450%;
 /*.menu-icon{
 text-align: right;
 }*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (min-width:1125){
-
-    body{
-        background-image:url("../imagenes/Register.png");
-        
-       
-        overflow:visible;
-      
-    }
-
-
-
-}
-
-nav {
-    display: none;
-}
-    
+  

@@ -5,10 +5,10 @@
         box-sizing: border-box;
         background-size: contain;
         
-      }
-     body{
-          overflow: hidden;
-        }
+    }
+    
+
+
     h1{
         font-size:50%;
         color:white;
@@ -128,18 +128,3 @@
     }
 
 /* } */
-
-@media screen and (min-width:1125){
-
-    body{
-        background-image:url("../imagenes/Register.png");
-        
-       
-        overflow:visible;
-      
-    }
-
-
-
-}
-
