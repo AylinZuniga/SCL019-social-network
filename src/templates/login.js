@@ -7,13 +7,13 @@ export const login = () => {
 <header class= "header-section">
 <h1 class="title">Together</h1>
 <img src="./imagenes/menuicon.png" class="menu-icon">
-<nav>
-<ul id="menu">
-  <li><a href="">Inicio</a></li>
-  <li><a href="">Perfil</a></li>
-  <li><a href="">Contacto</a></li>
-</ul>
-</nav>
+<!-- // <nav>
+// <ul id="menu">
+//   <li><a href="">Inicio</a></li>
+//   <li><a href="">Perfil</a></li>
+//   <li><a href="">Contacto</a></li>
+// </ul>
+// </nav> -->
 </header>
 
 <section class= "img-section">

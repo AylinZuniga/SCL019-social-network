@@ -63,19 +63,3 @@ body{
    
 }
 
-@media only screen and (min-width: 1125px){
-
-    body{
-        /* background-image:url("../imagenes/Register.png")    */
-        background-color: aquamarine;
-      
-    }
-
-    .title{
-        font-family: 'Bowlby One SC', cursive;
-        font-size: 50vw;  
-    }
-    
-
-}
-

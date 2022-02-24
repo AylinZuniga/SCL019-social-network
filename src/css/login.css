@@ -1,46 +1,30 @@
+
+
 .title{
     font-family: 'Bowlby One SC', cursive;
     font-size: 8vw;
 }
 
 body{
-    /* background-image:url("../imagenes/Register.png"); */
-    background-color: brown;
+    background-image:url("../imagenes/Register.png");
     display: flex;
     height:100vh;
     width:100vw;
     overflow:hidden;
   
 }
-.img-skating{@media screen and (min-width:1125){
-
-    body{
-        background-image:url("../imagenes/Register.png");
-        
-       
-        overflow:visible;
-      
-    }
 
 
-
+.menu-icon{
+    flex-direction: row;
+    width:9vw;
+    padding:1%;
+}
+.img-skating{
+    width:80vw;
 }
 
-    width:100%;
-    height: 80%;
-    justify-content: center;
-    text-align:center;
-    align-items: center;
-    margin-bottom:0;
-    margin: top 0%;
-    width: 70vw;
-        justify-content: center;
-        text-align:center;
-        align-items: center;
-        margin-bottom:10px;
-        margin-top:10%;
-    
-}
+  
 
 .img-google{
     width: 5%;
@@ -58,10 +42,15 @@ body{
 }
 
 .header{
+    display:flex;
     position: top;
     margin-top: 1%;
     font-size:180%;
     color:white;
+    margin-top: 5%;
+    font-size:350%;
+    flex-direction:row;
+    gap:30%;
 }
 
 h1{
@@ -98,7 +87,7 @@ h1{
  
 }
 .button-login{
-    width: 89vw;
+    width: 95vw;
     height: 8vh;
     border: none;
     border-radius: 89px;
@@ -134,7 +123,9 @@ h1{
     /*margin-left: 7%;*/
     margin-top: 5%;
     font-size:350%;
-    text-align:center;
+    text-align:left;
+    padding-left: 3%;
+
 }
     
     .buttonRegister:hover{
@@ -206,7 +197,7 @@ text-align: right;
 
 
 
-@media screen and (min-width:1125){
+/*@media screen and (min-width:1125){
 
     body{
         background-image:url("../imagenes/Register.png");
@@ -223,4 +214,4 @@ text-align: right;
 nav {
     display: none;
 }
-    
+    */
