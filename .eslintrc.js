@@ -15,4 +15,8 @@ module.exports = {
     'import/extensions': 0,
 
   },
+  settings: {
+    'import/no-unresolved': [2, { ignore: ['^https'] }],
+  },
+
 };
