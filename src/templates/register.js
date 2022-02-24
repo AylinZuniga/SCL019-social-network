@@ -19,7 +19,7 @@ export const register = () => {
     <input type="email" id="registerEmail" class="registerInput" placeholder="  Ingresa tu correo" required >
     <input type="password" id="registerPassword" class="registerInput" placeholder="  Ingresa tu contraseña" />
     <input type="password" id="confirmPassword" class="registerInput" placeholder="  Repite tu contraseña" />
-    <button type="submit" name="btn-register" class="buttonRegister" id="registerButton">
+    <button type="button" name="btn-register" class="buttonRegister" id="registerButton">
         Regístrate</button>
   </section>
   </form>
@@ -35,18 +35,17 @@ export const register = () => {
   const printPage = document.getElementById('root');
   printPage.innerHTML = registerView;
 
-  return printPage;
 
-    registerEvent
+    printPage
     .querySelector('#registerButton')
     .addEventListener('click', () => {
       const email = document.getElementById('registerEmail').value;
       const password = document.getElementById('registerPassword').value;
       const name = document.getElementById('registerName').value;
-      signUp(email, password, name);
+      registerEvent(email, password, name);
     });
-
-  return registerEvent;
+    return printPage;
+  
 
 
 };
