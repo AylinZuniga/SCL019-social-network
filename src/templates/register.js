@@ -1,3 +1,5 @@
+import { registerEvent } from "../lib/index.js";
+
 export const register = () => {
   const registerPage = document.createElement('main');
   registerPage.className = 'register-page';
@@ -30,9 +32,21 @@ export const register = () => {
  </div>
   </div>
   </section>`;
-
   const printPage = document.getElementById('root');
   printPage.innerHTML = registerView;
 
   return printPage;
+
+    registerEvent
+    .querySelector('#registerButton')
+    .addEventListener('click', () => {
+      const email = document.getElementById('registerEmail').value;
+      const password = document.getElementById('registerPassword').value;
+      const name = document.getElementById('registerName').value;
+      signUp(email, password, name);
+    });
+
+  return registerEvent;
+
+
 };

@@ -3,31 +3,11 @@
     font-size: 8vw;
 }
 
-body{
-    /* background-image:url("../imagenes/Register.png"); */
-    background-color: brown;
-    display: flex;
-    height:100vh;
-    width:100vw;
-    overflow:hidden;
-  
-}
-.img-skating{@media screen and (min-width:1125){
 
-    body{
-        background-image:url("../imagenes/Register.png");
-        
-       
-        overflow:visible;
-      
-    }
-
-
-
-}
+.img-skating{
 
     width:100%;
-    height: 80%;
+    height: 50%;
     justify-content: center;
     text-align:center;
     align-items: center;
@@ -38,7 +18,7 @@ body{
 
 .img-google{
     width: 5%;
-    height: 5%;
+    height: 1%;
 }
 
 /*width:uvw uvh    */
@@ -129,7 +109,7 @@ h1{
     font-size:350%;
     text-align:center;
 }
-    
+
     .buttonRegister:hover{
         color:lightsteelblue;
         width: 87vw;
@@ -199,21 +179,4 @@ text-align: right;
 
 
 
-@media screen and (min-width:1125){
 
-    body{
-        background-image:url("../imagenes/Register.png");
-        
-       
-        overflow:visible;
-      
-    }
-
-
-
-}
-
-nav {
-    display: none;
-}
-    
