@@ -6,6 +6,7 @@ export const start = () => {
  <header class= "header-start">
  <h1 class="title">Together</h1>
  </header>
+ <button class="logOut"> Logout </button>
  <section class= "img-section">
 <img class="img-dancing" src="./imagenes/dancing.png" />
 </section>
