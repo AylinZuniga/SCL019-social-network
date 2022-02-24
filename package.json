@@ -35,6 +35,7 @@
   "engines": {
     "node": ">=14"
   },
+  "type": "module",
   "dependencies": {
     "firebase": "^9.6.7"
   }
