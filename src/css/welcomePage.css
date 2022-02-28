@@ -54,7 +54,7 @@ body{
     font-weight: 600;
     line-height: 137.19%;
 }
-#get-into:hover{
+/* #get-into:hover{
     width:87vw;
     height: 7vh;
 
@@ -64,5 +64,5 @@ body{
     transform: scale(.97);
     transition:transform .5s;
    
-}
+} */
 

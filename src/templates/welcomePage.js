@@ -9,7 +9,6 @@ export const start = () => {
 
  <div class="welcome">
 
- <button class="logOut"> Logout </button>
  <section class= "img-section">
 <img class="img-dancing" src="./imagenes/dancing.png" />
 </section>
