@@ -10,8 +10,9 @@ import {
    GoogleAuthProvider,
   //  getRedirectResult,
   // signInWithRedirect,
-  signInWithPopup,
-} 
+  signInWithPopup
+}
+
 from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -42,11 +43,25 @@ export const registerEvent = (email, password, name) => {
       console.log('User created: ', cred.user);
 
       window.location.hash = '#/wall';
+      emailCheck();
     })
+   
     .catch((err) => {
       console.log(err.message);
       alert(err.message);
+    
     });
+    const emailCheck = () => {
+      sendEmailVerification(auth.currentUser)
+        .then(() => {
+          // Email verification sent!
+          console.log('Correo enviado');
+          alert('Hemos enviado un correo de verificación para validar tu cuenta');
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    };
 };
 
 // Iniciar sesión con correo registrado
