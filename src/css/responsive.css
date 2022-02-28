@@ -1,7 +1,7 @@
 
 /*General*/
 
-@media (min-width: 700px){
+/*@media (min-width: 700px){
     .title{
         font-family: 'Bowlby One SC', cursive;
         font-size: 5vw;
@@ -13,7 +13,7 @@
 
 /* Página de bienvenida */
 
-@media (min-width: 700px){
+/*@media (min-width: 700px){
     .title{
         font-family: 'Bowlby One SC', cursive;
         font-size: 5vw;
@@ -60,6 +60,7 @@
     }
   
 }
+*/
 
 /*Página de login*/
 /* @media screen and (min-width:1125){
@@ -78,4 +79,4 @@
 
 
 
-} */
+}
