@@ -1,7 +1,7 @@
 
 /*General*/
 
-@media (min-width: 700px){
+@media (min-width: 1200px){
     .title{
         font-family: 'Bowlby One SC', cursive;
         font-size: 5vw;
@@ -13,7 +13,7 @@
 
 /* Página de bienvenida */
 
-@media (min-width: 700px){
+@media (min-width: 1200px){
     .title{
         font-family: 'Bowlby One SC', cursive;
         font-size: 5vw;
@@ -23,10 +23,10 @@
     }
     .welcome{
         display: flex;
+        flex-direction: row;
         padding: 5%;
         gap: 2%;
-
-        }
+     }
 
     .img-section{
         width: 100%;
@@ -60,23 +60,23 @@
     }
   
 }
-*/
 
-/*Página de login*/
- @media screen and (min-width:1125){
+
+/* Página de login
+ @media screen and (min-width:1200){
 
     
 
 
-} 
+}  */
 
 
-/*Página de register*/
+/* Página de register
 
- @media screen and (min-width:1125){
+ @media screen and (min-width:1200){
 
    
 
 
 
-}
+} */

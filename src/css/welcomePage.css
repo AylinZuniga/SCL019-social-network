@@ -21,6 +21,13 @@ body{
     margin-top: 15%;
     width:100%;  
     border: 2px solid red; 
+
+}
+
+.welcome{
+    display: flex;
+    flex-direction: column;
+
 }
 
 .welcome-section {
@@ -54,7 +61,7 @@ body{
     font-weight: 600;
     line-height: 137.19%;
 }
-#get-into:hover{
+/* #get-into:hover{
     width:87vw;
     height: 7vh;
 
@@ -64,5 +71,5 @@ body{
     transform: scale(.97);
     transition:transform .5s;
    
-}
+} */
 
