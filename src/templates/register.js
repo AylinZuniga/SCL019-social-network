@@ -8,7 +8,7 @@ export const register = () => {
  
 <div class="title-menu">
   <h1 class="title">Together</h1>
-  <img src="./imagenes/menuicon.png" class="menu-icon">
+  
   </div>
   <section class="register-section">
   <img src="./imagenes/hanging.png"class="img-hanging">

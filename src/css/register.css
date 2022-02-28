@@ -9,9 +9,10 @@
 
 
     h1{
-        font-size:50%;
+        font-size:180%;
         color:white;
         margin-left:7%;
+        font-family: 'Bowlby One SC', cursive;
         
     }
     .grid-bottom{
@@ -29,7 +30,7 @@
     }
     .title-menu{
         display:flex;
-        margin-top: 5%;
+        margin-top: 0%;
         font-size:350%;
         flex-direction:row;
         gap:30%;
