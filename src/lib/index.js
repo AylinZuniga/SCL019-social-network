@@ -4,12 +4,13 @@ import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-
 import {
   getAuth,
   createUserWithEmailAndPassword, 
-  signOut,
+  // signOut,
    signInWithEmailAndPassword,
-   onAuthStateChanged,
+  //  onAuthStateChanged,
    GoogleAuthProvider,
-   getRedirectResult,
-  signInWithRedirect,
+  //  getRedirectResult,
+  // signInWithRedirect,
+  signInWithPopup,
 } 
 from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js';
 // TODO: Add SDKs for Firebase products that you want to use
@@ -68,64 +69,43 @@ export const signIn = (emailRegister, passwordRegister) => {
   };
 //iniciar sesion con google
   export const checkGoogle = () => {
-    getRedirectResult(auth)
-      .then((result) => {
-      // This gives you a Google Access Token. You can use it to access Google APIs.
-        const credential = GoogleAuthProvider.credentialFromResult(result);
-        const token = credential.accessToken;
-  
-        // The signed-in user info.
-        const user = result.user;
-        console.log(token, user);
-      }).catch((error) => {
-      // Handle Errors here.
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // The email of the user's account used.
-        const email = error.email;
-        // The AuthCredential type that was used.
-        const credential = GoogleAuthProvider.credentialFromError(error);
-        console.log(errorCode, errorMessage, email, credential);
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(auth, provider)
+    .then((result) => {
+      // This gives you a Google Access Token. You can use it to access the Google API.
+      const credential = GoogleAuthProvider.credentialFromResult(result);
+      const token = credential.accessToken;
+      // The signed-in user info.
+     // const user = result.user;
+window.location.hash='#/wall';
       // ...
-      });
+    }).catch((error) => {
+      // Handle Errors here.
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // The email of the user's account used.
+      const email = error.email;
+      // The AuthCredential type that was used.
+      const credential = GoogleAuthProvider.credentialFromError(error);
+      // ...
+    });
   };
   
-  // autentifizacion de cambios de estado
-  const provider = new GoogleAuthProvider();
+  // autentificacion de cambios de estado
+  // const provider = new GoogleAuthProvider();
   
-  export const startGoogle = () => {
-    signInWithRedirect(auth, provider);
-   // window.location.hash = '#/wall';
-  };
-  onAuthStateChanged(auth, (user) => {
-    console.log('user status changed:', user);
-    checkGoogle(auth);
-  });
-  // export const loginWithGoogle = () => {
-  //   getRedirectResult(auth)
-  //     .then((result) => {
-  //     // This gives you a Google Access Token. You can use it to access Google APIs.
-  //       const credential = GoogleAuthProvider.credentialFromResult(result);
-  //       const token = credential.accessToken;
-  
-  //       // The signed-in user info.
-  //       const user = result.user;
-  //       console.log(token, user);
-  //     }).catch((error) => {
-  //     // Handle Errors here.
-  //       const errorCode = error.code;
-  //       const errorMessage = error.message;
-  //       // The email of the user's account used.
-  //       const email = error.email;
-  //       // The AuthCredential type that was used.
-  //       const credential = GoogleAuthProvider.credentialFromError(error);
-  //       console.log(errorCode, errorMessage, email, credential);
-  //     // ...
-  //     });
+  // export const startGoogle = () => {
+  //   signInWithRedirect(auth, provider);
+  //   onAuthStateChanged(auth, (user) => {
+  //     console.log('user status changed:', user);
+  //     checkGoogle(auth);
+     
+  //    });
+  //   // 
   // };
-
   
-      
+  
+
   
 // export const logoutButton = () => {
 //   const logoutForm = document.querySelector('#login');
@@ -142,21 +122,4 @@ export const signIn = (emailRegister, passwordRegister) => {
 //   });
 // };
 
-// export const loginForm = () => {
-//   const loginForm = document.querySelector('#login');
-//   loginForm.addEventListener('submit', (e) => {
-//     e.preventDefault();
-//     const email = loginForm.email.value;
-//     const password = loginForm.password.value;
-//     signInWithEmailAndPassword(auth, email, password)
-//       .then((cred) => {
-//         console.log('User logged in ', cred.user);
-//         loginForm.reset();
-//       })
-//       .catch((err) => {
-//         console.log(err.message);
-//         alert(err.message);
-//       });
-//   });
-// };
 

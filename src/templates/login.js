@@ -1,4 +1,4 @@
- import { signIn, startGoogle } from '../lib/index.js';
+ import { signIn, checkGoogle } from '../lib/index.js';
 
 export const login = () => {
   const loginPage = document.createElement('main');
@@ -68,8 +68,8 @@ printPage
  printPage
  .querySelector('#googleButton')
  .addEventListener('click', () => {
-  startGoogle();
-   // window.location.hash = "#/wallpage";
+  checkGoogle();
+    //window.location.hash = "#/wall";
  });
 
 
