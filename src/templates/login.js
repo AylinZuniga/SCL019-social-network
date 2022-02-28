@@ -1,3 +1,4 @@
+import { loginForm } from "../lib.js";
 export const login = () => {
   const loginPage = document.createElement('main');
   loginPage.className = 'login-page';
@@ -25,7 +26,7 @@ export const login = () => {
   <section class="login-user">
   <input type="email" id="emailUser" class="login-input" placeholder="Ingresa tu correo" required >
   <input type="password" id="passwordUser" class="login-input" placeholder="Ingresa tu contraseña" />
-  <button type="submit" name="btn-login" class="button-login" id="accessButton">
+  <button type="button" name="btn-login" class="button-login" id="accessButton">
   Inicia Sesión</button>
   <section class="login-google">
   <p class="login-google">----- O -----</p>
@@ -54,6 +55,7 @@ export const login = () => {
     .addEventListener('click', () => {
       window.location.hash = '#/register';
     });
+    
 
   return printPage;
 };
