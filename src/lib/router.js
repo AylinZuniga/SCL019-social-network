@@ -11,8 +11,8 @@ export const router = (hash) => {
     start();
   } else if (hash === '#/login') {
     login();
-    singIn();
-    startWithGoogle();
+   // singIn();
+    //startWithGoogle();
   } else if (hash === '#/register') {
     register();
     registerEvent();
