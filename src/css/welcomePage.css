@@ -21,6 +21,13 @@ body{
     margin-top: 15%;
     width:100%;  
     border: 2px solid red; 
+
+}
+
+.welcome{
+    display: flex;
+    flex-direction: column;
+
 }
 
 .welcome-section {
