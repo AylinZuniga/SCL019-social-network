@@ -1,4 +1,4 @@
- import { signIn, startWithGoogle } from '../lib/index.js';
+ import { signIn, startGoogle } from '../lib/index.js';
 
 export const login = () => {
   const loginPage = document.createElement('main');
@@ -32,7 +32,7 @@ export const login = () => {
   <section class="login-google">
   <p class="login-google">----- O -----</p>
   <img class="img-google" src="./imagenes/google.png" />
-  <a id="googleButton" href="">Inicia sesión con Google</a>
+  <a id="googleButton" >Inicia sesión con Google</a>
     
   </button>
   </section>
@@ -68,7 +68,7 @@ printPage
  printPage
  .querySelector('#googleButton')
  .addEventListener('click', () => {
-  startWithGoogle();
+  startGoogle();
    // window.location.hash = "#/wallpage";
  });
 

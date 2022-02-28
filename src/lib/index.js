@@ -2,7 +2,7 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js';
 import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore.js';
 import {
-  getAuth, 
+  getAuth,
   createUserWithEmailAndPassword, 
   signOut,
    signInWithEmailAndPassword,
@@ -66,9 +66,8 @@ export const signIn = (emailRegister, passwordRegister) => {
       console.log(errorMessage);
     });
   };
-
-
-  export const loginWithGoogle = () => {
+//iniciar sesion con google
+  export const checkGoogle = () => {
     getRedirectResult(auth)
       .then((result) => {
       // This gives you a Google Access Token. You can use it to access Google APIs.
@@ -90,48 +89,43 @@ export const signIn = (emailRegister, passwordRegister) => {
       // ...
       });
   };
-
+  
   // autentifizacion de cambios de estado
-const provider = new GoogleAuthProvider();
+  const provider = new GoogleAuthProvider();
+  
+  export const startGoogle = () => {
+    signInWithRedirect(auth, provider);
+   // window.location.hash = '#/wall';
+  };
+  onAuthStateChanged(auth, (user) => {
+    console.log('user status changed:', user);
+    checkGoogle(auth);
+  });
+  // export const loginWithGoogle = () => {
+  //   getRedirectResult(auth)
+  //     .then((result) => {
+  //     // This gives you a Google Access Token. You can use it to access Google APIs.
+  //       const credential = GoogleAuthProvider.credentialFromResult(result);
+  //       const token = credential.accessToken;
+  
+  //       // The signed-in user info.
+  //       const user = result.user;
+  //       console.log(token, user);
+  //     }).catch((error) => {
+  //     // Handle Errors here.
+  //       const errorCode = error.code;
+  //       const errorMessage = error.message;
+  //       // The email of the user's account used.
+  //       const email = error.email;
+  //       // The AuthCredential type that was used.
+  //       const credential = GoogleAuthProvider.credentialFromError(error);
+  //       console.log(errorCode, errorMessage, email, credential);
+  //     // ...
+  //     });
+  // };
 
-export const startWithGoogle = () => {
-  signInWithRedirect(auth, provider);
-  window.location.hash = '#/wall';
-};
-onAuthStateChanged(auth, (user) => {
-  console.log('user status changed:', user);
-  //checkgoogle(auth);
-});
-
-//   // Iniciar sesión con Google
-// export const loginWithGoogle = () => {
-//   signInWithPopup(auth, provider)
-//     .then((result) => {
-//       // This gives you a Google Access Token. You can use it to access Google APIs.
-//       const credential = GoogleAuthProvider.credentialFromResult(result);
-//       const token = credential.accessToken;
-//       console.log(token);
-//       // The signed-in user info.
-//       const user = result.user;
-//       console.log(user);
-//       console.log('Inicio de sesión con Google');
-//       window.location.hash = '#/wall';
-//     })
-//     .catch((error) => {
-//       // Handle Errors here.
-//       const errorCode = error.code;
-//       console.log(errorCode);
-//       const errorMessage = error.message;
-//       // The email of the user's account used.
-//       const email = error.email;
-//       console.log(email);
-//       // The AuthCredential type that was used.
-//       const credential = GoogleAuthProvider.credentialFromError(error);
-//       console.log(credential);
-//       // ...
-//       console.log(errorMessage);
-//     });
-// };
+  
+      
   
 // export const logoutButton = () => {
 //   const logoutForm = document.querySelector('#login');
