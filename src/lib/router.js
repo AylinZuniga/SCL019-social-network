@@ -17,6 +17,6 @@ export const router = (hash) => {
     register();
     registerEvent();
   } else if (hash === '#/wall') {
-    wall();
+wall();
   }
 };
