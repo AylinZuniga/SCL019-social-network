@@ -1,3 +1,5 @@
+ import { singIn, startWithGoogle } from '../lib/index.js';
+
 export const login = () => {
   const loginPage = document.createElement('main');
   loginPage.className = 'login-page';
@@ -25,20 +27,19 @@ export const login = () => {
   <section class="login-user">
   <input type="email" id="emailUser" class="login-input" placeholder="Ingresa tu correo" required >
   <input type="password" id="passwordUser" class="login-input" placeholder="Ingresa tu contraseña" />
-  <button type="submit" name="btn-login" class="button-login" id="accessButton">
+  <button type="button" name="btn-login" class="button-login" id="accessButton">
   Inicia Sesión</button>
   <section class="login-google">
   <p class="login-google">----- O -----</p>
   <img class="img-google" src="./imagenes/google.png" />
-  <button type="button" name="btn-google" class="button-google" id="googleButton">
-  <a href="">Inicia sesión con Google</a>
+  <a id="googleButton" href="">Inicia sesión con Google</a>
     
   </button>
   </section>
   <section class="login-newAccount">
   <hr class="lines" />
   <p class="terms">¿No tienes una cuenta?</p>
-  <a class="link-newAccount" id="linkNewAccount" href="#/register" id= "checkUser">Regístrate</a>
+  <a class="link-newAccount" href="#/register" id="checkUser">Regístrate</a>
   <hr class="lines" />
 </section>
     
@@ -46,14 +47,30 @@ export const login = () => {
     </section>
     `;
 
-  const printPage = document.getElementById('root');
+    const printPage = document.getElementById('root');
   printPage.innerHTML = usserLoginPage;
 
-  printPage
-    .querySelector('#checkUser')
-    .addEventListener('click', () => {
+  printPage.querySelector('#checkUser').addEventListener('click', () => {
       window.location.hash = '#/register';
     });
+
+// Evento para Ingresar
+printPage
+.querySelector('#accessButton')
+.addEventListener('click', () => {
+  const emailRegister = document.querySelector('#emailUser').value;
+  const passwordRegister = document.querySelector('#passwordUser').value;
+  singIn(emailRegister, passwordRegister);
+});
+
+ // Evento para ingresar con Google
+ printPage
+ .querySelector('#googleButton')
+ .addEventListener('click', () => {
+   startWithGoogle();
+   // window.location.hash = "#/wallpage";
+ });
+
 
   return printPage;
 };

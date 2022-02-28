@@ -19,9 +19,8 @@ body{
 
 .img-dancing {
     margin-top: 15%;
-    width:100%;
-    height: 100%;
-   
+    width:100%;  
+    border: 2px solid red; 
 }
 
 .welcome-section {
@@ -31,9 +30,9 @@ body{
     align-items: center;
     font-size:230%;
     font-family: 'Abril Fatface', cursive;
-
-  
+    border: 2px solid  blue; 
 }
+
 .paragraph{
     color:rgba(255, 255, 255, 1);
 }

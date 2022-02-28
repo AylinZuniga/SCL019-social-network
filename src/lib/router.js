@@ -1,7 +1,8 @@
 import { start } from '../templates/welcomePage.js';
 import { login } from '../templates/login.js';
 import { register } from '../templates/register.js';
-import { registerEvent, loginForm } from './index.js';
+import { registerEvent, singIn, startWithGoogle } from './index.js';
+import { wall } from '../templates/wall.js';
 
 export const router = (hash) => {
   const rootDiv = document.getElementById('root');
@@ -10,11 +11,12 @@ export const router = (hash) => {
     start();
   } else if (hash === '#/login') {
     login();
-    loginForm();
+    singIn();
+    startWithGoogle();
   } else if (hash === '#/register') {
     register();
     registerEvent();
   } else if (hash === '#/wall') {
-
+    wall();
   }
 };

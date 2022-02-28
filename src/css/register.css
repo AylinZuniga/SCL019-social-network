@@ -1,12 +1,14 @@
 /* @media screen and (max-width:1125){ */
-    * {
+    /* * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
         background-size: contain;
         
-      }
- 
+    }
+    
+
+
     h1{
         font-size:50%;
         color:white;
@@ -76,7 +78,7 @@
         align-items: center;
         border-radius: 90px;
         /* padding-bottom: 30px; */
-        margin-bottom: 50%;
+        /* margin-bottom: 50%;
         border:none;
         padding-top:10%;
       
@@ -93,17 +95,17 @@
         border-radius: 70px;
         background-color:rgba(210, 219, 252, 1);
         justify-content: center;
-        text-align: center;
+        text-align: center; */
         /* margin: 10px; */
-        margin-left: 7%;
+        /* margin-left: 7%;
         margin-top: 5%;
         font-size:350%;
         text-align: left;
         
     
-    }
-  
-    .form-inputs{
+    } */
+   
+    /* .form-inputs{
         display:flex;
         
     
@@ -125,6 +127,4 @@
         height: 7vh;
     }
 
-/* } */
-
-
+ */

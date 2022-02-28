@@ -2,8 +2,16 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js';
 import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore.js';
 import {
-  getAuth, createUserWithEmailAndPassword, signOut, signInWithEmailAndPassword,
-} from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js';
+  getAuth, 
+  createUserWithEmailAndPassword, 
+  signOut,
+   signInWithEmailAndPassword,
+   onAuthStateChanged,
+   GoogleAuthProvider,
+   getRedirectResult,
+  signInWithRedirect,
+} 
+from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 // import { initializeApp } from '../../node_modules/firebase/app';
@@ -26,20 +34,105 @@ const db = getFirestore();
 // Initialize Firebase
 const auth = getAuth();
 
-export const registerEvent = (email, password, name ) => {
- 
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((cred) => {
-        console.log('User created: ', cred.user);
-      
-        window.location.hash = '#/wall';
-      })
-      .catch((err) => {
-        console.log(err.message);
-        alert(err.message);
-      });
- 
+// Registrarse
+export const registerEvent = (email, password, name) => {
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((cred) => {
+      console.log('User created: ', cred.user);
+
+      window.location.hash = '#/wall';
+    })
+    .catch((err) => {
+      console.log(err.message);
+      alert(err.message);
+    });
 };
+
+// Iniciar sesión con correo registrado
+export const singIn = (emailRegister, passwordRegister) => {
+  signInWithEmailAndPassword(auth, emailRegister, passwordRegister)
+    .then((userCredential) => {
+      // Signed in
+      const { user } = userCredential;
+      console.log(user);
+      // ...
+      window.location.hash = '#/wall';
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      console.log(errorCode);
+      alert('Correo o contraseña inválidos');
+      const errorMessage = error.message;
+      console.log(errorMessage);
+    });
+  };
+
+
+  export const loginWithGoogle = () => {
+    getRedirectResult(auth)
+      .then((result) => {
+      // This gives you a Google Access Token. You can use it to access Google APIs.
+        const credential = GoogleAuthProvider.credentialFromResult(result);
+        const token = credential.accessToken;
+  
+        // The signed-in user info.
+        const user = result.user;
+        console.log(token, user);
+      }).catch((error) => {
+      // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // The email of the user's account used.
+        const email = error.email;
+        // The AuthCredential type that was used.
+        const credential = GoogleAuthProvider.credentialFromError(error);
+        console.log(errorCode, errorMessage, email, credential);
+      // ...
+      });
+  };
+
+  // autentifizacion de cambios de estado
+const provider = new GoogleAuthProvider();
+
+export const startWithGoogle = () => {
+  signInWithRedirect(auth, provider);
+  window.location.hash = '#/wall';
+};
+onAuthStateChanged(auth, (user) => {
+  console.log('user status changed:', user);
+  checkgoogle(auth);
+});
+
+//   // Iniciar sesión con Google
+// export const loginWithGoogle = () => {
+//   signInWithPopup(auth, provider)
+//     .then((result) => {
+//       // This gives you a Google Access Token. You can use it to access Google APIs.
+//       const credential = GoogleAuthProvider.credentialFromResult(result);
+//       const token = credential.accessToken;
+//       console.log(token);
+//       // The signed-in user info.
+//       const user = result.user;
+//       console.log(user);
+//       console.log('Inicio de sesión con Google');
+//       window.location.hash = '#/wall';
+//     })
+//     .catch((error) => {
+//       // Handle Errors here.
+//       const errorCode = error.code;
+//       console.log(errorCode);
+//       const errorMessage = error.message;
+//       // The email of the user's account used.
+//       const email = error.email;
+//       console.log(email);
+//       // The AuthCredential type that was used.
+//       const credential = GoogleAuthProvider.credentialFromError(error);
+//       console.log(credential);
+//       // ...
+//       console.log(errorMessage);
+//     });
+// };
+  
 // export const logoutButton = () => {
 //   const logoutForm = document.querySelector('#login');
 //   logoutForm.addEventListener('submit', (e) => {
@@ -55,20 +148,21 @@ export const registerEvent = (email, password, name ) => {
 //   });
 // };
 
-export const loginForm = () => {
-  const loginForm = document.querySelector('#login');
-  loginForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const email = loginForm.email.value;
-    const password = loginForm.password.value;
-    signInWithEmailAndPassword(auth, email, password)
-      .then((cred) => {
-        console.log('User logged in ', cred.user);
-        loginForm.reset();
-      })
-      .catch((err) => {
-        console.log(err.message);
-        alert(err.message);
-      });
-  });
-};
+// export const loginForm = () => {
+//   const loginForm = document.querySelector('#login');
+//   loginForm.addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     const email = loginForm.email.value;
+//     const password = loginForm.password.value;
+//     signInWithEmailAndPassword(auth, email, password)
+//       .then((cred) => {
+//         console.log('User logged in ', cred.user);
+//         loginForm.reset();
+//       })
+//       .catch((err) => {
+//         console.log(err.message);
+//         alert(err.message);
+//       });
+//   });
+// };
+
