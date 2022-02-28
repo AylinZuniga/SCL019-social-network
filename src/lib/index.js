@@ -49,7 +49,7 @@ export const registerEvent = (email, password, name) => {
 };
 
 // Iniciar sesión con correo registrado
-export const singIn = (emailRegister, passwordRegister) => {
+export const signIn = (emailRegister, passwordRegister) => {
   signInWithEmailAndPassword(auth, emailRegister, passwordRegister)
     .then((userCredential) => {
       // Signed in
@@ -100,7 +100,7 @@ export const startWithGoogle = () => {
 };
 onAuthStateChanged(auth, (user) => {
   console.log('user status changed:', user);
-  checkgoogle(auth);
+  //checkgoogle(auth);
 });
 
 //   // Iniciar sesión con Google

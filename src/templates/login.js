@@ -1,4 +1,4 @@
- import { singIn, startWithGoogle } from '../lib/index.js';
+ import { signIn, startWithGoogle } from '../lib/index.js';
 
 export const login = () => {
   const loginPage = document.createElement('main');
@@ -61,14 +61,14 @@ printPage
 .addEventListener('click', () => {
   const emailRegister = document.querySelector('#emailUser').value;
   const passwordRegister = document.querySelector('#passwordUser').value;
-  singIn(emailRegister, passwordRegister);
+ signIn(emailRegister, passwordRegister);
 });
 
  // Evento para ingresar con Google
  printPage
  .querySelector('#googleButton')
  .addEventListener('click', () => {
-   startWithGoogle();
+  startWithGoogle();
    // window.location.hash = "#/wallpage";
  });
 
