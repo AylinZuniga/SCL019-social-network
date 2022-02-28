@@ -1,4 +1,4 @@
-import { registerEvent } from "../lib/index.js";
+import { registerEvent } from '../lib/index.js';
 
 export const register = () => {
   const registerPage = document.createElement('main');
@@ -35,8 +35,7 @@ export const register = () => {
   const printPage = document.getElementById('root');
   printPage.innerHTML = registerView;
 
-
-    printPage
+  printPage
     .querySelector('#registerButton')
     .addEventListener('click', () => {
       const email = document.getElementById('registerEmail').value;
@@ -44,8 +43,5 @@ export const register = () => {
       const name = document.getElementById('registerName').value;
       registerEvent(email, password, name);
     });
-    return printPage;
-  
-
-
+  return printPage;
 };

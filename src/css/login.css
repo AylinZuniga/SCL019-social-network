@@ -1,4 +1,4 @@
-/* .title{
+/* /* .title{
     font-family: 'Bowlby One SC', cursive;
     font-size: 8vw;
 } */
@@ -10,7 +10,7 @@ body{
     width:100vw;
     /* overflow:hidden; */
   
-}
+ }
 
 
 .img-skating{
@@ -34,16 +34,21 @@ body{
 
 .login-page{
    height: 100vh;
-   /*grid-template-columns: 20% 20% 20% 20%;*/
+   grid-template-columns: 20% 20% 20% 20%;
    align-content: space-around;    
    
 }
 
 .header{
+    display:flex;
     position: top;
     margin-top: 1%;
     font-size:180%;
     color:white;
+    margin-top: 5%;
+    font-size:350%;
+    flex-direction:row;
+    gap:30%;
 }
 
 h1{
@@ -80,7 +85,7 @@ h1{
  
 }
 .button-login{
-    width: 89vw;
+    width: 95vw;
     height: 8vh;
     border: none;
     border-radius: 89px;
@@ -93,11 +98,12 @@ h1{
 .form-section {
     background-color: rgba(255, 255, 255, 1);
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     border-radius: 90px;
     border:none;
     padding-top:2%;
     justify-content:baseline;
+    
  
 }
 
@@ -113,9 +119,11 @@ h1{
     justify-content: center;
     /* margin: 10px; */
     /*margin-left: 7%;*/
-    margin-top: 5%;
+     margin-top: 5%;
     font-size:350%;
-    text-align:center;
+    text-align:left;
+    padding-left: 3%;
+
 }
 
     .buttonRegister:hover{
@@ -138,9 +146,9 @@ h1{
 .img-google{
     width: 5vw;
     height: 4vh;
-}
+} 
 
-.terms{
+ .terms{
     margin-top: 3%;
     font-size: 450%;
 }
@@ -151,8 +159,8 @@ font-size: 450%;
 
 .login-google {
     margin-top: 6%;
-}
+} 
 /*.menu-icon{
 text-align: right;
 }*/
-  
+   
