@@ -53,6 +53,7 @@ export const login = () => {
   printPage.querySelector('#checkUser').addEventListener('click', () => {
       window.location.hash = '#/register';
     });
+    
 
 // Evento para Ingresar
 printPage
