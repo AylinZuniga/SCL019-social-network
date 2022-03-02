@@ -9,9 +9,9 @@
 
 
     h1{
-        font-size:50%;
+        font-size:190%;
         color:white;
-        margin-left:7%;
+        margin-left:5%;
         
     }
     .grid-bottom{
@@ -29,19 +29,23 @@
     }
     .title-menu{
         display:flex;
-        margin-top: 5%;
-        font-size:350%;
+        font-size: 380%;
         flex-direction:row;
-        gap:30%;
-        
-       
-    }
-    .menu-icon{
+        gap:35%;
+        margin: auto;
+        text-align: justify;
+         }
+    
+         .menu-icon{
         flex-direction: row;
-        width:9vw;
-        padding:1%;
+        width:14vw;
+        padding:2%;
+        margin:5% auto;
     }
   
+    .menu-icon:hover {
+        color: antiquewhite;
+    }
     .register-section{
         display:flex;
         align-items:center;
@@ -125,7 +129,3 @@
         width: 87vw;
         height: 7vh;
     }
-<<<<<<< HEAD
- 
-=======
->>>>>>> 14693cb5531d9122a567276d227d6347293fc0e3

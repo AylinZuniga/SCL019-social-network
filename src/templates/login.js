@@ -6,17 +6,10 @@ export const login = () => {
   loginPage.id = 'login-page';
   const usserLoginPage = `
     
-<header class= "header-section">
-<h1 class="title">Together</h1>
-<img src="./imagenes/menuicon.png" class="menu-icon">
-<!-- // <nav>
-// <ul id="menu">
-//   <li><a href="">Inicio</a></li>
-//   <li><a href="">Perfil</a></li>
-//   <li><a href="">Contacto</a></li>
-// </ul>
-// </nav> -->
-</header>
+  <header class="title-menu">
+  <h1 class="title">Together</h1>
+  <a href="#/"> <img src="./imagenes/casa.png" class="menu-icon"></a>
+  </header>
 
 <section class= "img-section">
 <img class="img-skating" src="./imagenes/skating.png" />
@@ -30,7 +23,7 @@ export const login = () => {
   <button type="button" name="btn-login" class="button-login" id="accessButton">
   Inicia Sesión</button>
   <section class="login-google">
-  <p class="login-google">----- O -----</p>
+  <div class="line"> <hr/>O<hr/> </div>
   <img class="img-google" src="./imagenes/google.png" />
   <a id="googleButton" >Inicia sesión con Google</a>
     

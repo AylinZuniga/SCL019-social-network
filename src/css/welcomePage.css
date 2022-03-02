@@ -6,16 +6,13 @@ body{
     
 }
 
+
+
 .start-section {
     display:flex;
     flex-wrap: wrap;
 }
 
-.header-start{
-    font-size: 450%;
-    margin-right: 70%;
-    margin-left: 2%;
-}
 
 .img-dancing {
     margin-top: 15%;
@@ -60,6 +57,32 @@ body{
     font-style: normal;
     font-weight: 600;
     line-height: 137.19%;
+}
+
+h1{
+    font-size:190%;
+    color:white;
+    margin-left:5%;
+}
+
+.title-menu{
+    display:flex;
+    font-size: 380%;
+    flex-direction:row;
+    gap:35%;
+    margin: auto;
+    text-align: justify;
+     }
+
+     .menu-icon{
+    flex-direction: row;
+    width:14vw;
+    padding:2%;
+    margin:5% auto;
+}
+
+.menu-icon:hover {
+    color: antiquewhite;
 }
 /* #get-into:hover{
     width:87vw;
