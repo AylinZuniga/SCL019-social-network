@@ -77,16 +77,12 @@
         font-size:100%;
         margin-top:20%; 
     }
-  
-}
 
-
-/* Página de login */
-
- @media screen and (min-width:1200){
+    /* Login */
 
     .loginContainer{
         display: flex;
+        flex-wrap: nowrap;
         flex-direction: row;
         padding: 5%;
         gap: 2%;
@@ -108,16 +104,16 @@
         width:50%;     
     }
 
-
-} 
-
-
-/* Página de register
-
- @media screen and (min-width:1200){
-
-   
+    .form-section{
+        width: 50vw;
+    }
 
 
 
-} */
+
+
+
+  
+}
+
+
