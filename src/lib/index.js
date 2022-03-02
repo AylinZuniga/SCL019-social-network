@@ -6,6 +6,7 @@ import {
   createUserWithEmailAndPassword, 
   // signOut,
    signInWithEmailAndPassword,
+   sendEmailVerification,
   //  onAuthStateChanged,
    GoogleAuthProvider,
   //  getRedirectResult,
