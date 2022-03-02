@@ -13,7 +13,7 @@ export const login = () => {
   </header>
 
 
-    <div class= "">
+    <div class= "loginContainer">
 
     <section class= "img-section">
      <img class="img-skating" src="./imagenes/skating.png" />
@@ -38,6 +38,10 @@ export const login = () => {
   <p class="terms">¿No tienes una cuenta?</p>
   <a class="link-newAccount" href="#/register" id="checkUser">Regístrate</a>
   <hr class="lines" />
+</section>
+
+    
+      </form>
 
     </section>
     </div>
