@@ -6,8 +6,12 @@
         font-family: 'Bowlby One SC', cursive;
         font-size: 5vw;
         margin-left: 3%;
-        margin-top: 2%;
-        
+        margin-top: 2%;   
+    }
+
+    body{
+         background-image:url("../imagenes/macbook.png");
+         background-size: cover;
     }
 }
 
@@ -30,16 +34,25 @@
 
     .img-section{
         width: 100%;
+        margin-left: -10%;
+        margin-top: -5%;
 
     }
     
     .img-dancing {
         margin-top: 10%;
         width: 70%;
-        padding-left: 5%;
-        
-             
+        padding-left: 5%; 
+        width: 75%;     
     }
+
+    .paragraph{
+        color:rgba(255, 255, 255, 1);
+        width: 100%;
+        font-size:250%;
+    }
+
+    
     .welcome-section {
         margin-top: 10%;
         text-align: center;
@@ -48,7 +61,8 @@
         width: 50%;
         gap:10%; 
         font-size:100%;
-    
+        margin-right: 4%;
+        
     } 
 
     #get-into{
@@ -62,13 +76,14 @@
 }
 
 
-/* Página de login
+/* Página de login */
+
  @media screen and (min-width:1200){
 
     
 
 
-}  */
+} 
 
 
 /* Página de register
