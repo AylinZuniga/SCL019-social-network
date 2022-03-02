@@ -18,7 +18,7 @@ export const login = () => {
       // </nav> -->
     </header>
 
-    <div class= "">
+    <div class= "loginContainer">
 
     <section class= "img-section">
      <img class="img-skating" src="./imagenes/skating.png" />

@@ -80,7 +80,23 @@
 
  @media screen and (min-width:1200){
 
+    .loginContainer{
+        
+    }
+
+    .img-section{
+        width: 100%;
+        margin-left: -10%;
+        margin-top: -5%;
+
+    }
     
+    .img-skating {
+        margin-top: 10%;
+        width: 70%;
+        padding-left: 5%; 
+        width: 75%;     
+    }
 
 
 } 
