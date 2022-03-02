@@ -1,4 +1,43 @@
 
+/* /* .title{
+    font-family: 'Bowlby One SC', cursive;
+    font-size: 8vw;
+} */
+h1{
+    font-size:190%;
+    color:white;
+    margin-left:5%;
+}
+
+.title-menu{
+    display:flex;
+    font-size: 380%;
+    flex-direction:row;
+    gap:35%;
+    margin: auto;
+    text-align: justify;
+     }
+
+     .menu-icon{
+    flex-direction: row;
+    width:14vw;
+    padding:2%;
+    margin:5% auto;
+}
+
+.menu-icon:hover {
+    color: antiquewhite;
+}
+
+body{
+    background-image:url("../imagenes/Register.png");
+    display: flex;
+    height:100vh;
+    width:100vw;
+    /* overflow:hidden; */
+  
+ }
+
 .img-skating{
     width:100%;
     height: 50%;
@@ -25,29 +64,7 @@
    
 }
 
-.header{
-    display:flex;
-    position: top;
-    margin-top: 1%;
-    font-size:180%;
-    color:white;
-    margin-top: 5%;
-    font-size:350%;
-    flex-direction:row;
-    gap:30%;
-}
 
-h1{
-    font-size:180%;
-    color:white;
-    text-align: left;
-    display:flex;
-    margin-top: 5%;
-    font-size:350%;
-    flex-direction:row;
-    gap: 50%;
-
-}
 
 .login-user{
     display:flex;
@@ -148,5 +165,14 @@ font-size: 450%;
 } 
 .menu-icon{
 text-align: right;
+}
+
+.lines{ 
+    color: red;
+}
+
+.line{
+    font-size: 450%;
+    color: rgb(191, 184, 184);
 }
    

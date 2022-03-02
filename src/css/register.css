@@ -9,10 +9,16 @@
 
 
     h1{
+<<<<<<< HEAD
+        font-size:190%;
+        color:white;
+        margin-left:5%;
+=======
         font-size:180%;
         color:white;
         margin-left:7%;
         font-family: 'Bowlby One SC', cursive;
+>>>>>>> 32cbad3e6aa980de9c16abdee27644f92bed4523
         
     }
     .grid-bottom{
@@ -30,19 +36,28 @@
     }
     .title-menu{
         display:flex;
+<<<<<<< HEAD
+        font-size: 380%;
+=======
         margin-top: 0%;
         font-size:350%;
+>>>>>>> 32cbad3e6aa980de9c16abdee27644f92bed4523
         flex-direction:row;
-        gap:30%;
-        
-       
-    }
-    .menu-icon{
+        gap:35%;
+        margin: auto;
+        text-align: justify;
+         }
+    
+         .menu-icon{
         flex-direction: row;
-        width:9vw;
-        padding:1%;
+        width:14vw;
+        padding:2%;
+        margin:5% auto;
     }
   
+    .menu-icon:hover {
+        color: antiquewhite;
+    }
     .register-section{
         display:flex;
         align-items:center;
