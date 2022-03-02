@@ -6,45 +6,49 @@ export const login = () => {
   loginPage.id = 'login-page';
   const usserLoginPage = `
     
-<header class= "header-section">
-<h1 class="title">Together</h1>
-<img src="./imagenes/menuicon.png" class="menu-icon">
-<!-- // <nav>
-// <ul id="menu">
-//   <li><a href="">Inicio</a></li>
-//   <li><a href="">Perfil</a></li>
-//   <li><a href="">Contacto</a></li>
-// </ul>
-// </nav> -->
-</header>
+   <header class= "header-section">
+     <h1 class="title">Together</h1>
+      <img src="./imagenes/menuicon.png" class="menu-icon">
+      <!-- // <nav>
+      // <ul id="menu">
+      //   <li><a href="">Inicio</a></li>
+      //   <li><a href="">Perfil</a></li>
+      //   <li><a href="">Contacto</a></li>
+      // </ul>
+      // </nav> -->
+    </header>
 
-<section class= "img-section">
-<img class="img-skating" src="./imagenes/skating.png" />
-</section>
+    <div class= "">
+
+    <section class= "img-section">
+     <img class="img-skating" src="./imagenes/skating.png" />
+    </section>
 
     <section class= "form-section">
-  <form id="login">
-  <section class="login-user">
-  <input type="email" id="emailUser" class="login-input" placeholder="Ingresa tu correo" required >
-  <input type="password" id="passwordUser" class="login-input" placeholder="Ingresa tu contraseña" />
-  <button type="button" name="btn-login" class="button-login" id="accessButton">
-  Inicia Sesión</button>
-  <section class="login-google">
-  <p class="login-google">----- O -----</p>
-  <img class="img-google" src="./imagenes/google.png" />
-  <a id="googleButton" >Inicia sesión con Google</a>
+      <form id="login">
+      <section class="login-user">
+      <input type="email" id="emailUser" class="login-input" placeholder="Ingresa tu correo" required >
+      <input type="password" id="passwordUser" class="login-input" placeholder="Ingresa tu contraseña" />
+      <button type="button" name="btn-login" class="button-login" id="accessButton">
+      Inicia Sesión</button>
+      <section class="login-google">
+      <p class="login-google">----- O -----</p>
+      <img class="img-google" src="./imagenes/google.png" />
+      <a id="googleButton" >Inicia sesión con Google</a>
     
-  </button>
-  </section>
-  <section class="login-newAccount">
-  <hr class="lines" />
-  <p class="terms">¿No tienes una cuenta?</p>
-  <a class="link-newAccount" href="#/register" id="checkUser">Regístrate</a>
-  <hr class="lines" />
-</section>
-    
-    </form>
+      </button>
+      </section>
+      <section class="login-newAccount">
+      <hr class="lines" />
+      <p class="terms">¿No tienes una cuenta?</p>
+      <a class="link-newAccount" href="#/register" id="checkUser">Regístrate</a>
+      <hr class="lines" />
+      </section>
+      </form>
+
     </section>
+    </div>
+
     `;
 
     const printPage = document.getElementById('root');
