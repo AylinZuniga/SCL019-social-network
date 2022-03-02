@@ -5,7 +5,7 @@ export const start = () => {
   const welcomePage = `
   <header class="title-menu">
   <h1 class="title">Together</h1>
-  <a class="menu-icon" href="#/"> <img src="./imagenes/casa.png" class="menu-icon"></a>
+  
   </header>
 
  <div class="welcome">

@@ -13,6 +13,11 @@
          background-image:url("../imagenes/macbook.png");
          background-size: cover;
     }
+
+    .menu-icon{
+        width: 10%;
+        margin-top: -10%;
+    }
 }
 
 /* Página de bienvenida */
@@ -81,7 +86,10 @@
  @media screen and (min-width:1200){
 
     .loginContainer{
-        
+        display: flex;
+        flex-direction: row;
+        padding: 5%;
+        gap: 2%;
     }
 
     .img-section{
@@ -95,7 +103,7 @@
         margin-top: 10%;
         width: 70%;
         padding-left: 5%; 
-        width: 75%;     
+        width:50%;     
     }
 
 

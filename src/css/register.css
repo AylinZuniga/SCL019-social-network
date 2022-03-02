@@ -9,16 +9,10 @@
 
 
     h1{
-<<<<<<< HEAD
-        font-size:190%;
-        color:white;
-        margin-left:5%;
-=======
         font-size:180%;
         color:white;
         margin-left:7%;
         font-family: 'Bowlby One SC', cursive;
->>>>>>> 32cbad3e6aa980de9c16abdee27644f92bed4523
         
     }
     .grid-bottom{
@@ -36,12 +30,8 @@
     }
     .title-menu{
         display:flex;
-<<<<<<< HEAD
-        font-size: 380%;
-=======
         margin-top: 0%;
         font-size:350%;
->>>>>>> 32cbad3e6aa980de9c16abdee27644f92bed4523
         flex-direction:row;
         gap:35%;
         margin: auto;
