@@ -1,4 +1,4 @@
- import { signIn, checkGoogle } from '../lib/index.js';
+import { signIn, checkGoogle } from '../lib/index.js';
 
 export const login = () => {
   const loginPage = document.createElement('main');
@@ -31,7 +31,6 @@ export const login = () => {
   <div class="line"> <hr/>O<hr/> </div>
   <img class="img-google" src="./imagenes/google.png" />
   <a id="googleButton" >Inicia sesión con Google</a>
-    </button>
   </section>
   <section class="login-newAccount">
   <hr class="lines" />
@@ -48,30 +47,30 @@ export const login = () => {
 
     `;
 
-    const printPage = document.getElementById('root');
+  const printPage = document.getElementById('root');
   printPage.innerHTML = usserLoginPage;
 
   printPage.querySelector('#checkUser').addEventListener('click', () => {
-      window.location.hash = '#/register';
+    window.location.hash = '#/register';
+  });
+
+
+  // Evento para Ingresar
+  printPage
+    .querySelector('#accessButton')
+    .addEventListener('click', () => {
+      const emailRegister = document.querySelector('#emailUser').value;
+      const passwordRegister = document.querySelector('#passwordUser').value;
+      signIn(emailRegister, passwordRegister);
     });
-    
 
-// Evento para Ingresar
-printPage
-.querySelector('#accessButton')
-.addEventListener('click', () => {
-  const emailRegister = document.querySelector('#emailUser').value;
-  const passwordRegister = document.querySelector('#passwordUser').value;
- signIn(emailRegister, passwordRegister);
-});
-
- // Evento para ingresar con Google
- printPage
- .querySelector('#googleButton')
- .addEventListener('click', () => {
-  checkGoogle();
-    //window.location.hash = "#/wall";
- });
+  // Evento para ingresar con Google
+  printPage
+    .querySelector('#googleButton')
+    .addEventListener('click', () => {
+      checkGoogle();
+      //window.location.hash = "#/wall";
+    });
 
 
   return printPage;

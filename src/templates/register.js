@@ -11,7 +11,6 @@ export const register = () => {
   <a href="#/"> <img src="./imagenes/casa.png" class="menu-icon"></a>
   </header>
   
-  </div>
   <section class="register-section">
   <img src="./imagenes/hanging.png"class="img-hanging">
   <div class="white-section">
