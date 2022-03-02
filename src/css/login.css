@@ -11,9 +11,9 @@ h1{
 
 .title-menu{
     display:flex;
-    font-size: 380%;
+    font-size: 320%;
     flex-direction:row;
-    gap:35%;
+    gap:10%;
     margin: auto;
     text-align: justify;
      }
@@ -22,7 +22,7 @@ h1{
     flex-direction: row;
     width:14vw;
     padding:2%;
-    margin:5% auto;
+    margin-right:5% auto;
 }
 
 .menu-icon:hover {
