@@ -21,23 +21,26 @@ export const login = () => {
 
     <section class= "form-section">
 
-  <form id="login">
-  <section class="login-user">
-  <input type="email" id="emailUser" class="login-input" placeholder="Ingresa tu correo" required >
-  <input type="password" id="passwordUser" class="login-input" placeholder="Ingresa tu contraseña" />
-  <button type="button" name="btn-login" class="button-login" id="accessButton">
-  Inicia Sesión</button>
-  <section class="login-google">
-  <div class="line"> <hr/>O<hr/> </div>
-  <img class="img-google" src="./imagenes/google.png" />
-  <a id="googleButton" >Inicia sesión con Google</a>
-  </section>
-  <section class="login-newAccount">
-  <hr class="lines" />
-  <p class="terms">¿No tienes una cuenta?</p>
-  <a class="link-newAccount" href="#/register" id="checkUser">Regístrate</a>
-  <hr class="lines" />
-</section>
+     <form id="login">
+       <section class="login-user">
+       <input type="email" id="emailUser" class="login-input" placeholder="Ingresa tu correo" required >
+       <input type="password" id="passwordUser" class="login-input" placeholder="Ingresa tu contraseña" />
+       <button type="button" name="btn-login" class="button-login" id="accessButton">
+       Inicia Sesión</button>
+       <section class="login-google">
+       <div class="line"> <hr/>O<hr/> </div>
+       <img class="img-google" src="./imagenes/google.png" />
+       <a id="googleButton" >Inicia sesión con Google</a>
+    
+     </button>
+    </section>
+
+    <section class="login-newAccount">
+     <hr class="lines" />
+     <p class="terms">¿No tienes una cuenta?</p>
+     <a class="link-newAccount" href="#/register" id="checkUser">Regístrate</a>
+     <hr class="lines" />
+    </section>
 
     
       </form>
