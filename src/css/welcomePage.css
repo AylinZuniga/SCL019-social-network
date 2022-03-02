@@ -17,8 +17,6 @@ body{
 .img-dancing {
     margin-top: 15%;
     width:100%;  
-    border: 2px solid red; 
-
 }
 
 .welcome{
@@ -34,13 +32,12 @@ body{
     align-items: center;
     font-size:230%;
     font-family: 'Abril Fatface', cursive;
-    border: 2px solid  blue; 
+    
 }
 
 .paragraph{
     color:rgba(255, 255, 255, 1);
 }
-
 #get-into{
     align-items: center;
     justify-content: center;
@@ -54,6 +51,7 @@ body{
     color:rgba(255, 255, 255, 1);
     transform:scale(1);
     font-family: Poppins;
+    font-style: normal;
     font-style: normal;
     font-weight: 600;
     line-height: 137.19%;
@@ -95,4 +93,3 @@ h1{
     transition:transform .5s;
    
 } */
-
