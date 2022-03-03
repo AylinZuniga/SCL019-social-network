@@ -108,6 +108,75 @@
         width: 50vw;
     }
 
+    /* register */
+.title-register{
+    gap:65%;
+}
+.register-section{
+    display:flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    grid:6%;
+}
+.img-hanging{
+    width: 40vw;
+    margin-bottom:50%;
+    margin-top:5%;
+    margin-left:10%;
+    
+
+}
+.white-section{
+    position:relative;
+    margin-top:5%;
+    margin-left:10%;
+    width:50vw;
+    height:70vh;
+    justify-content:baseline;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    border-radius: 80px;
+    margin-bottom: 60%;
+    border:none;
+    padding:2%;
+    padding-right:7%;
+
+  
+
+}
+.registerInput{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 35vw;
+    height: 7vh;
+    border-radius: 70px;
+    margin-top: 5%;
+    font-size:300%;
+    text-align: left;
+
+} 
+.buttonRegister{
+    width: 35vw;
+    height: 8vh;
+    border: none;
+    margin-top:5%;
+    font-size:400%;
+    transform: scale(1);
+    margin-left:7%;
+}
+.buttonRegister:hover{
+    width: 87vw;
+    height: 7vh;
+}
+.menu-register{
+    width:3vw;
+    margin-left:98%;
+
+}
+
+
 
 
 
