@@ -8,8 +8,15 @@ export const login = () => {
     
 
   <header class="title-menu">
-  <h1 class="title">Together</h1>
-  <a href="#/"> <img src="./imagenes/casa.png" class="menu-icon"></a>
+
+  <div class="titleContainer">
+   <h1 class="title">Together</h1>
+  </div>
+
+  <div class="homeContainer">
+   <a href="#/"> <img src="./imagenes/casa.png" class="menu-icon"></a>
+  </div>
+
   </header>
 
 
@@ -35,7 +42,8 @@ export const login = () => {
        <section class="login-google">
          <div class="line"> <hr/>O<hr/> </div>
          <img class="img-google" src="./imagenes/google.png" />
-         <a id="googleButton" >Inicia sesión con Google</a>
+
+         <a id="googleButton" class="googleButton" >Inicia sesión con Google</a>
        </section>
 
        <section class="login-newAccount">

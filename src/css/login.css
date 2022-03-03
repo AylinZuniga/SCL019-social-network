@@ -11,14 +11,15 @@ h1{
 
 .title-menu{
     display:flex;
-    font-size: 380%;
+    width: 100%;
     flex-direction:row;
     gap:35%;
     margin: auto;
     text-align: justify;
-     }
+}
 
-     .menu-icon{
+
+.menu-icon{
     flex-direction: row;
     width:14vw;
     padding:2%;
@@ -57,8 +58,7 @@ body{
 }
 
 .img-google{
-    width: 5%;
-    height: 1%;
+    width: 5%;  
 }
 
 
@@ -155,12 +155,12 @@ body{
 
 .img-google{
     width: 5vw;
-    height: 4vh;
 } 
 
  .terms{
     margin-top: 3%;
     font-size: 450%;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
 }
 
 .link-newAccount{
@@ -168,8 +168,14 @@ font-size: 450%;
 }
 
 .login-google {
-    margin-top: 6%;
+    margin-top: 3%;
 } 
+
+.homeContainer{
+margin-top: -3%;
+}
+
+
 .menu-icon{
 text-align: right;
 }
