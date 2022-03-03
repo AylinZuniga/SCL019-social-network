@@ -220,18 +220,18 @@
     /* register */
 .title-register{
     gap:65%;
-    margin-left: -5%;
+    margin-left: 3%;
 }
 .register-section{
     display:flex;
     flex-wrap: nowrap;
     flex-direction: row;
     grid:6%;
-    margin-top:-10%;
+    margin-top:-15%;
 
 }
 .img-hanging{
-    width: 75%;
+    width: 70%;
     margin-top:5%;
     padding-left:5%;
     margin-bottom: 70%;
@@ -240,12 +240,12 @@
 }
 .white-section{
     position:relative;
-    margin-top:2%;
-    margin-left:10%;
+    margin-top:10%;
+    margin-left:5%;
     margin-right: 5%;
     margin-bottom: 60%;
     width:55%;
-    height:40vw;
+    height:35vw;
     justify-content:baseline;
     justify-content: center;
     text-align: center;
@@ -253,7 +253,7 @@
     align-items: center;
     border-radius: 40px;
     border:none;
-    padding-top:5%;
+    padding-top:2%;
 
 
 
@@ -265,11 +265,12 @@
     width: 80%;
     height: 8vh;
     justify-content: center;
-    margin-top: 5%;
+    margin-top: 3%;
     font-size:80%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-left:11%;
     border-radius: 18px; 
+    gap:20%;
 } 
 .buttonRegister{
     width: 81%;
@@ -287,10 +288,26 @@
 }
 
 .grid-bottom{
-    font-size:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    gap:5%;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    font-size:90%
 }
 #linkLogin{
-    font-size: small;
+    font-size: 90%;
+    margin-top:3%;
+    color:#6482F4;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+}
+.menu-register{
+    width:30%;
+    margin-bottom: 100%;
+    margin-left:30%;
+    
 }
   
 }
