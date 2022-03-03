@@ -8,12 +8,17 @@ export const register = () => {
  
   <header class="title-register">
     <h1 class="title">Together</h1>
-    <a href="#/"> <img src="./imagenes/casa.png" class="menu-register"></a>
+    
+    <div class="homeContainer">
+     <a href="#/"> <img src="./imagenes/casa.png" class="menu-icon"></a>
+    </div>
+    
   </header>
 
   <section class="register-section">
+   <section class= "img-section"> <img src="./imagenes/hanging.png"class="img-hanging"></section>
 
-   <img src="./imagenes/hanging.png"class="img-hanging">
+  
 
     <div class="white-section">
     
