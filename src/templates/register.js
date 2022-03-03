@@ -6,12 +6,11 @@ export const register = () => {
   registerPage.id = 'registerPage';
   const registerView = `
  
-  <header class="title-menu">
+  <header class="title-register">
     <h1 class="title">Together</h1>
-    <a href="#/"> <img src="./imagenes/casa.png" class="menu-icon"></a>
+    <a href="#/"> <img src="./imagenes/casa.png" class="menu-register"></a>
   </header>
-  
-  <section class="register-section">
+  <section class="register-section">s
 
    <img src="./imagenes/hanging.png"class="img-hanging">
 
