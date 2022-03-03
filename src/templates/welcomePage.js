@@ -3,8 +3,13 @@ export const start = () => {
   startPage.className = 'start-section';
   startPage.id = 'start-section';
   const welcomePage = `
+
+
   <header class="title-menu">
-  <h1 class="title">Together</h1>
+  
+ <div class="titleContainer">
+   <h1 class="title">Together</h1>
+  </div>
   
   </header>
 

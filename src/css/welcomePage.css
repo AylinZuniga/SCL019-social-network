@@ -70,9 +70,9 @@ h1{
     gap:35%;
     margin: auto;
     text-align: justify;
-     }
+}
 
-     .menu-icon{
+.menu-icon{
     flex-direction: row;
     width:14vw;
     padding:2%;
