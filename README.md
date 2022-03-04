@@ -5,11 +5,7 @@
 * [1. Presentación](#1-presentación)
 * [2. Primeros pasos](#2-primeros-pasos)
 * [3. Desarrollo del proyecto](#3-Desarrollo del proyecto)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Hacker edition](#6-hacker-edition)
-* [7. Entrega](#7-entrega)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
+
 
 ## 1. Presentación - Bienvenid@ a Together! -
 
@@ -27,8 +23,8 @@ redes sociales, nace Together.
 
 Para comenzar a darle forma y enfoque al proyecto, generamos una encuesta que compartimos con la mayor cantidad de personas posibles y tratando de abarcar las más diversas realidades y contextos. A continuación se presentan las preguntas y respuestas obtenidas del formulario.
 
-![imagen](src/imagenes/Imagenes readme/formulario(1).jpeg)
-![imagen](src/imagenes/Imagenes readme/formulario(2).jpeg)
+![imagen](src/Imagenes/formulario(1).png)
+![imagen](src/imagenes/formulario(2).jpeg)
 ![imagen](src/imagenes/Imagenes readme/formulario(3).jpeg)
 ![imagen](src/imagenes/Imagenes readme/formulario(4).jpeg)
 
@@ -47,15 +43,15 @@ Ese es el problema que intenta resolver Together, se aspira que sea una red soci
 
 ## 3. Desarrollo del proyecto
  
- 3.1 Primera historia de usuario
+### 3.1 Primera historia de usuario
 
 ![imagen](src/Imagenes readme/)
 ![imagen](src/imagenes/Imagenes readme/Criterios de aceptación -1a HU.jpeg)
 ![imagen](src/imagenes/Imagenes readme/Definición de terminado-1a HU.jpeg)
 
-3.1.1 Prototipo baja fidelidad
+### 3.1.1 Prototipo baja fidelidad
 
-3.1.2 Prototipo alta fidelidad
+### 3.1.2 Prototipo alta fidelidad
 
 ![imagen](src/imagenes/Imagenes readme/P.A. Inicio.jpeg)
 ![imagen](src/imagenes/Imagenes readme/P.A. Ingreso.jpeg)
