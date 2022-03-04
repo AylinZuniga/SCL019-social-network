@@ -26,10 +26,8 @@ redes sociales, nace Together.
 
 Para comenzar a darle forma y enfoque al proyecto, generamos una encuesta que compartimos con la mayor cantidad de personas posibles y tratando de abarcar las más diversas realidades y contextos. A continuación se presentan las preguntas y respuestas obtenidas del formulario.
 
-![imagen](src/imagenes/formulario(1).png)
-![imagen](src/imagenes/formulario(2).png)
-![imagen](src/imagenes/formulario(3).png)
-![imagen](src/imagenes/formulario(4).png)
+![imagen](src/imagenes/formulario(1).png)![imagen](src/imagenes/formulario(2).png)
+![imagen](src/imagenes/formulario(3).png)![imagen](src/imagenes/formulario(4).png)
 
 A partir de lo expuesto anteriormente, definimos:
 
@@ -48,15 +46,13 @@ Ese es el problema que intenta resolver Together, se aspira que sea una red soci
  
 ### 3.1 Primera historia de usuario
 
-![imagen](src/Imagenes/1a H.U..png)
-![imagen](src/imagenes/Criterios aceptación-1a Hu.png)
-![imagen](src/imagenes/Definición de terminado-1a HU.png)
+![imagen](src/Imagenes/1a H.U..png) ![imagen](src/imagenes/Criterios aceptación-1a Hu.png)![imagen](src/imagenes/Definición de terminado-1a HU.png)
 
 ### 3.1.1 Prototipo baja fidelidad
 
 ### 3.1.2 Prototipo alta fidelidad
 
-![imagen](src/imagenes/P.A. Inicio.png
+![imagen](src/imagenes/P.A. Inicio.png)
 ![imagen](src/imagenes/P.A. Ingreso.png)
 ![imagen](src/imagenes/P.A. Registro.png)
 
