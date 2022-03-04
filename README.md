@@ -4,7 +4,10 @@
 
 * [1. Presentación](#1-presentación)
 * [2. Primeros pasos](#2-primeros-pasos)
-* [3. Desarrollo del proyecto](#3-Desarrollo del proyecto)
+* [3. Desarrollo del proyecto](#3-primeros-pasos)
+* [3.1 Primera historia de usuario](###-3.1-Primera-historia-de-usuario)
+* [3.1.1 Prototipo baja fidelidad](###-3.1.2-Prototipo-baja-fidelidad)
+* [3.1.2 Prototipo alta fidelidad](###-3.1.2-Prototipo-alta-fidelidad)
 
 
 ## 1. Presentación - Bienvenid@ a Together! -
@@ -24,9 +27,9 @@ redes sociales, nace Together.
 Para comenzar a darle forma y enfoque al proyecto, generamos una encuesta que compartimos con la mayor cantidad de personas posibles y tratando de abarcar las más diversas realidades y contextos. A continuación se presentan las preguntas y respuestas obtenidas del formulario.
 
 ![imagen](src/Imagenes/formulario(1).png)
-![imagen](src/imagenes/formulario(2).jpeg)
-![imagen](src/imagenes/Imagenes readme/formulario(3).jpeg)
-![imagen](src/imagenes/Imagenes readme/formulario(4).jpeg)
+![imagen](src/imagenes/formulario(2).png)
+![imagen](src/imagenes/formulario(3).png)
+![imagen](src/imagenes/formulario(4).png)
 
 A partir de lo expuesto anteriormente, definimos:
 
@@ -45,20 +48,20 @@ Ese es el problema que intenta resolver Together, se aspira que sea una red soci
  
 ### 3.1 Primera historia de usuario
 
-![imagen](src/Imagenes readme/)
-![imagen](src/imagenes/Imagenes readme/Criterios de aceptación -1a HU.jpeg)
-![imagen](src/imagenes/Imagenes readme/Definición de terminado-1a HU.jpeg)
+![imagen](src/Imagenes/1a H.U..png)
+![imagen](src/imagenes/Criterios aceptación-1a Hu.png)
+![imagen](src/imagenes/Definición de terminado-1a HU.png)
 
 ### 3.1.1 Prototipo baja fidelidad
 
 ### 3.1.2 Prototipo alta fidelidad
 
-![imagen](src/imagenes/Imagenes readme/P.A. Inicio.jpeg)
-![imagen](src/imagenes/Imagenes readme/P.A. Ingreso.jpeg)
-![imagen](src/imagenes/Imagenes readme/P.A. Registro.jpeg)
+![imagen](src/imagenes/P.A. Inicio.png
+![imagen](src/imagenes/P.A. Ingreso.png)
+![imagen](src/imagenes/P.A. Registro.png)
 
-![imagen](src/imagenes/Imagenes readme/P.A. (1).jpeg)
-![imagen](src/imagenes/Imagenes readme/P.A. (2).jpeg)
+![imagen](src/imagenes/P.A (1).png)
+![imagen](src/imagenes/P.A (2).png)
 
 
 
