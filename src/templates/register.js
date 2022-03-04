@@ -7,13 +7,21 @@ export const register = () => {
   const registerView = `
  
   <header class="title-register">
-    <h1 class="title">Together</h1>
-    <a href="#/"> <img src="./imagenes/casa.png" class="menu-register"></a>
+  <div class="titleContainer">
+  <h1 class="title">Together</h1>
+ </div>
+
+    
+
+     <a href="#/"> <img src="./imagenes/casa.png" class="menu-register"></a>
+  
+
   </header>
 
   <section class="register-section">
+   <section class= "img-section"> <img src="./imagenes/hanging.png"class="img-hanging"></section>
 
-   <img src="./imagenes/hanging.png"class="img-hanging">
+  
 
     <div class="white-section">
     

@@ -12,12 +12,20 @@
         font-size:180%;
         color:white;
         margin-left:7%;
+        margin-top: 10%;
         font-family: 'Bowlby One SC', cursive;
         
+    }
+    .menu-register{
+        width:10vw;
+        margin-top:20%;
+        margin-left:98%;
+    
     }
     .grid-bottom{
         margin:5%;
         flex-direction: row;
+        font-size: 80%;
        
     }
     p{
@@ -36,9 +44,9 @@
         gap:35%;
         margin: auto;
         text-align: justify;
-         }
+    }
     
-         .menu-icon{
+     .menu-icon{
         flex-direction: row;
         width:14vw;
         padding:2%;
@@ -66,7 +74,7 @@
         text-align:center;
         align-items: center;
         margin-bottom:10px;
-        margin-top:10%;
+        margin-top:11%;
         
     
        
