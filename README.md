@@ -46,18 +46,18 @@ Ese es el problema que intenta resolver Together, se aspira que sea una red soci
  
 ## 3.1 Primera historia de usuario
 
-![imagen](src/Imagenes/1a H.U..png) ![imagen](src/imagenes/Criterios aceptación-1a Hu.png)![imagen](src/imagenes/Definición de terminado-1a HU.png)
+![imagen](src/Imagenes/historia(1).png) ![imagen](src/imagenes/criterios-aceptacion-h1.png)![imagen](src/imagenes/definicion-terminado-h1.png)
 
 ## 3.1.1 Prototipo baja fidelidad
 
 ## 3.1.2 Prototipo alta fidelidad
 
 ![imagen](src/imagenes/together(inicio).png)
-![imagen](src/imagenes/P.A. Ingreso.png)
-![imagen](src/imagenes/P.A. Registro.png)
+![imagen](src/imagenes/together(ingreso).png)
+![imagen](src/imagenes/together(registro).png)
 
-![imagen](src/imagenes/P.A (1).png)
-![imagen](src/imagenes/P.A (2).png)
+![imagen](src/imagenes/together(mack1).png)
+![imagen](src/imagenes/together(2).png)
 
 
 
