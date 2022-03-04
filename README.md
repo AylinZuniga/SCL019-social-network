@@ -26,7 +26,7 @@ redes sociales, nace Together.
 
 Para comenzar a darle forma y enfoque al proyecto, generamos una encuesta que compartimos con la mayor cantidad de personas posibles y tratando de abarcar las más diversas realidades y contextos. A continuación se presentan las preguntas y respuestas obtenidas del formulario.
 
-![imagen](src/Imagenes/formulario(1).png)
+![imagen](src/imagenes/formulario(1).png)
 ![imagen](src/imagenes/formulario(2).png)
 ![imagen](src/imagenes/formulario(3).png)
 ![imagen](src/imagenes/formulario(4).png)
