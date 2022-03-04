@@ -52,7 +52,7 @@ Ese es el problema que intenta resolver Together, se aspira que sea una red soci
 
 ## 3.1.2 Prototipo alta fidelidad
 
-![imagen](src/imagenes/together(inicio).png
+![imagen](src/imagenes/together(inicio).png)
 ![imagen](src/imagenes/P.A. Ingreso.png)
 ![imagen](src/imagenes/P.A. Registro.png)
 
