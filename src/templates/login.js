@@ -14,7 +14,7 @@ export const login = () => {
   </div>
 
   <div class="homeContainer">
-   <a href="#/"> <img src="./imagenes/casa.png" class="menu-icon"></a>
+   <a class="iconContainer" href="#/"> <img src="./imagenes/casa.png" class="menu-icon"></a>
   </div>
 
   </header>
