@@ -4,7 +4,7 @@
 
 * [1. Presentación](#1-presentación)
 * [2. Primeros pasos](#2-primeros-pasos)
-* [3. Desarrollo del proyecto](#3-primeros-pasos)
+* [3. Desarrollo del proyecto](#3-Desarrollo-del-proyecto)
 * [3.1 Primera historia de usuario](###-3.1-Primera-historia-de-usuario)
 * [3.1.1 Prototipo baja fidelidad](###-3.1.2-Prototipo-baja-fidelidad)
 * [3.1.2 Prototipo alta fidelidad](###-3.1.2-Prototipo-alta-fidelidad)
@@ -44,15 +44,15 @@ Ese es el problema que intenta resolver Together, se aspira que sea una red soci
 
 ## 3. Desarrollo del proyecto
  
-### 3.1 Primera historia de usuario
+## 3.1 Primera historia de usuario
 
 ![imagen](src/Imagenes/1a H.U..png) ![imagen](src/imagenes/Criterios aceptación-1a Hu.png)![imagen](src/imagenes/Definición de terminado-1a HU.png)
 
-### 3.1.1 Prototipo baja fidelidad
+## 3.1.1 Prototipo baja fidelidad
 
-### 3.1.2 Prototipo alta fidelidad
+## 3.1.2 Prototipo alta fidelidad
 
-![imagen](src/imagenes/P.A. Inicio.png)
+![imagen](src/imagenes/P.A. Inicio.png)s
 ![imagen](src/imagenes/P.A. Ingreso.png)
 ![imagen](src/imagenes/P.A. Registro.png)
 
