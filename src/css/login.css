@@ -13,7 +13,7 @@ h1{
     display:flex;
     width: 100%;
     flex-direction:row;
-    gap:35%;
+    gap:10%;
     margin: auto;
     text-align: justify;
 }
@@ -23,7 +23,7 @@ h1{
     flex-direction: row;
     width:10vw;
     padding:2%;
-    margin:5% auto;
+    margin-right:5% auto;
 }
 
 

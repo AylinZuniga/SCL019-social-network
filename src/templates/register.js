@@ -18,8 +18,10 @@ export const register = () => {
 
   </header>
 
+
   <section class="register-section">
    <section class= "img-section"> <img src="./imagenes/hanging.png"class="img-hanging"></section>
+
 
   
 
