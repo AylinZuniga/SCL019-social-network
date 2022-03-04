@@ -49,7 +49,7 @@ Ese es el problema que intenta resolver Together, se aspira que sea una red soci
  
  3.1 Primera historia de usuario
 
-![imagen](src/imagenes/Imagenes readme/)
+![imagen](src/Imagenes readme/)
 ![imagen](src/imagenes/Imagenes readme/Criterios de aceptación -1a HU.jpeg)
 ![imagen](src/imagenes/Imagenes readme/Definición de terminado-1a HU.jpeg)
 
