@@ -46,7 +46,7 @@ Ese es el problema que intenta resolver Together, se aspira que sea una red soci
  
 ## 3.1 Primera historia de usuario
 
-![imagen](src/Imagenes/primera-historia.png) ![imagen](src/imagenes/criterios-aceptacion-h1.png)![imagen](src/imagenes/definicion-terminado-h1.png)
+![imagen](src/imagenes/primera-historia-de-usuario.png)
 
 ## 3.1.1 Prototipo baja fidelidad
 
