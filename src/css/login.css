@@ -21,7 +21,7 @@ h1{
 
 .menu-icon{
     flex-direction: row;
-    width:10vw;
+    width:9vw;
     padding:2%;
     margin-right:5% auto;
 }
@@ -48,12 +48,12 @@ body{
 }
 
 .img-skating{
-    width:100%;
+    width:70%;
     justify-content: center;
     text-align:center;
     align-items: center;
     margin-bottom:0;
-    margin: top 0%;
+    margin-top:6%;
     
 }
 
@@ -69,6 +69,11 @@ body{
    grid-template-columns: 20% 20% 20% 20%;
    align-content: space-around;    
    
+}
+
+.login-newAccount{
+    display:flex;
+    flex-direction:row;
 }
 
 
@@ -95,23 +100,25 @@ body{
  
 }
 .button-login{
-    width: 95vw;
+    width: 80vw;
     height: 8vh;
     border: none;
     border-radius: 89px;
     background-color:rgba(100, 130, 244, 1);
     margin-top:5%;
-    font-size:450%;
+    font-size:130%;
     color: rgba(255, 255, 255, 1);
 }
 
 .form-section {
     background-color: rgba(255, 255, 255, 1);
     width: 100vw;
-    height: 100vh;
-    border-radius: 90px;
+    height: 60vh;
+    border-top-right-radius: 40px;
+    border-top-left-radius:40px;
     border:none;
-    padding-top:2%;
+    margin-top:2%;
+    padding-top:5%;
     justify-content:baseline;
     
  
@@ -121,7 +128,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 95vw;
+    width: 80vw;
     height: 8vh;
     border: none;
     border-radius: 70px;
@@ -130,7 +137,7 @@ body{
     /* margin: 10px; */
     /*margin-left: 7%;*/
      margin-top: 5%;
-    font-size:350%;
+    font-size:100%;
     text-align:left;
     padding-left: 3%;
 
@@ -149,8 +156,7 @@ body{
     background-color:rgba(255, 255, 255, 1);
     font-size:120%;
     text-decoration-color: rgba(210, 219, 252, 1);
-    margin-bottom: 6%;
-    margin-top: 6%;
+    margin-top: -10%;
 }
 
 .img-google{
@@ -159,33 +165,29 @@ body{
 
  .terms{
     margin-top: 3%;
-    font-size: 450%;
+    font-size: 100%;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
 }
 
 .link-newAccount{
-font-size: 450%;
+ font-size: 100%;
+ 
 }
 
 .login-google {
-    margin-top: 3%;
+  margin-top: 3%;
 } 
 
-.homeContainer{
-margin-top: -3%;
-}
+/* .homeContainer{
+  
+} */
 
 
 .menu-icon{
-text-align: right;
+ text-align: right;
 }
 
-.lines{ 
-    color: red;
-}
 
-.line{
-    font-size: 450%;
-    color: rgb(191, 184, 184);
-}
+
+
    
