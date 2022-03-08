@@ -112,6 +112,7 @@
         margin-top: 2%;
     }
 
+
     .img-section{
         width: 100%;
         margin-left: -10%;
@@ -131,6 +132,7 @@
         height: 30vw;
         border-radius: 40px;
         padding-top: 1%;
+  
     }
 
    
@@ -240,7 +242,7 @@
 }
 .white-section{
     position:relative;
-    margin-top:10%;
+    margin-top:20%;
     margin-left:5%;
     margin-right: 5%;
     margin-bottom: 60%;
@@ -305,7 +307,8 @@
 }
 .menu-register{
     width:30%;
-    margin-bottom: 100%;
+    margin-top:20%;
+    margin-bottom: 90%;
     margin-left:30%;
     
 }
