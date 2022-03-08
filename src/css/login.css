@@ -178,23 +178,16 @@ body{
   margin-top: 3%;
 } 
 
-.homeContainer{
-  margin-top: -35%;
-}
+/* .homeContainer{
+  
+} */
 
 
 .menu-icon{
  text-align: right;
 }
 
-.lines{ 
- color: red;
- display:none;
-}
 
-.line{
-    font-size: 450%;
-    color: rgb(191, 184, 184);
-    display:none;
-}
+
+
    
