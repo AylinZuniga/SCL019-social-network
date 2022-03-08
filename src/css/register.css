@@ -33,7 +33,7 @@
         color:black;
     }
     a{
-        font-size:350%;
+        font-size:120%;
         color: rgba(80, 194, 201, 1);  
     }
     .title-register{
@@ -103,8 +103,8 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        width: 12vw;
-        height: 7vh;
+        width: 72vw;
+        height: 6vh;
         border: none;
         border-radius: 70px;
         background-color:rgba(210, 219, 252, 1);
