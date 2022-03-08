@@ -16,12 +16,13 @@ h1{
     gap:10%;
     margin: auto;
     text-align: justify;
+    height: 10%;
 }
 
 
 .menu-icon{
     flex-direction: row;
-    width:9vw;
+    width:11vw;
     padding:2%;
     margin-right:5% auto;
 }
@@ -120,7 +121,7 @@ body{
     border-top-right-radius: 40px;
     border-top-left-radius:40px;
     border:none;
-    margin-top:2%;
+    margin-top:1%;
     padding-top:5%;
     justify-content:baseline;
     
@@ -176,7 +177,8 @@ body{
  font-size: 100%;
  padding-top:3%;
  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
- color:rgba(100, 130, 244, 1);
+ color:#6482F4
+
  
 }
 

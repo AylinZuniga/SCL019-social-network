@@ -12,22 +12,28 @@
         font-size:180%;
         color:white;
         margin-left:7%;
-        margin-top: 10%;
+        margin-top: 20%;
         font-family: 'Bowlby One SC', cursive;
         
     }
     .menu-register{
-        width:9vw;
-        margin-top:20%;
-        margin-left:98%;
+        width:11vw;
+        margin-top:-10%;
+        margin-left:96%;
     
     }
     .grid-bottom{
-        margin:5%;
+        display:flex;
+        margin:4%;
         flex-direction: row;
-        font-size: 80%;
-       
+        font-size: 100%;
+        justify-content: center;
+        gap:3%;
     }
+    .link-login{
+        padding-top:2%;
+    }
+   
     p{
         font-size:60%;
         color:black;
@@ -42,6 +48,7 @@
     .title-register{
         display:flex;
         margin-top: 0%;
+        height:10%;
         font-size:350%;
         flex-direction:row;
         gap:35%;
@@ -51,7 +58,6 @@
     
      .menu-icon{
         flex-direction: row;
-        width:14vw;
         padding:2%;
         margin:5% auto;
     }
@@ -66,8 +72,8 @@
         text-align: center;
         flex-direction: column;
         flex-wrap: wrap;
-        margin-bottom: 10%;
-        margin-top:10px;
+        gap:3%;
+       
     
     
     }
@@ -77,7 +83,7 @@
         text-align:center;
         align-items: center;
         margin-bottom:10px;
-        margin-top:11%;
+        margin-top:8%;
         
     
        
@@ -85,19 +91,18 @@
     .white-section{
         position:relative;
         background-color:rgba(255, 255, 255, 1);
-        margin-top:10%;
+        margin-top:5%;
         margin-left:0%;
         width:101vw;
-        height:100vh;
+        height:70vh;
         justify-content:baseline;
         text-align: center;
         align-content: center;
         align-items: center;
-        border-radius: 90px;
-        /* padding-bottom: 30px; */
-        margin-bottom: 50%;
+        border-top-right-radius: 40px;
+        border-top-left-radius: 40px;
         border:none;
-        padding-top:10%;
+        padding-top:5%;
       
     
     }
@@ -106,16 +111,16 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        width: 72vw;
-        height: 6vh;
+        width: 80vw;
+        height: 8vh;
         border: none;
         border-radius: 70px;
         background-color:rgba(210, 219, 252, 1);
         justify-content: center;
         text-align: center;
-        margin-left: 7%;
-        margin-top: 5%;
-        font-size:350%;
+        margin-left: 10%;
+        margin-top: 4%;
+        font-size:100%;
         text-align: left;
         
     
@@ -128,13 +133,13 @@
     }
     
     .buttonRegister{
-        width: 89vw;
+        width: 80vw;
         height: 8vh;
         border: none;
         border-radius: 89px;
         background-color:rgba(100, 130, 244, 1);
-        margin-top:5%;
-        font-size:450%;
+        margin-top:3%;
+        font-size:130%;
         color: rgba(255, 255, 255, 1);
         transform: scale(1);
     }
