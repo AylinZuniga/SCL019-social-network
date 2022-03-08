@@ -20,7 +20,7 @@ export const start = () => {
 </section>
 
  <section class= "welcome-section">
- <p class="paragraph">Conoce amigos y gente nueva para salir</p>
+ <p class="paragraph">Conoce amigos y gente nueva <br> para salir</p>
  <button name="button" id= "get-into" value ="ingresar">Comencemos!</button> 
  </section>
 
