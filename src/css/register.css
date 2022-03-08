@@ -17,7 +17,7 @@
         
     }
     .menu-register{
-        width:10vw;
+        width:9vw;
         margin-top:20%;
         margin-left:98%;
     
@@ -103,7 +103,7 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        width: 87vw;
+        width: 12vw;
         height: 7vh;
         border: none;
         border-radius: 70px;

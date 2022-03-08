@@ -40,17 +40,17 @@ export const login = () => {
        </section>
        
        <section class="login-google">
-         <div class="line"> <hr/>O<hr/> </div>
+        
          <img class="img-google" src="./imagenes/google.png" />
 
          <a id="googleButton" class="googleButton" >Inicia sesión con Google</a>
        </section>
 
        <section class="login-newAccount">
-          <hr class="lines" />
+          
           <p class="terms">¿No tienes una cuenta?</p>
           <a class="link-newAccount" href="#/register" id="checkUser">Regístrate</a>
-          <hr class="lines" />
+         
        </section>
 
     
