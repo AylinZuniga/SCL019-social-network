@@ -4,13 +4,11 @@ import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-
 import {
   getAuth,
   createUserWithEmailAndPassword, 
-  // signOut,
+   signOut,
    signInWithEmailAndPassword,
    sendEmailVerification,
   //  onAuthStateChanged,
    GoogleAuthProvider,
-  //  getRedirectResult,
-  // signInWithRedirect,
   signInWithPopup
 }
 
@@ -123,19 +121,19 @@ window.location.hash='#/wall';
   
 
   
-// export const logoutButton = () => {
-//   const logoutForm = document.querySelector('#login');
-//   logoutForm.addEventListener('submit', (e) => {
-//     signOut(auth)
-//       .then((cred) => {
-//         console.log('the user signed out');
-//       })
+export const logoutButton = () => {
+  const logoutForm = document.querySelector('#login');
+  logoutForm.addEventListener('submit', (e) => {
+    signOut(auth)
+      .then((cred) => {
+        console.log('the user signed out');
+      })
 
-//       .catch((err) => {
-//         console.log(err.message);
-//         alert(err.message);
-//       });
-//   });
-// };
+      .catch((err) => {
+        console.log(err.message);
+        alert(err.message);
+      });
+  });
+};
 
 
