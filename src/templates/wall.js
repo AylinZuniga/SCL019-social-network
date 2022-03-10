@@ -17,7 +17,7 @@ export const wall = () => {
        <div class="publishContainer">
          <p class="questionP">¿Qué estas pensando?</p>
          <textarea name="postText" class="postText"></textarea>
-         <button class="publish"></button>
+         <button class="publish">Publicar</button>
         </div>
 
         <section class="wallPosts"> </section>

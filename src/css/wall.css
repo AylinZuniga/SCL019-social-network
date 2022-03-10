@@ -1,7 +1,7 @@
 .wallHeaderContainer{
     display:flex;
     flex-direction: row;
-    gap:70%;
+    gap:80%;
     height: 15%;
 
 }
@@ -39,7 +39,7 @@
     font-style: normal;
     font-weight: 600;
     margin-left:-50%;
-    margin-top:-5%;
+    margin-top:-2%;
 }
 
 .postText{
@@ -48,5 +48,22 @@
     align-self: center;
     height: 40%;
     width:90%;
+    margin-top:2%;
+    text-align: center;
 }
 
+.publish{
+    width: 20%;
+    height: 20%;
+    margin-left:75%;
+    border:none;
+    border-radius:5px;
+    background-color:rgba(100, 130, 244, 1);
+    color:white;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: small;
+
+
+}
