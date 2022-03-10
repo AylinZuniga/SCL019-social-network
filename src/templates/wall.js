@@ -3,14 +3,24 @@ export const wall = () => {
     registerPage.className = 'wall-page';
     registerPage.id = 'wallPage';
     const wallPageView = `
-    <header class="wallHeader">
-     <div>
-        <h1 class="title">Together</h1>
-        <a href="#/"> <img src="./imagenes/exit.png" class="exitIcon"></a>
-     </div>
-    </header>
+       <header class="wallHeader">
+        <div class="wallHeaderContainer">
+            <h1 class="wallTitle">Together</h1>
+            <a href="#/"> <img src="./imagenes/exit.png" class="exitIcon"></a>
+        </div>
+       </header>
 
+       <section class"profilePic">
+        <a href="#/"> <img src="./imagenes/profile.png" class="profilePic"></a>  
+       </section>
 
+       <div class="publishContainer">
+         <p class="questionP">¿Qué estas pensando?</p>
+         <textarea name="postText" class="postText"></textarea>
+         <button class="publish"></button>
+        </div>
+
+        <section class="wallPosts"> </section>
 
     `;
     const printPage = document.getElementById('root');
