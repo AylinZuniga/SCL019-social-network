@@ -1,0 +1,52 @@
+.wallHeaderContainer{
+    display:flex;
+    flex-direction: row;
+    gap:70%;
+    height: 15%;
+
+}
+
+.wallTitle{
+    font-size: 170%;
+    margin-top:5%;
+}
+.exitIcon{
+    height:40%;
+    margin-top: 35%;
+}
+
+.profilePic{
+    width:45%;
+    margin-left:-35%
+}
+.publishContainer{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    gap:5%;
+    width:178%;
+    height: 18%;
+    margin: 5% 10% 0 10%;
+    margin-top:5%;
+    background-color:rgba(255, 226, 192, 1);
+    border:none;
+    border-radius:10px;
+}
+.questionP{
+    color:rgba(100, 130, 244, 1);
+    font-size:80%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    margin-left:-50%;
+    margin-top:-5%;
+}
+
+.postText{
+    border:none;
+    border-radius:8px;
+    align-self: center;
+    height: 40%;
+    width:90%;
+}
+
