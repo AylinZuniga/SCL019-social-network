@@ -21,20 +21,8 @@ export const wall = () => {
         </div>
 
         <section class="wallPosts"> </section>
-
-
-
-    <header class="title-register">
-    <div class="titleContainer">
-    <h1 class="title">Together</h1>
-   </div>
   
-      
-  
-       <a href="#/"> <img src="./imagenes/casa.png" class="menu-register"></a>
     
-  
-    </header>
     
 
 
