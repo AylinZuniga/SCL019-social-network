@@ -11,11 +11,8 @@ export const register = () => {
   <h1 class="title">Together</h1>
  </div>
 
-    
-
      <a href="#/"> <img src="./imagenes/casa.png" class="menu-register"></a>
   
-
   </header>
 
 
