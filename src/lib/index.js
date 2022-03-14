@@ -130,20 +130,10 @@ export const logOut = () => {
 };
 
 
-export const addPost = async (inputPost) => {
+export const addPost =  (db, description) => {
  // Add a new document with a generated id.
-  const docRef = await addDoc(collection(db, 'posts'), {
-    userId: auth.currentUser.uid,
-    name: auth.currentUser.displayName,
-    email: auth.currentUser.email,
-    description: inputPost,
-    datepost: Date.now(),
-    likes: [],
-    likesCounter: 0,
-  });
-  console.log('Document written with ID: ', docRef.id);
-
- return docRef;
+    addDoc(collection(db, 'posts'), {description});
+  
 };
 
 
