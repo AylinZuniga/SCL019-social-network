@@ -1,6 +1,21 @@
 /* eslint-disable import/no-unresolved */
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js';
-import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore.js';
+import {  getFirestore,
+  collection,
+  addDoc,
+  Timestamp,
+  query,
+  getDocs,
+  updateDoc,
+  increment,
+  doc,
+  orderBy,
+  where,
+  deleteDoc,
+  arrayUnion,
+  arrayRemove,
+}
+ from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore.js';
 import {
   getAuth,
   createUserWithEmailAndPassword, 
@@ -11,13 +26,8 @@ import {
    GoogleAuthProvider,
   signInWithPopup
 }
-
 from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js';
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-// import { initializeApp } from '../../node_modules/firebase/app';
-// import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
-// import { getFirestore } from 'firebase/firestore';
+
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -105,25 +115,10 @@ window.location.hash='#/wall';
     });
   };
   
-  // autentificacion de cambios de estado
-  // const provider = new GoogleAuthProvider();
-  
-  // export const startGoogle = () => {
-  //   signInWithRedirect(auth, provider);
-  //   onAuthStateChanged(auth, (user) => {
-  //     console.log('user status changed:', user);
-  //     checkGoogle(auth);
-     
-  //    });
-  //   // 
-  // };
-  
-  
-
-  
+  //Cerrar sesion en desarrollo
 export const logoutButton = () => {
-  const logoutForm = document.querySelector('#login');
-  logoutForm.addEventListener('submit', (e) => {
+  const logoutForm = document.querySelector('.exitIcon');
+  
     signOut(auth)
       .then((cred) => {
         console.log('the user signed out');
@@ -133,7 +128,25 @@ export const logoutButton = () => {
         console.log(err.message);
         alert(err.message);
       });
-  });
+  
 };
+
+export const addPost = async (inputPost) => {
+  // Add a new document with a generated id.
+  const docRef = await addDoc(collection(db, 'posts'), {
+    userId: auth.currentUser.uid,
+    name: auth.currentUser.displayName,
+    email: auth.currentUser.email,
+    description: inputPost,
+    datepost: Date.now(),
+    likes: [],
+    likesCounter: 0,
+  });
+  console.log('Document written with ID: ', docRef.id);
+
+  return docRef;
+};
+
+
 
 

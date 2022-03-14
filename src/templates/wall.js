@@ -1,7 +1,8 @@
+import { addPost } from '../lib/index.js';
 export const wall = () => {
-    const registerPage = document.createElement('main');
-    registerPage.className = 'wall-page';
-    registerPage.id = 'wallPage';
+    const wallPage = document.createElement('main');
+    wallPage.className = 'wall-page';
+    wallPage.id = 'wallPage';
     const wallPageView = `
        <header class="wallHeader">
 
@@ -23,7 +24,7 @@ export const wall = () => {
            <div class="publishContainer">   
               <p class="questionP">¿Qué estas pensando?</p>
               <textarea name="postText" class="postText" id="postText"></textarea>
-              <button class="publish">Publicar</button>
+              <button class="publish" id="publish">Publicar</button>
            </div>
 
          </div>
@@ -32,13 +33,29 @@ export const wall = () => {
 
         </div>
     
-    
-
-
-
     `;
+    // wallPage.querySelector('#exitIcon').addEventListener('click', () => {
+    //     logoutButton();
+    //   });
+    // Producto en desarrollo
+    // Evento para guardar datos de post
+    const newPost = wallPage.querySelector('#publish');
+    newPost.addEventListener('click', () => {
+        const inputPost = document.getElementById('postText').value;
+        if (inputPost === '') {
+            alert('Complete los campos vacios');
+        } else {
+            addPost(inputPost);
+        }
+        document.getElementById('postText').value = '';
+    });
+
+
+
     const printPage = document.getElementById('root');
     printPage.innerHTML = wallPageView;
 
+    
     return printPage;
+
 };
