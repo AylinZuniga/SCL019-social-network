@@ -55,7 +55,14 @@ export const wall = () => {
     const printPage = document.getElementById('root');
     printPage.innerHTML = wallPageView;
 
-    
+    // Evento para cerrar sesión
+    printPage
+    .querySelector('.exitIcon').addEventListener('click', () => {
+    logOut();
+  });
+
+// Evento para guardar post
+ //probandoo
     return printPage;
 
 };
