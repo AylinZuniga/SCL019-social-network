@@ -315,6 +315,13 @@
 
 /* Wall */
 
+.postAndWall{
+    width: 100%;
+}
+.profilePic{
+    width: 300%;
+    padding-top: 70%;
+}
   
 }
 

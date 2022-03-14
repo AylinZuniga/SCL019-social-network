@@ -15,21 +15,24 @@ export const wall = () => {
 
        <div class="postAndWall">
 
-         <div class="pic-publish">
+           <div class="pic-publish">
 
-            <section class"profilePic">
-             <a href="#/"> <img src="./imagenes/profile.png" class="profilePic"></a>  
-            </section>
+                <section class"profilePicContainer">
+                 <a href="#/"> <img src="./imagenes/profile.png" class="profilePic"></a>  
+                </section>
         
-           <div class="publishContainer">   
-              <p class="questionP">¿Qué estas pensando?</p>
-              <textarea name="postText" class="postText" id="postText"></textarea>
-              <button class="publish" id="publish">Publicar</button>
-           </div>
+                <div class="publishContainer">   
+                    <p class="questionP">¿Qué estas pensando?</p>
+                    <textarea name="postText" class="postText" id="postText"></textarea>
+                    <button class="publish" id="publish">Publicar</button>
+                </div>
 
-         </div>
+            </div>
 
-         <section class="wallPosts"> </section>
+            <div class="wallPostsContainer">
+                <section class="wallPosts"> </section>
+            </div>
+
 
         </div>
     
@@ -39,7 +42,12 @@ export const wall = () => {
     //   });
     // Producto en desarrollo
     // Evento para guardar datos de post
-    const newPost = wallPage.querySelector('#publish');
+    const printPage = document.getElementById('root');
+    printPage.innerHTML = wallPageView;
+    
+
+
+    const newPost = printPage.querySelector('#publish');
     newPost.addEventListener('click', () => {
         const inputPost = document.getElementById('postText').value;
         if (inputPost === '') {
@@ -52,17 +60,15 @@ export const wall = () => {
 
 
 
-    const printPage = document.getElementById('root');
-    printPage.innerHTML = wallPageView;
+    
 
     // Evento para cerrar sesión
-    printPage
-    .querySelector('.exitIcon').addEventListener('click', () => {
+    printPage.querySelector('.exitIcon').addEventListener('click', () => {
     logOut();
   });
 
-// Evento para guardar post
- //probandoo
+    // Evento para guardar post
+    //probandoo
     return printPage;
 
 };
