@@ -44,8 +44,8 @@ const printPage = document.getElementById('root');
     logOut();
   });
 
-
- 
+// Evento para guardar post
+ //probandoo
     return printPage;
 
 };
