@@ -1,3 +1,4 @@
+
 .wallHeaderContainer{
     display:flex;
     flex-direction: row;
@@ -15,9 +16,15 @@
     margin-top: 35%;
 }
 
+
 .profilePic{
-    width:45%;
+    width:42%;
     margin-left:-35%
+}
+.postAndWall{
+    display:flex;
+    flex-direction: column;
+
 }
 .publishContainer{
     display:flex;
@@ -25,7 +32,7 @@
     justify-content:center;
     gap:5%;
     width:178%;
-    height: 18%;
+    height: 16vh;
     margin: 5% 10% 0 10%;
     margin-top:5%;
     background-color:rgba(255, 226, 192, 1);
