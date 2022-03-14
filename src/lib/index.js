@@ -114,25 +114,24 @@ window.location.hash='#/wall';
       // ...
     });
   };
-  
-  //Cerrar sesion en desarrollo
-export const logoutButton = () => {
-  const logoutForm = document.querySelector('.exitIcon');
-  
-    signOut(auth)
-      .then((cred) => {
-        console.log('the user signed out');
-      })
 
-      .catch((err) => {
-        console.log(err.message);
-        alert(err.message);
-      });
-  
+  // Cerrar sesión
+export const logOut = () => {
+  signOut(auth)
+    .then(() => {
+      // Sign-out successful.
+      console.log('cierre de sesión exitoso');
+      window.location.hash = '#/login';
+    })
+    .catch((error) => {
+      console.log(error);
+      // An error happened.
+    });
 };
 
+
 export const addPost = async (inputPost) => {
-  // Add a new document with a generated id.
+ // Add a new document with a generated id.
   const docRef = await addDoc(collection(db, 'posts'), {
     userId: auth.currentUser.uid,
     name: auth.currentUser.displayName,
