@@ -1,4 +1,4 @@
-import { logOut } from '../lib/index.js';
+import { addPost } from '../lib/index.js';
 export const wall = () => {
     const wallPage = document.createElement('main');
     wallPage.className = 'wall-page';
@@ -34,8 +34,25 @@ export const wall = () => {
         </div>
     
     `;
+    // wallPage.querySelector('#exitIcon').addEventListener('click', () => {
+    //     logoutButton();
+    //   });
+    // Producto en desarrollo
+    // Evento para guardar datos de post
+    const newPost = wallPage.querySelector('#publish');
+    newPost.addEventListener('click', () => {
+        const inputPost = document.getElementById('postText').value;
+        if (inputPost === '') {
+            alert('Complete los campos vacios');
+        } else {
+            addPost(inputPost);
+        }
+        document.getElementById('postText').value = '';
+    });
 
-const printPage = document.getElementById('root');
+
+
+    const printPage = document.getElementById('root');
     printPage.innerHTML = wallPageView;
 
     // Evento para cerrar sesión
@@ -44,8 +61,8 @@ const printPage = document.getElementById('root');
     logOut();
   });
 
-
- 
+// Evento para guardar post
+ //probandoo
     return printPage;
 
 };
