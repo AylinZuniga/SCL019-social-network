@@ -23,8 +23,8 @@ from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js';
 const firebaseConfig = {
   apiKey: 'AIzaSyBUvj7Ny-b2QLU57iZ_B0CP8gsezTwV75Q',
   authDomain: 'social-network-949f0.firebaseapp.com',
-  projectId: 'social-network-949f0',
-  storageBucket: 'social-network-949f0.appspot.com',
+  projectId: 'together',
+  storageBucket: 'together.appspot.com',
   messagingSenderId: '499338039893',
   appId: '1:499338039893:web:7f04fc4790a65d8949fadc',
 };
