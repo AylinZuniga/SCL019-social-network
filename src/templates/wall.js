@@ -48,14 +48,19 @@ export const wall = () => {
 
 
     const newPost = printPage.querySelector('#publish');
-    newPost.addEventListener('click', () => {
+    
+    newPost.addEventListener('submit', () => {
+
+       
         const inputPost = document.getElementById('postText').value;
+       
         if (inputPost === '') {
             alert('Complete los campos vacios');
         } else {
             addPost(inputPost);
         }
         document.getElementById('postText').value = '';
+        
     });
 
 
