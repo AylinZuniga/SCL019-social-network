@@ -143,7 +143,7 @@ export const addPost = async (inputPost) => {
   });
   console.log('Document written with ID: ', docRef.id);
 
-  return docRef;
+ // return docRef;
 };
 
 
