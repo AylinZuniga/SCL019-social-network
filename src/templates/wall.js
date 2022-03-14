@@ -34,12 +34,13 @@ export const wall = () => {
         </div>
     
     `;
+    console.log(wallPage);
     // wallPage.querySelector('#exitIcon').addEventListener('click', () => {
     //     logoutButton();
     //   });
     // Producto en desarrollo
     // Evento para guardar datos de post
-    const newPost = wallPage.querySelector('#publish');
+    const newPost = wallPageView.querySelector('#publish');
     newPost.addEventListener('click', () => {
         const inputPost = document.getElementById('postText').value;
         if (inputPost === '') {
@@ -49,8 +50,8 @@ export const wall = () => {
         }
         document.getElementById('postText').value = '';
     });
-
-
+    console.log(newPost);
+    console.log(wallPage);
 
     const printPage = document.getElementById('root');
     printPage.innerHTML = wallPageView;
