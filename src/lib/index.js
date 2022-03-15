@@ -1,9 +1,11 @@
 /* eslint-disable import/no-unresolved */
+import { printPosts} from '../templates/post.js'
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
 import { 
   getFirestore,
   collection,
   addDoc,
+  onSnapshot,
   Timestamp,
   query,
   getDocs,
@@ -132,12 +134,29 @@ export const logOut = () => {
     });
 };
 
-
+// guardar datos post
 export const addPost = async ( description) => {
  // Add a new document with a generated id.
     await addDoc(collection(db, 'posts'), {description});
   
 };
 
-
+// Leer datos de post
+export const readPost = () => {
+  const q = query(collection(db, 'posts'), orderBy('datepost', 'desc'));
+  onSnapshot(q, (querySnapshot) => {
+    const boxPost = [];
+    querySnapshot.forEach((doc) => {
+      boxPost.push({
+        id: doc.id,
+        data: doc.data(),
+        title: doc.data.title,
+        description: doc.data.description,
+      });
+    });
+    printPosts(boxPost);
+    console.log('title', 'description', boxPost.join(', '));
+    return boxPost;
+  });
+};
 

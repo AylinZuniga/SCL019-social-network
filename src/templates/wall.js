@@ -1,5 +1,5 @@
 import { addPost, logOut } from '../lib/index.js';
-import { printPosts } from '../lib/post.js';
+// import { printPosts } from '../lib/post.js';
 
 export const wall = () => {
   const wallPage = document.createElement('main');
@@ -57,11 +57,18 @@ export const wall = () => {
   newPost.addEventListener('submit',async (e) => {
     e.preventDefault();
     const inputPost = document.getElementById('postText').value;
-  
+    if (inputPost == ''){
+      alert('Aun no has escrito nada');
+    }
+    if(inputPost != ''){
     await addPost(inputPost);
+
     console.log(addPost)
     console.log(newPost)
-    publishContainer.reset;
+    }
+    else{
+    document.getElementById('publish').reset;
+    }
   });
 
 
