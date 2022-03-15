@@ -1,5 +1,5 @@
 /* eslint-disable import/no-unresolved */
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
 import { 
   getFirestore,
   collection,
@@ -44,7 +44,7 @@ from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js';
 const app = initializeApp(firebaseConfig);
 const db = getFirestore();
 
-// Initialize Firebase
+// Initialize Firebasegit
 const auth = getAuth();
 
 // Registrarse
@@ -132,18 +132,11 @@ export const logOut = () => {
 };
 
 
-// export const addPost = async (inputPost) => {
-//  // Add a new document with a generated id.
-//   const docRef = await addDoc(collection(db, 'posts'), {
-//     userId: auth.currentUser.uid,
-//     name: auth.currentUser.displayName,
-//     email: auth.currentUser.email,
-//     description: inputPost,
-//     datepost: Date.now(),
-//     likes: [],
-//     likesCounter: 0,
-//   });
-//   console.log('Document written with ID: ', docRef.id);
+export const addPost =  (db, description) => {
+ // Add a new document with a generated id.
+    addDoc(collection(db, 'posts'), {description});
+  
+};
 
 //  return docRef;
 // };

@@ -242,7 +242,7 @@
 }
 .white-section{
     position:relative;
-    margin-top:50%;
+    margin-top:20%;
     margin-left:5%;
     margin-right: 5%;
     margin-bottom: 60%;
@@ -315,6 +315,13 @@
 
 /* Wall */
 
+.postAndWall{
+    width: 100%;
+}
+.profilePic{
+    width: 300%;
+    padding-top: 70%;
+}
   
 }
 
