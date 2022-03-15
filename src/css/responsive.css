@@ -315,14 +315,20 @@
 
 /* Wall */
 
-.postAndWall{
-    width: 100%;
-}
+
 .profilePic{
-    width: 300%;
-    padding-top: 70%;
+    width: 34%;
+    margin-top:-40%;
 }
-  
+
+.publishContainer{
+  margin-top:10%;
+  padding-top: 5%;
+  height:30vh;
+  width:40vw;
+}
+
+
 }
 
 
