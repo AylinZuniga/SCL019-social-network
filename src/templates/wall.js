@@ -1,4 +1,4 @@
-import { addPost } from '../lib/index.js';
+import { addPost, logOut } from '../lib/index.js';
 export const wall = () => {
   const wallPage = document.createElement('main');
   wallPage.className = 'wall-page';
