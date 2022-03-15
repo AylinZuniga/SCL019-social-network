@@ -1,4 +1,6 @@
 import { addPost, logOut } from '../lib/index.js';
+import { printPosts } from '../lib/post.js';
+
 export const wall = () => {
   const wallPage = document.createElement('main');
   wallPage.className = 'wall-page';
@@ -41,10 +43,9 @@ export const wall = () => {
         </div>
     
     `;
-  // wallPage.querySelector('#exitIcon').addEventListener('click', () => {
-  //     logoutButton();
-  //   });
-  // Producto en desarrollo
+
+
+
   // Evento para guardar datos de post
   const printPage = document.getElementById('root');
   printPage.innerHTML = wallPageView;
@@ -75,5 +76,11 @@ export const wall = () => {
   // Evento para guardar post
   //probandoo
   return printPage;
+
+
+  // evento imprimir post
+  // containerWall.querySelector('#logout').addEventListener('click', () => {
+  //   printPosts();
+  // });
 
 };
