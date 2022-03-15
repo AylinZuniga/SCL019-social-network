@@ -1,4 +1,4 @@
-import { logOut } from '../lib/index.js';
+import { logOut, addPost } from '../lib/index.js';
 export const wall = () => {
     const wallPage = document.createElement('main');
     wallPage.className = 'wall-page';
@@ -44,8 +44,27 @@ const printPage = document.getElementById('root');
     logOut();
   });
 
-// Evento para guardar post
- //probandoo
+    // Evento para guardar post
+   // printPage
+  const newPost = printPage.querySelector('#publish');
+  newPost.addEventListener('click', () => {
+    const inputPost = document.getElementById('postText').value;
+    if (inputPost === '') {
+      alert('Complete los campos vacios');
+    } else {
+      addPost(inputPost);
+    }
+   // document.getElementById('postText').value = '';
+    });
+//   printPage
+//   .querySelector('#registerButton')
+//   .addEventListener('click', () => {
+//     const email = document.getElementById('registerEmail').value;
+//     const password = document.getElementById('registerPassword').value;
+//     const name = document.getElementById('registerName').value;
+//     registerEvent(email, password, name);
+//   });
+ 
     return printPage;
 
 };
