@@ -30,6 +30,7 @@ import {
 from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js';
 
 
+
 // Your web app's Firebase configuration
 
   const firebaseConfig = {
@@ -132,48 +133,11 @@ export const logOut = () => {
 };
 
 
-export const addPost =  (db, description) => {
+export const addPost = async ( description) => {
  // Add a new document with a generated id.
-    addDoc(collection(db, 'posts'), {description});
+    await addDoc(collection(db, 'posts'), {description});
   
 };
-
-//  return docRef;
-// };
-
-export async function addPost(inputPost) {
-  // La declaración try...catch señala un bloque de instrucciones a intentar (try)
-  // y especifica una respuesta si se produce una excepción (catch).
-  try {
-    let nameUser;
-    // si el usuario se registró sin google (es decir no se guardó su displayName)
-    // al momento de crear el post
-    // su nombre será el email.
-    if (auth.currentUser.displayName === null) {
-      nameUser = auth.currentUser.email;
-    } else {
-      nameUser = auth.currentUser.displayName;
-    }
-    // addDoc Agregue un nuevo documento a la CollectionReference especificada con los datos
-    // proporcionados asignándole una ID de documento automáticamente.
-    const docRef = await addDoc(collection(db, 'Post'), {
-      // especificamos los atributos que contendrá la coleccion
-      userId: auth.currentUser.uid,
-      name: nameUser,
-      email: auth.currentUser.email,
-      comentUser: inputPosts,
-      // Guarda en la base de datos la fecha en formato legible
-      datepost: Timestamp.fromDate(new Date()),
-      likes: [], // se guardará los id de los user que hagan like en el post
-      likesCounter: 0, // contará los like
-    });
-    console.log('documento escrito con id', docRef.id);
-    inputPost.reset(); // Se limpia el input del formulario del post
-   // showPost(); // llama a la funcion showPost()
-  } catch (err) {
-    console.log('error : ', err);
-  }
-}
 
 
 

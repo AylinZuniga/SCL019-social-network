@@ -317,14 +317,15 @@
 
 
 .profilePic{
-    width: 34%;
-    margin-top:-40%;
+    width: 30%;
+    margin-top:15%;
+    margin-left:-50%;
 }
 
 .publishContainer{
   margin-top:10%;
   padding-top: 5%;
-  height:30vh;
+  height:25vh;
   width:40vw;
 }
 
