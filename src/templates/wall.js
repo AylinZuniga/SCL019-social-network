@@ -25,10 +25,10 @@ export const wall = () => {
                  <a href="#/"> <img src="./imagenes/profile.png" class="profilePic"></a>  
                 </section>
         
-                <form class="publishContainer">   
+                <form class="publishContainer" id="formPublish">   
                     <p class="questionP">¿Qué estas pensando?</p>
                     <textarea name="postText" class="postText" id="postText"></textarea>
-                    <button class="publish" id="publish">Publicar</button>
+                    <button type="submit" class="publish" id="publish">Publicar</button>
                 </form>
 
             </div>
@@ -51,12 +51,13 @@ export const wall = () => {
 
 
 
-  const newPost = printPage.querySelector('#publish');
-  newPost.addEventListener('submit', (e) => {
-    e.preventDefault
+  const newPost = printPage.querySelector('#formPublish');
+ 
+  newPost.addEventListener('submit',async (e) => {
+    e.preventDefault();
     const inputPost = document.getElementById('postText').value;
-
-    addPost(firebaseObject.db, description);
+  
+    await addPost(inputPost);
     console.log(addPost)
     console.log(newPost)
     publishContainer.reset;
