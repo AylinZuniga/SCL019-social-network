@@ -56,11 +56,18 @@ export const wall = () => {
   newPost.addEventListener('submit',async (e) => {
     e.preventDefault();
     const inputPost = document.getElementById('postText').value;
-  
+    if (inputPost == ''){
+      alert('Aun no has escrito nada');
+    }
+    if(inputPost != ''){
     await addPost(inputPost);
+
     console.log(addPost)
     console.log(newPost)
-    publishContainer.reset;
+    }
+    else{
+    document.getElementById('publish').reset;
+    }
   });
 
 

@@ -328,6 +328,16 @@
   height:25vh;
   width:40vw;
 }
+/* .wallPostsContainer{
+
+    overflow: scroll;
+    height: 50%;
+    width:50%;
+    border: 5px solid #f7bc57;
+    border-radius: 15px;
+    background-color: #6482F4;
+} */
+
 
 
 }
