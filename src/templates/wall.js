@@ -1,6 +1,5 @@
 import { addPost, logOut, readPost } from '../lib/index.js';
 
-
 export const wall = () => {
   const wallPage = document.createElement('main');
   wallPage.className = 'wall-page';
@@ -45,35 +44,28 @@ export const wall = () => {
     `;
     readPost();
 
-
-
-  // Evento para guardar datos de post
+  // Generando vista de wallPage
   const printPage = document.getElementById('root');
   printPage.innerHTML = wallPageView;
 
-
-
+  
+//
   const newPost = printPage.querySelector('#formPublish');
  
   newPost.addEventListener('submit',async (e) => {
     e.preventDefault();
     const inputPost = document.getElementById('postText').value;
+    newPost.reset();
+    
     if (inputPost == ''){
       alert('Aun no has escrito nada');
     }
     if(inputPost != ''){
     await addPost(inputPost);
-    readPost();
-
     console.log('input post',inputPost)
     }
-    else{
-    document.getElementById('publish').reset;
-    console.log(document.getElementById('publish'))
-    }
-    
-  });
-
+// readPost();
+});
 
 
 
@@ -83,14 +75,8 @@ export const wall = () => {
     logOut();
   });
 
-  // Evento para guardar post
-  //probandoo
+ 
   return printPage;
 
-
-  // evento imprimir post
-  // containerWall.querySelector('#logout').addEventListener('click', () => {
-  //   printPosts();
-  // });
 
 };

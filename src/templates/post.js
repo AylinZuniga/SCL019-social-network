@@ -24,3 +24,7 @@ export const printPosts = (array) => {
     return printPosts;
     
   }
+
+ // if (data.element.data.userId === auth.currentUser.uid)
+
+

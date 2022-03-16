@@ -48,7 +48,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore();
 
 // Initialize Firebasegit
-const auth = getAuth();
+export const auth = getAuth(app);
 
 // Registrarse
 export const registerEvent = (email, password, name) => {
@@ -135,8 +135,7 @@ export const logOut = () => {
 };
 
 // guardar datos post
-export const addPost = async ( description) => {
- // Add a new document with a generated id.
+export const addPost = async ( description) => {            // Add a new document with a generated id.
  
   const date = Timestamp.fromDate(new Date())
     await addDoc(collection(db, 'posts'), {description,date});
@@ -145,7 +144,7 @@ export const addPost = async ( description) => {
 
 // Leer datos de post
 export const readPost = () => {
-  const q = query(collection(db, 'posts'));
+  const q = query(collection(db, 'posts'), orderBy('date', 'desc'));
   onSnapshot(q, (querySnapshot) => {
     const boxPost = [];
     querySnapshot.forEach((doc) => {
@@ -154,11 +153,11 @@ export const readPost = () => {
         id: doc.id,
         data: doc.data(),
         description: doc.data().description,
+        date: doc.data().date,
       });
     });
     printPosts(boxPost);
     return boxPost;
-  });
-};
+  });};
 
 
