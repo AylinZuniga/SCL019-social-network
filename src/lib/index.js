@@ -150,7 +150,7 @@ export const readPost = () => {
     querySnapshot.forEach((doc) => {
       console.log('documentos',doc)
       boxPost.push({
-        id: doc.id,
+        id: doc.data().id,
         data: doc.data(),
         description: doc.data().description,
         date: doc.data().date,
@@ -160,4 +160,37 @@ export const readPost = () => {
     return boxPost;
   });};
 
+// // Borrar datos
+// export const deletePost = async (id) => {
+//   await deleteDoc(doc(db, 'posts', id));
+//   console.log(await deleteDoc);
+// };
 
+// // Editar datos
+// export const editPost = async (id, inputTitle, inputReview) => {
+//   const refreshPost = doc(db, 'posts', id);
+//   await updateDoc(refreshPost, {
+//     title: inputTitle,
+//     description: inputReview,
+//   });
+// };
+
+// // Dar likes y contador de likes
+// export const likePost = async (id, userLike) => {
+//   const likeRef = doc(db, 'posts', id);
+//   const docSnap = await getDoc(likeRef);
+//   const postData = docSnap.data();
+//   const likesCount = postData.likesCounter;
+
+//   if (postData.likes.includes(userLike)) {
+//     await updateDoc(likeRef, {
+//       likes: arrayRemove(userLike),
+//       likesCounter: likesCount - 1,
+//     });
+//   } else {
+//     await updateDoc(likeRef, {
+//       likes: arrayUnion(userLike),
+//       likesCounter: likesCount + 1,
+//     });
+//   }
+// };
