@@ -1,5 +1,4 @@
 import { addPost, logOut, readPost } from '../lib/index.js';
-//import { printPosts } from './post.js';
 
 export const wall = () => {
   const wallPage = document.createElement('main');
@@ -43,7 +42,6 @@ export const wall = () => {
         </div>
     
     `;
-
     readPost();
 
   // Generando vista de wallPage
@@ -66,10 +64,8 @@ export const wall = () => {
     await addPost(inputPost);
     console.log('input post',inputPost)
     }
-
- // readPost();
-
-  });
+// readPost();
+});
 
 
 
