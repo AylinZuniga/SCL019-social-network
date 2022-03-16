@@ -41,6 +41,16 @@
     border:none;
     border-radius:10px;
 }
+.wallPostsContainer{
+
+    overflow: scroll;
+    height: 50vh;
+    margin: 5% 10% 0 10%;
+    width:178%;
+    border: 5px solid #f7bc57;
+    border-radius: 15px;
+    background-color: #6482F4;
+}
 .questionP{
     color:rgba(100, 130, 244, 1);
     font-size:80%;

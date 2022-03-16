@@ -1,4 +1,6 @@
-import { addPost, logOut } from '../lib/index.js';
+import { addPost, logOut, readPost } from '../lib/index.js';
+//import { printPosts } from './post.js';
+
 export const wall = () => {
   const wallPage = document.createElement('main');
   wallPage.className = 'wall-page';
@@ -25,43 +27,49 @@ export const wall = () => {
                  <a href="#/"> <img src="./imagenes/profile.png" class="profilePic"></a>  
                 </section>
         
-                <form class="publishContainer">   
+                <form class="publishContainer" id="formPublish">   
                     <p class="questionP">¿Qué estas pensando?</p>
                     <textarea name="postText" class="postText" id="postText"></textarea>
-                    <button class="publish" id="publish">Publicar</button>
+                    <button type="submit" class="publish" id="publish">Publicar</button>
                 </form>
 
             </div>
 
             <div class="wallPostsContainer">
-                <section class="wallPosts"> </section>
+                <section id="wallPosts" class="wallPosts"> </section>
             </div>
 
 
         </div>
     
     `;
-  // wallPage.querySelector('#exitIcon').addEventListener('click', () => {
-  //     logoutButton();
-  //   });
-  // Producto en desarrollo
-  // Evento para guardar datos de post
+
+    readPost();
+
+  // Generando vista de wallPage
   const printPage = document.getElementById('root');
   printPage.innerHTML = wallPageView;
 
-
-
-  const newPost = printPage.querySelector('#publish');
-  newPost.addEventListener('submit', (e) => {
-    e.preventDefault
+  
+//
+  const newPost = printPage.querySelector('#formPublish');
+ 
+  newPost.addEventListener('submit',async (e) => {
+    e.preventDefault();
     const inputPost = document.getElementById('postText').value;
+    newPost.reset();
+    
+    if (inputPost == ''){
+      alert('Aun no has escrito nada');
+    }
+    if(inputPost != ''){
+    await addPost(inputPost);
+    console.log('input post',inputPost)
+    }
 
-    addPost(firebaseObject.db, description);
-    console.log(addPost)
-    console.log(newPost)
-    publishContainer.reset;
+ // readPost();
+
   });
-
 
 
 
@@ -71,8 +79,8 @@ export const wall = () => {
     logOut();
   });
 
-  // Evento para guardar post
-  //probandoo
+ 
   return printPage;
+
 
 };

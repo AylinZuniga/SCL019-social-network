@@ -2,6 +2,14 @@
 /*General*/
 
 @media (min-width: 1200px){
+
+    #root{
+
+    width: 100%;
+
+    }
+
+
     .title{
         font-family: 'Bowlby One SC', cursive;
         font-size: 5vw;
@@ -315,14 +323,45 @@
 
 /* Wall */
 
-.postAndWall{
-    width: 100%;
-}
+
 .profilePic{
-    width: 300%;
-    padding-top: 70%;
+    width: 20%;
+    margin-top:15%;
+    margin-left:-60%;
 }
-  
+
+.publishContainer{
+  margin-top:10%;
+  padding-top: 5%;
+  height:25vh;
+  width:40vw;
+}
+.exitIcon{
+    margin-right: 60%;
+    margin-top: 15%;
+    height: 5%;
+    
+
+}
+.wallPostsContainer{
+
+
+    overflow: scroll;
+    height: 50vh;
+    width:50%;
+    border: 5px solid #f7bc57;
+    border-radius: 15px;
+    background-color: #6482F4;
+}
+
+.postAndWall{
+
+    flex-direction: row;
+
+
+
+}
+
 }
 
 

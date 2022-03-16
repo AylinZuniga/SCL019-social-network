@@ -1,9 +1,11 @@
 /* eslint-disable import/no-unresolved */
+import { printPosts} from '../templates/post.js'
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
 import { 
   getFirestore,
   collection,
   addDoc,
+  onSnapshot,
   Timestamp,
   query,
   getDocs,
@@ -30,6 +32,7 @@ import {
 from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js';
 
 
+
 // Your web app's Firebase configuration
 
   const firebaseConfig = {
@@ -45,7 +48,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore();
 
 // Initialize Firebasegit
-const auth = getAuth();
+export const auth = getAuth(app);
 
 // Registrarse
 export const registerEvent = (email, password, name) => {
@@ -131,49 +134,30 @@ export const logOut = () => {
     });
 };
 
-
-export const addPost =  (db, description) => {
- // Add a new document with a generated id.
-    addDoc(collection(db, 'posts'), {description});
+// guardar datos post
+export const addPost = async ( description) => {            // Add a new document with a generated id.
+ 
+  const date = Timestamp.fromDate(new Date())
+    await addDoc(collection(db, 'posts'), {description,date});
   
 };
 
-//  return docRef;
-// };
-
-// export async function addPost(inputPost) {
-//   // La declaración try...catch señala un bloque de instrucciones a intentar (try)
-//   // y especifica una respuesta si se produce una excepción (catch).
-//   try {
-//     let nameUser;
-//     // si el usuario se registró sin google (es decir no se guardó su displayName)
-//     // al momento de crear el post
-//     // su nombre será el email.
-//     if (auth.currentUser.displayName === null) {
-//       nameUser = auth.currentUser.email;
-//     } else {
-//       nameUser = auth.currentUser.displayName;
-//     }
-//     // addDoc Agregue un nuevo documento a la CollectionReference especificada con los datos
-//     // proporcionados asignándole una ID de documento automáticamente.
-//     const docRef = await addDoc(collection(db, 'Post'), {
-//       // especificamos los atributos que contendrá la coleccion
-//       userId: auth.currentUser.uid,
-//       name: nameUser,
-//       email: auth.currentUser.email,
-//       comentUser: inputPosts,
-//       // Guarda en la base de datos la fecha en formato legible
-//       datepost: Timestamp.fromDate(new Date()),
-//       likes: [], // se guardará los id de los user que hagan like en el post
-//       likesCounter: 0, // contará los like
-//     });
-//     console.log('documento escrito con id', docRef.id);
-//     inputPost.reset(); // Se limpia el input del formulario del post
-//    // showPost(); // llama a la funcion showPost()
-//   } catch (err) {
-//     console.log('error : ', err);
-//   }
-// }
-
+// Leer datos de post
+export const readPost = () => {
+  const q = query(collection(db, 'posts'), orderBy('date', 'desc'));
+  onSnapshot(q, (querySnapshot) => {
+    const boxPost = [];
+    querySnapshot.forEach((doc) => {
+      console.log('documentos',doc)
+      boxPost.push({
+        id: doc.id,
+        data: doc.data(),
+        description: doc.data().description,
+        date: doc.data().date,
+      });
+    });
+    printPosts(boxPost);
+    return boxPost;
+  });};
 
 
