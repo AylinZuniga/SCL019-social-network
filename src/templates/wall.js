@@ -55,7 +55,10 @@ export const wall = () => {
   newPost.addEventListener('submit',async (e) => {
     e.preventDefault();
     const inputPost = document.getElementById('postText').value;
-    newPost.reset();
+    setTimeout(() => {
+      newPost.reset();
+    }, 1000);
+    
     
     if (inputPost == ''){
       alert('Aun no has escrito nada');
@@ -64,7 +67,8 @@ export const wall = () => {
     await addPost(inputPost);
     console.log('input post',inputPost)
     }
-// readPost();
+
+
 });
 
 
