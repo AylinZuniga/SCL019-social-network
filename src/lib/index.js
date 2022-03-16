@@ -71,6 +71,7 @@ export const registerEvent = (email, password, name) => {
           // Email verification sent!
           console.log('Correo enviado');
           alert('Hemos enviado un correo de verificación para validar tu cuenta');
+          
         })
         .catch((error) => {
           console.log(error);
@@ -104,6 +105,8 @@ export const signIn = (emailRegister, passwordRegister) => {
       // This gives you a Google Access Token. You can use it to access the Google API.
       const credential = GoogleAuthProvider.credentialFromResult(result);
       const token = credential.accessToken;
+      console.log(result._tokenResponse)
+      localStorage.setItem('nameUserRegister', result._tokenResponse.firstName);
       // The signed-in user info.
      // const user = result.user;
 window.location.hash='#/wall';
@@ -138,7 +141,9 @@ export const logOut = () => {
 export const addPost = async ( description) => {            // Add a new document with a generated id.
  
   const date = Timestamp.fromDate(new Date())
-    await addDoc(collection(db, 'posts'), {description,date});
+  const name =  auth.currentUser.displayName
+  console.log(name)
+    await addDoc(collection(db, 'posts'), {description,date,name});
   
 };
 
