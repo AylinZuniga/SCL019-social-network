@@ -1,5 +1,3 @@
-// import {printPage } from '../lib/index.js';
-
 //Función para imprimir posts
 export const printPosts = (array) => {
     const containerEmpty = document.querySelector('#wallPosts');
@@ -16,12 +14,11 @@ export const printPosts = (array) => {
         <div class="buttons">
           <button class="btn-like" value='${element.id}'><img class="like-post" src="./imagenes/like.png" />${element.data.likesCounter}</button>
           `;
+
+
+          containerEmpty.innerHTML += postView;
     }
   
-    const printPage = document.getElementById('root');
-    printPage.innerHTML = postView;
-
-
 
     array.forEach(viewPost);
     return printPosts;

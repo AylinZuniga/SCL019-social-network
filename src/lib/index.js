@@ -137,26 +137,28 @@ export const logOut = () => {
 // guardar datos post
 export const addPost = async ( description) => {
  // Add a new document with a generated id.
-    await addDoc(collection(db, 'posts'), {description});
+ 
+  const date = Timestamp.fromDate(new Date())
+    await addDoc(collection(db, 'posts'), {description,date});
   
 };
 
 // Leer datos de post
 export const readPost = () => {
-  const q = query(collection(db, 'posts'), orderBy('datepost', 'desc'));
+  const q = query(collection(db, 'posts'));
   onSnapshot(q, (querySnapshot) => {
     const boxPost = [];
     querySnapshot.forEach((doc) => {
+      console.log('documentos',doc)
       boxPost.push({
         id: doc.id,
         data: doc.data(),
-        title: doc.data.title,
-        description: doc.data.description,
+        description: doc.data().description,
       });
     });
     printPosts(boxPost);
-    console.log('title', 'description', boxPost.join(', '));
     return boxPost;
   });
 };
+
 

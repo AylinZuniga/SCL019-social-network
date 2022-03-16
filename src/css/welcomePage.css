@@ -6,10 +6,6 @@ body{
         
 }
 
-/* #root{
-    width: 100%;
-} */
-
 .start-section {
     display:flex;
     flex-wrap: wrap;

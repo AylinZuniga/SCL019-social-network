@@ -1,5 +1,5 @@
-import { addPost, logOut } from '../lib/index.js';
-// import { printPosts } from '../lib/post.js';
+import { addPost, logOut, readPost } from '../lib/index.js';
+
 
 export const wall = () => {
   const wallPage = document.createElement('main');
@@ -36,7 +36,7 @@ export const wall = () => {
             </div>
 
             <div class="wallPostsContainer">
-                <section class="wallPosts"> </section>
+                <section id="wallPosts" class="wallPosts"> </section>
             </div>
 
 
@@ -63,12 +63,12 @@ export const wall = () => {
     if(inputPost != ''){
     await addPost(inputPost);
 
-    console.log(addPost)
-    console.log(newPost)
+    console.log('input post',inputPost)
     }
     else{
     document.getElementById('publish').reset;
     }
+    readPost();
   });
 
 
