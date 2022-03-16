@@ -62,15 +62,16 @@ export const wall = () => {
       alert('Aun no has escrito nada');
     }
     if(inputPost != ''){
-    await addPost(inputPost);
-    readPost();
+     await addPost(inputPost);
+     readPost();
+     
 
-    console.log('input post',inputPost)
+
     }
-    else{
-    document.getElementById('publish').reset;
-    console.log(document.getElementById('publish'))
-    }
+
+    // else{
+    //   inputPost.reset;
+    //  }
     
   });
 
