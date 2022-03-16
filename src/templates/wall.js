@@ -43,6 +43,7 @@ export const wall = () => {
         </div>
     
     `;
+    readPost();
 
 
 
@@ -62,14 +63,15 @@ export const wall = () => {
     }
     if(inputPost != ''){
     await addPost(inputPost);
-    
+    readPost();
 
     console.log('input post',inputPost)
     }
     else{
     document.getElementById('publish').reset;
+    console.log(document.getElementById('publish'))
     }
-    readPost();
+    
   });
 
 
