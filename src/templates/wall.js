@@ -62,6 +62,7 @@ export const wall = () => {
     }
     if(inputPost != ''){
     await addPost(inputPost);
+    
 
     console.log('input post',inputPost)
     }
