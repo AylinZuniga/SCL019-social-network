@@ -144,13 +144,16 @@ export const addPost = async ( description) => {            // Add a new documen
 
 // Leer datos de post
 export const readPost = () => {
+
   const q = query(collection(db, 'posts'), orderBy('date', 'desc'));
+
   onSnapshot(q, (querySnapshot) => {
     const boxPost = [];
     querySnapshot.forEach((doc) => {
       console.log('documentos',doc)
       boxPost.push({
         id: doc.id,
+        datepost: Date.now(),
         data: doc.data(),
         description: doc.data().description,
         date: doc.data().date,
