@@ -76,3 +76,11 @@
 
 
 }
+
+.wallPostsContainer{
+
+    overflow: scroll;
+    height: 50%;
+    border: 5px solid #f7bc57;
+    border-radius: 15px;
+}
