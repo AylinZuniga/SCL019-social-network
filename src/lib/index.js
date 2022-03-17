@@ -45,10 +45,10 @@ from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js';
 };
 
 const app = initializeApp(firebaseConfig);
-const db = getFirestore();
+const db = getFirestore(app);
+export const auth = getAuth(app);    // Initialize Firebasegit
+export const user = auth.currentUser;
 
-// Initialize Firebasegit
-export const auth = getAuth(app);
 
 // Registrarse
 export const registerEvent = (email, password) => {
@@ -68,7 +68,7 @@ export const registerEvent = (email, password) => {
     
     });
     const emailCheck = () => {
-      sendEmailVerification(auth.currentUser)
+      sendEmailVerification(user)
         .then(() => {
           // Email verification sent!
           console.log('Correo enviado');
@@ -108,8 +108,10 @@ export const signIn = (emailRegister, passwordRegister) => {
       const credential = GoogleAuthProvider.credentialFromResult(result);
       
       // The signed-in user info.
-     // const user = result.user;
-     window.location.hash='#/wall';
+
+      const signedInUser = result.user;
+window.location.hash='#/wall';
+
       // ...
     }).catch((error) => {
       // Handle Errors here.
@@ -140,11 +142,13 @@ export const logOut = () => {
 // guardar datos post
 export const addPost = async ( description) => {            // Add a new document with a generated id.
  
-  const date = Timestamp.fromDate(new Date())
-  const name =  auth.currentUser.displayName
+
+  const date = Timestamp.fromDate(new Date());
+  const name =  auth.currentUser.displayName;
   const userId = auth.currentUser.uid;
-  console.log(name)
-    await addDoc(collection(db, 'posts'), {description,date,name,userId});
+  console.log(userId);
+    await addDoc(collection(db, 'posts'), {description,date,name, userId});
+
   
 };
 
@@ -169,6 +173,7 @@ export const readPost = () => {
     return boxPost;
   });};
 
+
   // Borrar datos
 export const deletePost = async (id) => {
   await deleteDoc(doc(db, 'posts', id));
@@ -179,9 +184,7 @@ export const deletePost = async (id) => {
 export const editPost = async (id, description) => {
   const refreshPost = doc(db, 'posts', id);
   await updateDoc(refreshPost, {
-   
     description: description,
   });
 };
-
 
