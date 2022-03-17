@@ -45,13 +45,13 @@ from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js';
 };
 
 const app = initializeApp(firebaseConfig);
-const db = getFirestore();
+const db = getFirestore(app);
+export const auth = getAuth(app);    // Initialize Firebasegit
+export const user = auth.currentUser;
 
-// Initialize Firebasegit
-export const auth = getAuth(app);
 
 // Registrarse
-export const registerEvent = (email, password, name) => {
+export const registerEvent = (email, password) => {
   createUserWithEmailAndPassword(auth, email, password)
     .then((cred) => {
       console.log('User created: ', cred.user);
@@ -59,6 +59,8 @@ export const registerEvent = (email, password, name) => {
       window.location.hash = '#/wall';
       emailCheck();
     })
+
+    
    
     .catch((err) => {
       console.log(err.message);
@@ -66,7 +68,7 @@ export const registerEvent = (email, password, name) => {
     
     });
     const emailCheck = () => {
-      sendEmailVerification(auth.currentUser)
+      sendEmailVerification(user)
         .then(() => {
           // Email verification sent!
           console.log('Correo enviado');
@@ -104,12 +106,12 @@ export const signIn = (emailRegister, passwordRegister) => {
     .then((result) => {
       // This gives you a Google Access Token. You can use it to access the Google API.
       const credential = GoogleAuthProvider.credentialFromResult(result);
-      const token = credential.accessToken;
-      console.log(result._tokenResponse)
-      localStorage.setItem('nameUserRegister', result._tokenResponse.firstName);
+      
       // The signed-in user info.
-     // const user = result.user;
+
+      const signedInUser = result.user;
 window.location.hash='#/wall';
+
       // ...
     }).catch((error) => {
       // Handle Errors here.
@@ -140,10 +142,13 @@ export const logOut = () => {
 // guardar datos post
 export const addPost = async ( description) => {            // Add a new document with a generated id.
  
-  const date = Timestamp.fromDate(new Date())
-  const name =  auth.currentUser.displayName
-  console.log(name)
-    await addDoc(collection(db, 'posts'), {description,date,name});
+
+  const date = Timestamp.fromDate(new Date());
+  const name =  auth.currentUser.displayName;
+  const userId = auth.currentUser.uid;
+  console.log(userId);
+    await addDoc(collection(db, 'posts'), {description,date,name, userId});
+
   
 };
 
@@ -168,4 +173,18 @@ export const readPost = () => {
     return boxPost;
   });};
 
+
+  // Borrar datos
+export const deletePost = async (id) => {
+  await deleteDoc(doc(db, 'posts', id));
+  console.log(await deleteDoc);
+};
+
+// Editar datos
+export const editPost = async (id, description) => {
+  const refreshPost = doc(db, 'posts', id);
+  await updateDoc(refreshPost, {
+    description: description,
+  });
+};
 
