@@ -1,3 +1,4 @@
+import { deletePost,auth,editPost} from '../templates/index.js'
 //Función para imprimir posts
 export const printPosts = (array) => {
     const containerEmpty = document.querySelector('#wallPosts');
@@ -11,16 +12,23 @@ export const printPosts = (array) => {
             <div class="user-post">
             <p class="img-user2-p">${element.data.name}</p>
             </div>
-            <div class="img-meatballs">
-            <img class="like-post" src="./imagenes/meatballs.png" />
-            </div>
+          
            
          </div>
+
+           <div class="delete-edit">
+              <img class="edit-post" src="./imagenes/edit.png" />
+              <img class="delete-post" src="./imagenes/delete.png" />
+            </div>
+
+
            <div class="text-like">
          
             <div class="post-buttons">
             <textarea id="writePost-${element.id}" class="review-post2" readonly> ${element.data.description} </textarea>
             </div>
+
+            
             <div class="buttons">
             <button class="btn-like" value='${element.id}'><img class="like-post" src="./imagenes/like.png" />${element.data.likesCounter}</button>
             </div>
@@ -28,28 +36,67 @@ export const printPosts = (array) => {
            </div>
         </div>
           `;
-        
-          // let userEdit= '';
-          //  if (element.data.userId === auth.currentUser.uid) {
-          //    boxEmptyThree = `
-          //        <div class="edit-post">
-          //       <button id="btnImagePost" class="btn-image"> <img class="image-post" src="./imagenes/icons8imagen.png" /></button>
-          //        <button class="btn-pencil" value='${element.id}' > <img class="pencil-post" src="./imagenes/icons8lapiz.png" /> Editar</button>
-          //        <button class="btn-trash" id="btnTrash" value='${element.id}' > <img class="trash-post" src="./imagenes/icons8eliminar.png" /> Eliminar</button>
-          //        <button class="btn-save" id='mr-${element.id}-save'>Guardar</button>
-          //        </div>
-          //        `;
-          //  }
 
-           containerEmpty.innerHTML += postView ;
-     }
-  
+          
+          let userEdit= '';
+          if (element.data.userId === auth.currentUser.uid) {
+            userEdit = `
+                <div class="edit-post">
+                
+                <button class="btn-pencil" value='${element.id}' > Editar</button>
+                <button class="btn-trash" id="btnTrash" value='${element.id}' > Borrar</button>
+                <button class="btn-save" id='mr-${element.id}-save'>Guardar</button>
+                </div>
+                `;
+          }
+
+          containerEmpty.innerHTML += postView + userEdit;
+    };
 
     array.forEach(viewPost);
-    return printPosts;
     
-  }
+    
+  
 
- // if (data.element.data.userId === auth.currentUser.uid)
+    //Evento para borrar post
+    const deleteButton = containerEmpty.querySelectorAll('.btn-trash');
+    deleteButton.forEach((e) => {
+      e.addEventListener('click', () => {
+        // eslint-disable-next-line no-restricted-globals
+        const confirmDelete = confirm('¿Estás seguro de eliminar este Post?');
+        if (confirmDelete === true) {
+          deletePost(e.value);
+        }
+      });
+    });
+
+
+
+      // Evento para editar post
+      const updatePost = containerEmpty.querySelectorAll('.btn-pencil');
+      updatePost.forEach((element) => {
+        element.addEventListener('click', () => {
+          const valueButton = element.value;
+          const editDocReview = containerEmpty.querySelector(`#writePost-${valueButton}`);
+          editDocReview.removeAttribute('readonly');
+          const saveValue = containerEmpty.querySelector(
+            `#mr-${element.value}-save`,
+          );
+          saveValue.style.display = 'block';
+          saveValue.addEventListener('click', () => {
+            
+            const description = editDocReview.value;
+            editPost(element.value, description);
+            saveValue.style.display = 'none';
+            
+            editDocReview.setAttribute('readonly');
+          });
+        });
+      });
+
+
+      return printPosts;
+    };
+
 
 
