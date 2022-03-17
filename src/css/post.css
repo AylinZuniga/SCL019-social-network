@@ -1,7 +1,7 @@
 .postContainer{
     background-color:white;
     padding:5%;
-    /* width:80%; */
+    width:80%;
     border-color:black;
     border:30px;
     height:30%;
@@ -23,8 +23,6 @@
     height: 60vh;
     border:10px;
     width:150%;
- 
-  
 
 }
 
@@ -38,7 +36,6 @@
     margin: 5% 10% 0 10%;
     width:100%;
     padding:1%;
-   
 }
 .postUserMenu{
     display:flex;
@@ -47,11 +44,25 @@
 .img-user2-p{
     display:flex;
     flex-direction: row;
+    margin-top:-15%;
 }
 
-.img-meatballs{
-    margin-left:75%;
-    margin-top:-5%;
+.delete-edit{
+    margin-left:60%;
+    margin-top:-8%;
+    width:10%;
+    gap:10%;
+}
+.edit-post{
+   width: 40%;
+   margin-right: 3%;
+   
+
+}
+.delete-post{
+    width:40%;
+    margin-left: 1%;
+    
 }
 
 
@@ -62,11 +73,15 @@
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
-    margin-top:-2%;
+    margin-top:2%;
 }
 .buttons{
-    margin-top:-5%;
+    margin-top:-10%;
     width:8%;
     margin-left:80%;
 }
-
+.btn-like{
+    margin-top: 85%;
+    background: none;
+    border:none;
+}
