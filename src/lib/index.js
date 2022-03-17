@@ -45,10 +45,10 @@ from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js';
 };
 
 const app = initializeApp(firebaseConfig);
-const db = getFirestore();
+const db = getFirestore(app);
+export const auth = getAuth(app);    // Initialize Firebasegit
+export const user = auth.currentUser;
 
-// Initialize Firebasegit
-export const auth = getAuth(app);
 
 // Registrarse
 export const registerEvent = (email, password, name) => {
@@ -66,11 +66,12 @@ export const registerEvent = (email, password, name) => {
     
     });
     const emailCheck = () => {
-      sendEmailVerification(auth.currentUser)
+      sendEmailVerification(user)
         .then(() => {
           // Email verification sent!
           console.log('Correo enviado');
           alert('Hemos enviado un correo de verificación para validar tu cuenta');
+          
         })
         .catch((error) => {
           console.log(error);
@@ -104,8 +105,10 @@ export const signIn = (emailRegister, passwordRegister) => {
       // This gives you a Google Access Token. You can use it to access the Google API.
       const credential = GoogleAuthProvider.credentialFromResult(result);
       const token = credential.accessToken;
+      console.log(result._tokenResponse)
+      localStorage.setItem('nameUserRegister', result._tokenResponse.firstName);
       // The signed-in user info.
-     // const user = result.user;
+      const signedInUser = result.user;
 window.location.hash='#/wall';
       // ...
     }).catch((error) => {
@@ -137,20 +140,26 @@ export const logOut = () => {
 // guardar datos post
 export const addPost = async ( description) => {            // Add a new document with a generated id.
  
-  const date = Timestamp.fromDate(new Date())
-    await addDoc(collection(db, 'posts'), {description,date});
+  const date = Timestamp.fromDate(new Date());
+  const name =  auth.currentUser.displayName;
+  const userId = auth.currentUser.uid;
+  console.log(userId);
+    await addDoc(collection(db, 'posts'), {description,date,name, userId});
   
 };
 
 // Leer datos de post
 export const readPost = () => {
+
   const q = query(collection(db, 'posts'), orderBy('date', 'desc'));
+
   onSnapshot(q, (querySnapshot) => {
     const boxPost = [];
     querySnapshot.forEach((doc) => {
       console.log('documentos',doc)
       boxPost.push({
-        id: doc.data().id,
+        id: doc.id,
+        datepost: Date.now(),
         data: doc.data(),
         description: doc.data().description,
         date: doc.data().date,
@@ -175,19 +184,20 @@ export const readPost = () => {
 //   });
 // };
 
-// // Dar likes y contador de likes
-// export const likePost = async (id, userLike) => {
+// // // Dar likes y contador de likes
+//  export const likePost = async (id, userLike) => {
 //   const likeRef = doc(db, 'posts', id);
-//   const docSnap = await getDoc(likeRef);
-//   const postData = docSnap.data();
-//   const likesCount = postData.likesCounter;
+//   console.log(likeRef);
+//    const docSnap = await getDoc(likeRef);
+//    const postData = docSnap.data();
+//    const likesCount = postData.likesCounter;
 
-//   if (postData.likes.includes(userLike)) {
-//     await updateDoc(likeRef, {
-//       likes: arrayRemove(userLike),
-//       likesCounter: likesCount - 1,
-//     });
-//   } else {
+//    if (postData.likes.includes(userLike)) {
+//      await updateDoc(likeRef, {
+//      likes: arrayRemove(userLike),
+//        likesCounter: likesCount - 1,
+//      });
+//    } else {
 //     await updateDoc(likeRef, {
 //       likes: arrayUnion(userLike),
 //       likesCounter: likesCount + 1,
