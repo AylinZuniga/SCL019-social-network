@@ -13,7 +13,9 @@ export const printPosts = (array) => {
               <p class="img-user2-p">${element.data.name}</p>
             </div>
 
+
          </div>
+
 
 
            <div class="text-like">
