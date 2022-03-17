@@ -1,4 +1,4 @@
-import { deletePost,auth,editPost} from '../templates/index.js'
+import { deletePost,auth,editPost} from '../lib/index.js'
 //Función para imprimir posts
 export const printPosts = (array) => {
     const containerEmpty = document.querySelector('#wallPosts');
