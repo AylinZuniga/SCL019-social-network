@@ -13,15 +13,9 @@ export const printPosts = (array) => {
               <p class="img-user2-p">${element.data.name}</p>
             </div>
 
-            
-            <div class="delete-edit">
-              <img class="edit-post" src="./imagenes/edit.png" />
-              <img class="delete-post" src="./imagenes/delete.png" />
-            </div>
 
-          </div>
+         </div>
 
-        
 
 
            <div class="text-like">
@@ -42,10 +36,10 @@ export const printPosts = (array) => {
           let userEdit= '';
           if (element.data.userId === auth.currentUser.uid) {
             userEdit = `
-                <div class="edit-post">
+                <div class="delete-edit">
                 
-                <button class="btn-pencil" value='${element.id}' > Editar</button>
-                <button class="btn-trash" id="btnTrash" value='${element.id}' > Borrar</button>
+                <button class="btn-pencil" value='${element.id}' ><img class="edit-post" src="./imagenes/edit.png" /></button>
+                <button class="btn-trash" id="btnTrash" value='${element.id}' ><img class="delete-post" src="./imagenes/delete.png" /></button>
                 <button class="btn-save" id='mr-${element.id}-save'>Guardar</button>
                 </div>
                 `;
