@@ -6,6 +6,11 @@
     height: 15%;
 
 }
+.wallPosts{
+    width:60%;
+    border:none;
+    border-radius: 10px;
+}
 
 .wallTitle{
     font-size: 170%;
@@ -18,9 +23,9 @@
 
 
 .profilePic{
-    width:42%;
-    margin-top:25%;
-    margin-left:-35%;
+    width: 35%;
+    margin-top: 14%;
+    margin-left: -40%;
     
 }
 .postAndWall{
@@ -33,7 +38,7 @@
     flex-direction: column;
     justify-content:center;
     gap:5%;
-    width:178%;
+    width:80vw;
     height: 16vh;
     margin: 5% 10% 0 10%;
     margin-top:5%;
@@ -41,16 +46,7 @@
     border:none;
     border-radius:10px;
 }
-.wallPostsContainer{
 
-    overflow: scroll;
-    height: 50vh;
-    margin: 5% 10% 0 10%;
-    width:178%;
-    border: 5px solid #f7bc57;
-    border-radius: 15px;
-    background-color: #6482F4;
-}
 .questionP{
     color:rgba(100, 130, 244, 1);
     font-size:80%;
@@ -87,10 +83,4 @@
 
 }
 
-.wallPostsContainer{
 
-    overflow: scroll;
-    height: 50%;
-    border: 5px solid #f7bc57;
-    border-radius: 15px;
-}

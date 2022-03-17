@@ -4,16 +4,28 @@ export const printPosts = (array) => {
     containerEmpty.innerHTML = '';
     const viewPost = (element) => {
       const postView = `
-        <div id="postModal" class="post-modal">
-        <div class="user-post">
-          
-          <p class="img-user2-p">${element.data.name}</p>
-        </div>
-        <div class="post-buttons">
-        <textarea id="writePost-${element.id}" class="review-post2" readonly> ${element.data.description} </textarea>
-        </div>
-        <div class="buttons">
-          <button class="btn-like" value="${element.id}"><img class="like-post" src="./imagenes/corazon.png" />${element.data.likesCounter}</button>
+        <div id="postContainer" class="postContainer">
+
+         <div class="postUserMenu">
+
+            <div class="user-post">
+            <p class="img-user2-p">${element.data.name}</p>
+            </div>
+            <div class="img-meatballs">
+            <img class="like-post" src="./imagenes/meatballs.png" />
+            </div>
+           
+         </div>
+           <div class="text-like">
+         
+            <div class="post-buttons">
+            <textarea id="writePost-${element.id}" class="review-post2" readonly> ${element.data.description} </textarea>
+            </div>
+            <div class="buttons">
+            <button class="btn-like" value='${element.id}'><img class="like-post" src="./imagenes/like.png" />${element.data.likesCounter}</button>
+            </div>
+            
+           </div>
         </div>
           `;
         
