@@ -95,7 +95,7 @@ export const printPosts = (array) => {
         });
       });
 
-
+//probando
       return printPosts;
     };
 
