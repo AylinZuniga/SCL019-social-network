@@ -85,3 +85,7 @@
     background: none;
     border:none;
 }
+
+.btn-save{
+    display: none;
+}
