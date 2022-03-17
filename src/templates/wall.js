@@ -13,7 +13,7 @@ export const wall = () => {
           </div>
      
           <div class="homeContainer">
-            <a class="iconContainer" href="#/"> <img src="./imagenes/exit.png" class="exitIcon"></a>
+          <a class="iconContainer" href="#/"><img src="./imagenes/exit.png" class="exitIcon"></a>
           </div>
      
        </header>
@@ -67,7 +67,7 @@ export const wall = () => {
     await addPost(inputPost);
     console.log('input post',inputPost)
     }
-
+    readPost();
 
 });
 

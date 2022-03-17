@@ -36,6 +36,7 @@ export const printPosts = (array) => {
            </div>
         </div>
           `;
+
           
           let userEdit= '';
           if (element.data.userId === auth.currentUser.uid) {
@@ -51,7 +52,6 @@ export const printPosts = (array) => {
 
           containerEmpty.innerHTML += postView + userEdit;
     };
-  
 
     array.forEach(viewPost);
     
