@@ -345,21 +345,25 @@
 }
 .wallPostsContainer{
 
-
     overflow: scroll;
-    height: 50vh;
+    scroll-behavior: smooth;
+    height: 73vh;
     width:50%;
-    border: 5px solid #f7bc57;
     border-radius: 15px;
-    background-color: #6482F4;
+    background-color: transparent;
 }
 
 .postAndWall{
-
     flex-direction: row;
 
-
-
+}
+.review-post2{
+    margin-top:5%;
+}
+.buttons{
+    margin-top:22%;
+    width:8%;
+    margin-left:90%;
 }
 
 }
