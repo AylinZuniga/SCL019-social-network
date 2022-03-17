@@ -10,10 +10,15 @@ export const printPosts = (array) => {
          <div class="postUserMenu">
 
             <div class="user-post">
-            <p class="img-user2-p">${element.data.name}</p>
+              <p class="img-user2-p">${element.data.name}</p>
             </div>
-          
-           
+
+            
+            <div class="delete-edit">
+              <img class="edit-post" src="./imagenes/edit.png" />
+              <img class="delete-post" src="./imagenes/delete.png" />
+            </div>
+
          </div>
 
            <div class="delete-edit">
@@ -25,12 +30,11 @@ export const printPosts = (array) => {
            <div class="text-like">
          
             <div class="post-buttons">
-            <textarea id="writePost-${element.id}" class="review-post2" readonly> ${element.data.description} </textarea>
+              <textarea id="writePost-${element.id}" class="review-post2" readonly> ${element.data.description} </textarea>
             </div>
 
-            
-            <div class="buttons">
-            <button class="btn-like" value='${element.id}'><img class="like-post" src="./imagenes/like.png" />${element.data.likesCounter}</button>
+              <div class="buttons">
+              <button class="btn-like" value='${element.id}'><img class="like-post" src="./imagenes/like.png" />${element.data.likesCounter}</button>
             </div>
             
            </div>

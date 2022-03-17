@@ -361,10 +361,40 @@
     margin-top:5%;
 }
 .buttons{
-    margin-top:22%;
+    margin-top:-5%;
     width:8%;
     margin-left:90%;
 }
+
+.delete-edit{
+    margin-left:70%;
+    margin-top:-8%;
+    width:10%;
+    gap:10%;
+}
+.edit-post{
+   width: 40%;
+   margin-right: 3%;
+   
+
+}
+.delete-post{
+    width:40%;
+    margin-left: 1%;
+    
+}
+
+.btn-like{
+    margin-top:-40%;
+    background: none;
+    border:none;
+}
+.buttons{
+    margin-top:-12%;
+    width:8%;
+    margin-left:85%;
+}
+
 
 }
 
