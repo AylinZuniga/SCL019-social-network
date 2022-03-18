@@ -170,8 +170,8 @@ export const readPost = () => {
         data: doc.data(),
         description: doc.data().description,
         date: doc.data().date,
-        // likes:[],
-        // likesCounter:0
+        likes:[],
+        likesCounter:0
       });
     });
     printPosts(boxPost);
