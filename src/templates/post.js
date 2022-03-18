@@ -1,10 +1,10 @@
-import { deletePost,auth,editPost,likePost} from '../lib/index.js'
+import { deletePost, auth, editPost, likePost } from '../lib/index.js'
 //Función para imprimir posts
 export const printPosts = (array) => {
-    const containerEmpty = document.querySelector('#wallPosts');
-    containerEmpty.innerHTML = '';
-    const viewPost = (element) => {
-      const postView = `
+  const containerEmpty = document.querySelector('#wallPosts');
+  containerEmpty.innerHTML = '';
+  const viewPost = (element) => {
+    const postView = `
         <div id="postContainer" class="postContainer">
 
          <div class="postUserMenu">
@@ -12,7 +12,6 @@ export const printPosts = (array) => {
             <div class="user-post">
               <p class="img-user2-p">${element.data.name}</p>
             </div>
-
 
          </div>
 
@@ -32,10 +31,10 @@ export const printPosts = (array) => {
         </div>
           `;
 
-          
-          let userEdit= '';
-          if (element.data.userId === auth.currentUser.uid) {
-            userEdit = `
+
+    let userEdit = '';
+    if (element.data.userId === auth.currentUser.uid) {
+      userEdit = `
                 <div class="delete-edit">
                 
                 <button class="btn-pencil" value='${element.id}' ><img class="edit-post" src="./imagenes/edit.png" /></button>
@@ -43,53 +42,53 @@ export const printPosts = (array) => {
                 <button class="btn-save" id='mr-${element.id}-save'>Guardar</button>
                 </div>
                 `;
-          }
+    }
 
-          containerEmpty.innerHTML += postView + userEdit;
-    };
+    containerEmpty.innerHTML += postView + userEdit;
+  };
 
-    array.forEach(viewPost);
-    
-    
-  
+  array.forEach(viewPost);
 
-    //Evento para borrar post
-    const deleteButton = containerEmpty.querySelectorAll('.btn-trash');
-    deleteButton.forEach((e) => {
-      e.addEventListener('click', () => {
-        // eslint-disable-next-line no-restricted-globals
-        const confirmDelete = confirm('¿Estás seguro de eliminar este Post?');
-        if (confirmDelete === true) {
-          deletePost(e.value);
-        }
+
+
+
+  //Evento para borrar post
+  const deleteButton = containerEmpty.querySelectorAll('.btn-trash');
+  deleteButton.forEach((e) => {
+    e.addEventListener('click', () => {
+      // eslint-disable-next-line no-restricted-globals
+      const confirmDelete = confirm('¿Estás seguro de eliminar este Post?');
+      if (confirmDelete === true) {
+        deletePost(e.value);
+      }
+    });
+  });
+
+
+
+  // Evento para editar post
+  const updatePost = containerEmpty.querySelectorAll('.btn-pencil');
+  updatePost.forEach((element) => {
+    element.addEventListener('click', () => {
+      const valueButton = element.value;
+      const editDocReview = containerEmpty.querySelector(`#writePost-${valueButton}`);
+      editDocReview.removeAttribute('readonly');
+      const saveValue = containerEmpty.querySelector(
+        `#mr-${element.value}-save`,
+      );
+      saveValue.style.display = 'block';
+      saveValue.addEventListener('click', () => {
+
+        const description = editDocReview.value;
+        editPost(element.value, description);
+        saveValue.style.display = 'none';
+
+        editDocReview.setAttribute('readonly');
       });
     });
+  });
 
-
-
-      // Evento para editar post
-      const updatePost = containerEmpty.querySelectorAll('.btn-pencil');
-      updatePost.forEach((element) => {
-        element.addEventListener('click', () => {
-          const valueButton = element.value;
-          const editDocReview = containerEmpty.querySelector(`#writePost-${valueButton}`);
-          editDocReview.removeAttribute('readonly');
-          const saveValue = containerEmpty.querySelector(
-            `#mr-${element.value}-save`,
-          );
-          saveValue.style.display = 'block';
-          saveValue.addEventListener('click', () => {
-            
-            const description = editDocReview.value;
-            editPost(element.value, description);
-            saveValue.style.display = 'none';
-            
-            editDocReview.setAttribute('readonly');
-          });
-        });
-      });
-
-      // Evento para dar likes
+  // Evento para dar likes
   const likeButton = containerEmpty.querySelectorAll('.btn-like');
   likeButton.forEach((e) => {
     e.addEventListener('click', () => {
@@ -99,10 +98,11 @@ export const printPosts = (array) => {
     });
   });
 
-  
+
 
   return printPosts;
 };
+
 
 
 

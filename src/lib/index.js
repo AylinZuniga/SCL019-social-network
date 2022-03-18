@@ -146,8 +146,11 @@ export const addPost = async ( description) => {            // Add a new documen
   const date = Timestamp.fromDate(new Date());
   const name =  auth.currentUser.displayName;
   const userId = auth.currentUser.uid;
+  const likes=[];
+  const likesCounter= 0;
   console.log(userId);
-    await addDoc(collection(db, 'posts'), {description,date,name, userId});
+
+    await addDoc(collection(db, 'posts'), {description,date,name, userId, likes, likesCounter});
 
   
 };
@@ -167,6 +170,8 @@ export const readPost = () => {
         data: doc.data(),
         description: doc.data().description,
         date: doc.data().date,
+        // likes:[],
+        // likesCounter:0
       });
     });
     printPosts(boxPost);
@@ -187,6 +192,26 @@ export const editPost = async (id, description) => {
     description: description,
   });
 };
+// Dar likes y contador de likes
+export const likePost = async (id, userLike) => {
+  const likeRef = doc(db, 'posts', id);
+  const docSnap = await getDoc(likeRef);
+  const postData = docSnap.data();
+  const likesCount = postData.likesCounter;
+
+  if (postData.likes.includes(userLike[likesCount])) {
+    await updateDoc(likeRef, {
+      likes: arrayRemove(userLike),
+      likesCounter: likesCount - 1,
+    });
+  } else {
+    await updateDoc(likeRef, {
+      likes: arrayUnion(userLike),
+      likesCounter: likesCount + 1,
+    });
+  }
+};
+
 
 // Dar likes y contador de likes
 export const likePost = async (id, userLike) => {
