@@ -1,4 +1,4 @@
-import { deletePost,auth,editPost} from '../lib/index.js'
+import { deletePost,auth,editPost,likePost} from '../lib/index.js'
 //Función para imprimir posts
 export const printPosts = (array) => {
     const containerEmpty = document.querySelector('#wallPosts');
@@ -13,7 +13,9 @@ export const printPosts = (array) => {
               <p class="img-user2-p">${element.data.name}</p>
             </div>
 
+
          </div>
+
 
 
            <div class="text-like">
@@ -87,9 +89,20 @@ export const printPosts = (array) => {
         });
       });
 
-//probando
-      return printPosts;
-    };
+      // Evento para dar likes
+  const likeButton = containerEmpty.querySelectorAll('.btn-like');
+  likeButton.forEach((e) => {
+    e.addEventListener('click', () => {
+      const likeValue = e.value;
+      const userId = auth.currentUser.uid;
+      likePost(likeValue, userId);
+    });
+  });
+
+  
+
+  return printPosts;
+};
 
 
 
