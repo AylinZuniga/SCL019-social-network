@@ -199,27 +199,6 @@ export const likePost = async (id, userLike) => {
   const postData = docSnap.data();
   const likesCount = postData.likesCounter;
 
-  if (postData.likes.includes(userLike[likesCount])) {
-    await updateDoc(likeRef, {
-      likes: arrayRemove(userLike),
-      likesCounter: likesCount - 1,
-    });
-  } else {
-    await updateDoc(likeRef, {
-      likes: arrayUnion(userLike),
-      likesCounter: likesCount + 1,
-    });
-  }
-};
-
-
-// Dar likes y contador de likes
-export const likePost = async (id, userLike) => {
-  const likeRef = doc(db, 'posts', id);
-  const docSnap = await getDoc(likeRef);
-  const postData = docSnap.data();
-  const likesCount = postData.likesCounter;
-
   if (postData.likes.includes(userLike)) {
     await updateDoc(likeRef, {
       likes: arrayRemove(userLike),
@@ -232,3 +211,6 @@ export const likePost = async (id, userLike) => {
     });
   }
 };
+
+
+
