@@ -384,8 +384,7 @@
     
 }
 
-.btn-like{
-    margin-top:-40%;
+.btn-like,.btn-trash{
     background: none;
     border:none;
 }
