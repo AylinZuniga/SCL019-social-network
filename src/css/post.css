@@ -86,8 +86,16 @@
     margin-top: 85%;
     background: none;
     border:none;
+    display: flex;
+    flex-direction: row-reverse;
+    color:rgba(100, 130, 244, 1);
 }
 
 .btn-save{
     display: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgba(100, 130, 244, 1);
+    border-color:white;
+    border:20px;
+    color:white;
 }
