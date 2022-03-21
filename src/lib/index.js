@@ -57,7 +57,7 @@ export const registerEvent = (email, password) => {
       console.log('User created: ', cred.user);
 
       window.location.hash = '#/wall';
-      emailCheck();
+      // emailCheck();
     })
 
     
@@ -67,18 +67,18 @@ export const registerEvent = (email, password) => {
       alert(err.message);
     
     });
-    const emailCheck = () => {
-      sendEmailVerification(user)
-        .then(() => {
-          // Email verification sent!
-          console.log('Correo enviado');
-          alert('Hemos enviado un correo de verificación para validar tu cuenta');
+    // const emailCheck = () => {
+    //   sendEmailVerification(user)
+    //     .then(() => {
+    //       // Email verification sent!
+    //       console.log('Correo enviado');
+    //       alert('Hemos enviado un correo de verificación para validar tu cuenta');
           
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    };
+    //     })
+    //     .catch((error) => {
+    //       console.log(error);
+    //     });
+    // };
 };
 
 // Iniciar sesión con correo registrado
