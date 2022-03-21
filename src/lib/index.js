@@ -178,7 +178,6 @@ export const editPost = async (id, description) => {
     description: description,
   });
 };
-
 // Dar likes y contador de likes
 export const likePost = async (id, userLike) => {
   const likeRef = doc(db, 'posts', id);
@@ -198,3 +197,6 @@ export const likePost = async (id, userLike) => {
     });
   }
 };
+
+
+
