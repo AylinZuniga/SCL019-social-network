@@ -98,7 +98,7 @@ export const printPosts = (array) => {
     });
   });
 
-//jelou
+
 
   return printPosts;
 };
