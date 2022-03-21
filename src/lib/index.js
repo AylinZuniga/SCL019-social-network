@@ -1,7 +1,7 @@
 /* eslint-disable import/no-unresolved */
-import { printPosts} from '../templates/post.js'
+import { printPosts } from '../templates/post.js'
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
-import { 
+import {
   getFirestore,
   collection,
   addDoc,
@@ -18,30 +18,30 @@ import {
   arrayUnion,
   arrayRemove,
 }
- from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore.js';
+  from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore.js';
 import {
   getAuth,
-  createUserWithEmailAndPassword, 
-   signOut,
-   signInWithEmailAndPassword,
-   sendEmailVerification,
+  createUserWithEmailAndPassword,
+  signOut,
+  signInWithEmailAndPassword,
+  sendEmailVerification,
   //  onAuthStateChanged,
-   GoogleAuthProvider,
+  GoogleAuthProvider,
   signInWithPopup
 }
-from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js';
+  from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js';
 
 
 
 // Your web app's Firebase configuration
 
-  const firebaseConfig = {
-    apiKey: "AIzaSyBUvj7Ny-b2QLU57iZ_B0CP8gsezTwV75Q",
-    authDomain: "social-network-949f0.firebaseapp.com",
-    projectId: "social-network-949f0",
-    storageBucket: "social-network-949f0.appspot.com",
-    messagingSenderId: "499338039893",
-    appId: "1:499338039893:web:7f04fc4790a65d8949fadc"
+const firebaseConfig = {
+  apiKey: "AIzaSyBUvj7Ny-b2QLU57iZ_B0CP8gsezTwV75Q",
+  authDomain: "social-network-949f0.firebaseapp.com",
+  projectId: "social-network-949f0",
+  storageBucket: "social-network-949f0.appspot.com",
+  messagingSenderId: "499338039893",
+  appId: "1:499338039893:web:7f04fc4790a65d8949fadc"
 };
 
 const app = initializeApp(firebaseConfig);
@@ -60,25 +60,25 @@ export const registerEvent = (email, password) => {
       emailCheck();
     })
 
-    
-   
+
+
     .catch((err) => {
       console.log(err.message);
       alert(err.message);
-    
+
     });
-    const emailCheck = () => {
-      sendEmailVerification(user)
-        .then(() => {
-          // Email verification sent!
-          console.log('Correo enviado');
-          alert('Hemos enviado un correo de verificación para validar tu cuenta');
-          
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    };
+  const emailCheck = () => {
+    sendEmailVerification(user)
+      .then(() => {
+        // Email verification sent!
+        console.log('Correo enviado');
+        alert('Hemos enviado un correo de verificación para validar tu cuenta');
+
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 };
 
 // Iniciar sesión con correo registrado
@@ -98,34 +98,22 @@ export const signIn = (emailRegister, passwordRegister) => {
       const errorMessage = error.message;
       console.log(errorMessage);
     });
-  };
+};
+
+
 //iniciar sesion con google
-  export const checkGoogle = () => {
-    const provider = new GoogleAuthProvider();
-    signInWithPopup(auth, provider)
-    .then((result) => {
-      // This gives you a Google Access Token. You can use it to access the Google API.
-      const credential = GoogleAuthProvider.credentialFromResult(result);
-      
-      // The signed-in user info.
+export const checkGoogle = () => {
+  const provider = new GoogleAuthProvider();
+  signInWithPopup(auth, provider)
+    .then(() => {
 
-      const signedInUser = result.user;
-window.location.hash='#/wall';
+      window.location.hash = '#/wall';
 
-      // ...
-    }).catch((error) => {
-      // Handle Errors here.
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      // The email of the user's account used.
-      const email = error.email;
-      // The AuthCredential type that was used.
-      const credential = GoogleAuthProvider.credentialFromError(error);
-      // ...
-    });
-  };
 
-  // Cerrar sesión
+    })
+};
+
+// Cerrar sesión
 export const logOut = () => {
   signOut(auth)
     .then(() => {
@@ -133,53 +121,51 @@ export const logOut = () => {
       console.log('cierre de sesión exitoso');
       window.location.hash = '#/login';
     })
-    .catch((error) => {
-      console.log(error);
-      // An error happened.
-    });
+    
 };
 
 // guardar datos post
-export const addPost = async ( description) => {            // Add a new document with a generated id.
- 
+export const addPost = async (description) => {            // Add a new document with a generated id.
+
 
   const date = Timestamp.fromDate(new Date());
-  const name =  auth.currentUser.displayName;
+  const name = auth.currentUser.displayName;
   const userId = auth.currentUser.uid;
-  const likes=[];
-  const likesCounter= 0;
-  console.log(userId);
-
-    await addDoc(collection(db, 'posts'), {description,date,name, userId, likes, likesCounter});
-
+  const likes = [];
+  const likesCounter = 0;
   
+
+  await addDoc(collection(db, 'posts'), { description, date, name, userId, likes, likesCounter }); //guardamos la coleccion post 
 };
+
+
 
 // Leer datos de post
 export const readPost = () => {
 
   const q = query(collection(db, 'posts'), orderBy('date', 'desc'));
 
-  onSnapshot(q, (querySnapshot) => {
+  onSnapshot(q, (querySnapshot) => { //onSnapshot escucha los elementos del documento 
     const boxPost = [];
-    querySnapshot.forEach((doc) => {
-      console.log('documentos',doc)
+    querySnapshot.forEach((doc) => { //QuerySnapshot accede a los objetos que llama de doc por medio del array
+      console.log('documentos', doc)
       boxPost.push({
         id: doc.id,
         datepost: Date.now(),
         data: doc.data(),
         description: doc.data().description,
         date: doc.data().date,
-        likes:[],
-        likesCounter:0
+        likes: [],
+        likesCounter: 0
       });
     });
     printPosts(boxPost);
     return boxPost;
-  });};
+  });
+};
 
 
-  // Borrar datos
+// Borrar datos
 export const deletePost = async (id) => {
   await deleteDoc(doc(db, 'posts', id));
   console.log(await deleteDoc);
@@ -192,26 +178,6 @@ export const editPost = async (id, description) => {
     description: description,
   });
 };
-// Dar likes y contador de likes
-export const likePost = async (id, userLike) => {
-  const likeRef = doc(db, 'posts', id);
-  const docSnap = await getDoc(likeRef);
-  const postData = docSnap.data();
-  const likesCount = postData.likesCounter;
-
-  if (postData.likes.includes(userLike[likesCount])) {
-    await updateDoc(likeRef, {
-      likes: arrayRemove(userLike),
-      likesCounter: likesCount - 1,
-    });
-  } else {
-    await updateDoc(likeRef, {
-      likes: arrayUnion(userLike),
-      likesCounter: likesCount + 1,
-    });
-  }
-};
-
 
 // Dar likes y contador de likes
 export const likePost = async (id, userLike) => {
