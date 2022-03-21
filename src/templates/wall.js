@@ -9,7 +9,7 @@ export const wall = () => {
        <header class="title-menu">
 
           <div class="titleContainer">
-            <h1 class="title">Togeter</h1>
+            <h1 class="title">Together</h1>
           </div>
      
           <div class="homeContainer">
