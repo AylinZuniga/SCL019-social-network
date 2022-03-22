@@ -57,7 +57,7 @@ export const registerEvent = (email, password) => {
       console.log('User created: ', cred.user);
 
       window.location.hash = '#/wall';
-      emailCheck();
+      // emailCheck();
     })
 
 
