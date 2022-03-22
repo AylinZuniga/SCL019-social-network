@@ -8,6 +8,8 @@
 * [3.1 Primera historia de usuario](###-3.1-Primera-historia-de-usuario)
 * [3.1.1 Prototipo baja fidelidad](###-3.1.2-Prototipo-baja-fidelidad)
 * [3.1.2 Prototipo alta fidelidad](###-3.1.2-Prototipo-alta-fidelidad)
+* [3.1.2 Prototipo alta fidelidad](###-3.1.3-Segunda historia de usuario)
+* 
 
 
 ## 1. Presentación - Bienvenid@ a Together! -
@@ -55,6 +57,23 @@ Ese es el problema que intenta resolver Together, se aspira que sea una red soci
 ![imagen](src/imagenes/together(inicio).png)![imagen](src/imagenes/together(ingreso).png)![imagen](src/imagenes/together(registro).png)
 
 ![imagen](src/imagenes/together(mack1).png)![imagen](src/imagenes/together(2).png)
+
+## 3.1.3  Segunda Historia de Usuario
+
+![imagen](src/imagenes/2daHistoria.png)
+
+## 3.1.4 Prototipo alta fidelidad
+
+![imagen](src/imagenes/movile.png)
+
+![imagen](src/imagenes/responsive.png)
+
+
+
+
+
+
+
 
 
 
