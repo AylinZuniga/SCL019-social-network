@@ -49,7 +49,7 @@ export const wall = () => {
   printPage.innerHTML = wallPageView;
 
   
-//
+
   const newPost = printPage.querySelector('#formPublish');
  
   newPost.addEventListener('submit',async (e) => {
