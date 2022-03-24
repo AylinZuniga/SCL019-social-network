@@ -10,11 +10,10 @@ export const printPosts = (array) => {
          <div class="postUserMenu">
 
             <div class="user-post">
-              <p class="img-user2-p">${element.data.name}</p>
+              <p class="user-name">${element.data.name}</p>
             </div>
 
          </div>
-
 
 
            <div class="text-like">
@@ -70,31 +69,31 @@ export const printPosts = (array) => {
   const updatePost = containerEmpty.querySelectorAll('.btn-pencil');
   updatePost.forEach((element) => {
     element.addEventListener('click', () => {
-      const valueButton = element.value;
-      const editDocReview = containerEmpty.querySelector(`#writePost-${valueButton}`);
-      editDocReview.removeAttribute('readonly');
+      const valueButton = element.value;//llamamos al elemento especifico que queremos modificar
+      const editDocReview = containerEmpty.querySelector(`#writePost-${valueButton}`);//estamos llamando al valor del text area
+      editDocReview.removeAttribute('readonly');//le quitamos el valor de solo lectura dejandolo editable
       const saveValue = containerEmpty.querySelector(
         `#mr-${element.value}-save`,
-      );
+      );//llamamos al boton para guardar cambios
       saveValue.style.display = 'block';
       saveValue.addEventListener('click', () => {
 
-        const description = editDocReview.value;
-        editPost(element.value, description);
-        saveValue.style.display = 'none';
+        const description = editDocReview.value;//el nuevo texto sera el valor de editDocReview
+        editPost(element.value, description);//llamamos la funcion de firebase
+        saveValue.style.display = 'none';//ocultamos el boton de guardar
 
-        editDocReview.setAttribute('readonly');
+        editDocReview.setAttribute('readonly');//le devolvemos el valor de lectura
       });
     });
   });
 
   // Evento para dar likes
-  const likeButton = containerEmpty.querySelectorAll('.btn-like');
+  const likeButton = containerEmpty.querySelectorAll('.btn-like');//tomamos el valor del selector
   likeButton.forEach((e) => {
     e.addEventListener('click', () => {
       const likeValue = e.value;
       const userId = auth.currentUser.uid;
-      likePost(likeValue, userId);
+      likePost(likeValue, userId);//guardamos los parametros para entregarselos a las funciones de index.js
     });
   });
 

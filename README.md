@@ -66,7 +66,7 @@ Ese es el problema que intenta resolver Together, se aspira que sea una red soci
 
 ![imagen](src/imagenes/movile.png)
 
-![imagen](src/imagenes/responsive.png)
+![imagen](src/imagenes/wallResponsive.png)
 
 
 
