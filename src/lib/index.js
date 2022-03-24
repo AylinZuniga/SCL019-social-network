@@ -42,12 +42,13 @@ const firebaseConfig = {
   storageBucket: "social-network-949f0.appspot.com",
   messagingSenderId: "499338039893",
   appId: "1:499338039893:web:7f04fc4790a65d8949fadc"
-};
+};//guarda la info del proyecto
 
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+const db = getFirestore(app);//constante que guarda la base de datos
 export const auth = getAuth(app);    // Initialize Firebasegit
-export const user = auth.currentUser;
+export const user = auth.currentUser;// autentifica el usuario
+
 
 
 // Registrarse
@@ -60,25 +61,23 @@ export const registerEvent = (email, password) => {
       // emailCheck();
     })
 
-
-
     .catch((err) => {
       console.log(err.message);
       alert(err.message);
 
     });
-  const emailCheck = () => {
-    sendEmailVerification(user)
-      .then(() => {
-        // Email verification sent!
-        console.log('Correo enviado');
-        alert('Hemos enviado un correo de verificación para validar tu cuenta');
+  // const emailCheck = () => {
+  //   sendEmailVerification(user)
+  //     .then(() => {
+  //       // Email verification sent!
+  //       console.log('Correo enviado');
+  //       alert('Hemos enviado un correo de verificación para validar tu cuenta');
 
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // };
 };
 
 // Iniciar sesión con correo registrado
@@ -86,9 +85,11 @@ export const signIn = (emailRegister, passwordRegister) => {
   signInWithEmailAndPassword(auth, emailRegister, passwordRegister)
     .then((userCredential) => {
       // Signed in
-      const { user } = userCredential;
+      console.log("userCredential", userCredential)
+
+      const { user } = userCredential;// le estamos dando el valor de usercredential 
       console.log(user);
-      // ...
+    
       window.location.hash = '#/wall';
     })
     .catch((error) => {
@@ -127,14 +128,11 @@ export const logOut = () => {
 // guardar datos post
 export const addPost = async (description) => {            // Add a new document with a generated id.
 
-
   const date = Timestamp.fromDate(new Date());
   const name = auth.currentUser.displayName;
   const userId = auth.currentUser.uid;
   const likes = [];
   const likesCounter = 0;
-  
-
   await addDoc(collection(db, 'posts'), { description, date, name, userId, likes, likesCounter }); //guardamos la coleccion post 
 };
 
@@ -143,7 +141,7 @@ export const addPost = async (description) => {            // Add a new document
 // Leer datos de post
 export const readPost = () => {
 
-  const q = query(collection(db, 'posts'), orderBy('date', 'desc'));
+  const q = query(collection(db, 'posts'), orderBy('date', 'desc'));//query consulta la base de datos de firebase
 
   onSnapshot(q, (querySnapshot) => { //onSnapshot escucha los elementos del documento 
     const boxPost = [];
@@ -180,9 +178,9 @@ export const editPost = async (id, description) => {
 };
 // Dar likes y contador de likes
 export const likePost = async (id, userLike) => {
-  const likeRef = doc(db, 'posts', id);
-  const docSnap = await getDoc(likeRef);
-  const postData = docSnap.data();
+  const likeRef = doc(db, 'posts', id);//accediendo a la colleccion de los posts
+  const docSnap = await getDoc(likeRef);//estamos trayendo un post especifico con getDoc
+  const postData = docSnap.data();//nos permite agregar esta nueva data a cualquier elemneto de Dom
   const likesCount = postData.likesCounter;
 
   if (postData.likes.includes(userLike)) {
