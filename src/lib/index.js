@@ -141,7 +141,7 @@ export const addPost = async (description) => {            // Add a new document
 // Leer datos de post
 export const readPost = () => {
 
-  const q = query(collection(db, 'posts'), orderBy('date', 'desc'));//query consulta la base de datos de firebase
+  const q = query(collection(db, 'posts'), orderBy('date', 'desc'));//query consulta o lee la base de datos de firebase
 
   onSnapshot(q, (querySnapshot) => { //onSnapshot escucha los elementos del documento 
     const boxPost = [];
