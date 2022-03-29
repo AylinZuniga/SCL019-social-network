@@ -57,21 +57,19 @@ export const wall = () => {
     const inputPost = document.getElementById('postText').value;
     setTimeout(() => {
       newPost.reset();
-    }, 1000);
+    }, 1000);//hacer que el texto de la publicacion no se vaya tan rapido
     
     
     if (inputPost == ''){
       alert('Aun no has escrito nada');
     }
     if(inputPost != ''){
-    await addPost(inputPost);
+    await addPost(inputPost);//ejecutar la funcion de index js para subir a la base de datos
     console.log('input post',inputPost)
     }
-    readPost();
+    readPost();//ejecutar funcion para mostrar los posts
 
 });
-
-
 
 
   // Evento para cerrar sesión
