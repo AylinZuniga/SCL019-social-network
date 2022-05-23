@@ -52,8 +52,14 @@ export const register = () => {
     .addEventListener('click', () => {
       const email = document.getElementById('registerEmail').value;
       const password = document.getElementById('registerPassword').value;
+      const confirmPassword= document.getElementById('confirmPassword').value;
       const name = document.getElementById('registerName').value;
-      registerEvent(email, password, name);
+
+      if(confirmPassword !== password){
+            alert('La contraseña de confirmacion no coincide')
+      }
+     else{registerEvent(email, password, name);
+    }
     });
   return printPage;
 };
